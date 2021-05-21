@@ -1,15 +1,17 @@
 <template>
 
-  <div class="container">
+  <div id="container">
 
     <div class="banner">
       <div class="banner-content">
 
         <div class="title">
           <h1>Basundhara</h1>
+          <h1></h1>
           <h3>Professional Headshots | Corporate Photography |</h3>
           <h3>Branding and Commercial Photoshoots</h3>
-        <router-link class="button" to="/App.vue"><p>Enter</p></router-link>
+          <button class="button" @click="onClick">Enter</button>
+        <!-- <router-link class="button" to="/App.vue"><p>Enter</p></router-link> -->
         </div>
 
         <div class="links">
@@ -33,11 +35,22 @@ import social from "../components/social-links.vue"
 
 
 export default {
-  name: 'Home',
+//   name: 'Home',
   components: { social
-  }
+  },
+    methods: {
+        onClick() {
+            // document.getElementById("container").style.display="none"
+        }
+    }
 }
+
+
+
+
 </script>
+
+
 
 <!-- STYLING -->
 <style>
@@ -51,7 +64,7 @@ export default {
 
 <style scoped>
 
-.container {
+#container {
   background-image: url('../assets/background.jpg');
   background-repeat: repeat;
   height: 100vh;
@@ -59,6 +72,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  transition: .5s, fade-in-out;
 }
 
 .banner {
