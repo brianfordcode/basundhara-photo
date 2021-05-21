@@ -13,9 +13,9 @@
         </div>
 
         <div class="links">
-          <a href="#">fb</a> |
-          <a href="#">linkedin</a> |
-          <a href="#">insta</a>
+          <social class="social" social="facebook"></social>
+          <social class="social" social="linkedin"></social>
+          <social class="social" social="instagram"></social>
         </div>
          
       </div>
@@ -28,10 +28,12 @@
 
 <script>
 
+import social from "../components/social-links.vue"
+
 
 export default {
   name: 'Home',
-  components: {
+  components: { social
   }
 }
 </script>
@@ -87,6 +89,17 @@ export default {
 .button:hover {
   background-color: black;
   color: white;
+}
+
+.social {
+  cursor: pointer;
+  height: 30px;
+  margin: 10px;
+  transition: .2s, fade-in-out;
+}
+
+.social:hover {
+  transform: scale(1.2);
 }
 
 
