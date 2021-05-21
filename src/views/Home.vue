@@ -9,7 +9,7 @@
           <h1>Basundhara</h1>
           <h3>Professional Headshots | Corporate Photography |</h3>
           <h3>Branding and Commercial Photoshoots</h3>
-        <router-link class="button" to="/about"><p>Enter</p></router-link>
+        <router-link class="button" to="/App.vue"><p>Enter</p></router-link>
         </div>
 
         <div class="links">
@@ -26,6 +26,7 @@
 
 </template>
 
+<!-- JAVASCRIPT -->
 <script>
 
 import social from "../components/social-links.vue"
@@ -38,24 +39,30 @@ export default {
 }
 </script>
 
-<style scoped>
+<!-- STYLING -->
+<style>
 
 * {
   margin: 0;
   padding: 0;
 }
 
+</style>
+
+<style scoped>
+
 .container {
   background-image: url('../assets/background.jpg');
+  background-repeat: repeat;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
 .banner {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255,255,255,0.9);
   width: 100%;
   height: 300px;
 }
@@ -71,12 +78,11 @@ export default {
 
 .button {
   display: inline-block;
+  background-color: white;
   padding: 20px 40px;
   margin-top: 40px;
   border: none;
   border: 2px solid black;
-  background-color: white;
-  transition: 1;
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
@@ -101,6 +107,5 @@ export default {
 .social:hover {
   transform: scale(1.2);
 }
-
-
 </style>
+
