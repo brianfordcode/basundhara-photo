@@ -1,6 +1,6 @@
 <template>
   <h1>my work</h1>
-</template>
+  </template>
 
 <script>
 export default {}

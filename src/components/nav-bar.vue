@@ -25,32 +25,55 @@
 <style scoped>
 
 .nav {
-  width: 225px;
+  width: 210px;
   height: 100vh;
   background-color: rgb(233, 233, 233);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
+/* TITLE */
+
+h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  /* border: 1px solid black; */
+}
+/* PAGE LINKS */
 .links {
   display: flex;
   flex-direction: column;
-  text-align: right;
-  transform: translate(20px, -100px);
+  align-items: flex-end;
+  /* border: 1px solid black; */
+  flex-grow: 2;
 }
 
 .links > * {
   text-decoration: none;
   color: black;
-  margin: 20px;
+  margin: 20px 0;
   font-size: 20px;
   transition: .2s, fade-in-out;
 }
 
 .links > *:hover {
   color: blue;
+}
+
+/* SOCIAL LINKS */
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  /* border: 1px solid black; */
 }
 
 .social {
@@ -63,9 +86,9 @@
 .social:hover {
   transform: scale(1.2);
 }
+
+
 </style>
-
-
 
 
 <script>
