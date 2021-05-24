@@ -1,5 +1,5 @@
 <template>
-  <h1>headshot tips</h1>
+  <h1>Coming Soon...</h1>
 </template>
 
 <script>
@@ -8,6 +8,16 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+
+h1 {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+
+
 
 </style>

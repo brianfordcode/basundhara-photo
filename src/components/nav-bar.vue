@@ -27,7 +27,8 @@
 .nav {
   width: 210px;
   height: 100vh;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
   align-items: center;

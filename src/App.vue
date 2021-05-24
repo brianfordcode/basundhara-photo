@@ -19,11 +19,10 @@
 
   import navbar from './components/nav-bar'
   import openingscreen from './views/opening-screen'
-  import about from './views/About'
 
   export default {
     components: {
-      navbar, openingscreen, about
+      navbar, openingscreen
     }
   }
 
