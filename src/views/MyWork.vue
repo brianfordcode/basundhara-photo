@@ -1,21 +1,31 @@
 <template>
 
-<div class="container">
-  <h1>My Work</h1>
-    
+
+<div class="main-container">
+  <h1>My Work</h1>  
+<div class="images-container">
+
+  
   <carousel
       @next="next"
       @prev="prev"
   >
+  
     <carousel-slide v-for="(image, index) in images"
                     :key="image"
                     :index="index"
                     :visibleImage="visibleImage"
                     :direction="direction"
                     >
-                    <img :src="image">
+                    <img class="featured-image" :src="image">
     </carousel-slide>
   </carousel>
+</div>
+
+
+  <div class="img-lineup">
+    <img class="image" v-for="image in images" :src="image" :key="image">
+  </div>
 
 </div>
   
@@ -78,17 +88,49 @@ export default {
 
 <style scoped>
 
-.container {
+.main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid blue; */
-  margin: 20px auto;
+  margin: 0 auto;
+  border: 1px solid pink;
+}
+
+h1 {
+  padding: 20px;
+}
+
+.images-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid blue;
+  margin: 0 auto;
   /* width: 400px; */
 }
 
-img {
+.featured-image {
   margin: 0 50px;
+}
+
+
+.img-lineup {
+  margin: 20px auto;
+  border: 1px solid blue;
+}
+
+.image {
+  height: 150px;
+  width: auto;
+  margin: 10px;
+  transition: .2s, fade-in-out;
+
+}
+
+.image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 </style>

@@ -34,7 +34,7 @@ export default {
     width: 450px;
     height: 500px;
     overflow: hidden;
-    /* border: 1px solid pink; */
+    /* border: 1px solid black; */
     /* text-align: center; */
 }
 
