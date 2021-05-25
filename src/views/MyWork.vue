@@ -82,13 +82,13 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid pink; */
+  /* border: 1px solid blue; */
   margin: 20px auto;
+  /* width: 400px; */
 }
 
-carousel-slide {
-  display: flex;
+img {
+  margin: 0 50px;
 }
-
 
 </style>

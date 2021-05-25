@@ -1,9 +1,10 @@
 <template>
   <div class="carousel">
       <slot></slot>
+      
 
-    <button @click="prev">prev</button>
-    <button @click="next">next</button>
+    <button class="prev" @click="prev">prev</button>
+    <button class="next" @click="next">next</button>
       
   </div>
 </template>
@@ -26,25 +27,38 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .carousel {
     position: relative;
-    text-align: center;
-    width: 400px;
-    height: 520px;
-    border: 1px solid pink;
+    width: 450px;
+    height: 500px;
     overflow: hidden;
+    /* border: 1px solid pink; */
+    /* text-align: center; */
 }
 
 button {
-    margin: 0 30px;
+    position: absolute;
+    height: 40px;
+    width: 50px;
+    top: calc(50% - 20px);
+    background-color: rgba(0,0,0,0.8);
     border: none;
-    background-color: white;
+    color: #FFF;
+}
+button:focus, button:hover {
+    outline: none;
     cursor: pointer;
 }
 
-button:hover {
-   transform: scale(1.1);
+.next {
+    right: 0;
 }
+
+.prev {
+    left: 0;
+}
+
+
 </style>
