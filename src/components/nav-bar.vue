@@ -2,7 +2,7 @@
 
     <div class="nav">
 
-        <h1>Basundhara</h1>
+        <img src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
 
         <div class="links">
             <router-link to="./MyWork">My Work</router-link> 
@@ -37,14 +37,11 @@
   flex-grow: 0;
 }
 
-/* TITLE */
-
-h1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-  /* border: 1px solid black; */
+/* LOGO */
+.basu-logo {
+  height: auto;
+  width: 80%;
+  padding: 30px 0;
 }
 /* PAGE LINKS */
 .links {
