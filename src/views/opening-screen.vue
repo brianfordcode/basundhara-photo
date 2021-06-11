@@ -6,10 +6,8 @@
       <div class="banner-content">
 
         <div class="title">
-          <h1>Basundhara</h1>
-          <h1></h1>
-          <h3>Professional Headshots | Corporate Photography |</h3>
-          <h3>Branding and Commercial Photoshoots</h3>
+          <img src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
+          <h3>Professional Headshots | Corporate Photography | Branding and Commercial Photoshoots</h3>
           <button class="button" @click="onClick">Enter</button>
         <!-- <router-link class="button" to="/App.vue"><p>Enter</p></router-link> -->
         </div>
@@ -63,6 +61,8 @@ export default {
 </style>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 
 #container {
   background-image: url('../assets/background.jpg');
@@ -82,20 +82,31 @@ export default {
 }
 
 .banner-content {
-  margin-top: 40px;
-  font-family: cursive;
+  font-family: 'Dancing Script';
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
+.basu-logo {
+  height: auto;
+  width: 300px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* border: 1px solid blue; */
+  height: 300px;
+}
 
 .button {
   display: inline-block;
   background-color: white;
   padding: 20px 40px;
-  margin-top: 40px;
-  border: none;
+  width: 150px;
+  /* margin-top: 40px; */
   border: 2px solid black;
   cursor: pointer;
   text-decoration: none;
@@ -114,8 +125,11 @@ export default {
 .social {
   cursor: pointer;
   height: 30px;
-  margin: 10px;
   transition: .2s, fade-in-out;
+}
+
+.social:nth-child(2) {
+  margin: 0 20px;
 }
 
 .social:hover {
