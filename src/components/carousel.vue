@@ -5,6 +5,7 @@
 
     <button class="prev" @click="prev">prev</button>
     <button class="next" @click="next">next</button>
+     <button class="next" @click="next">next</button>
       
   </div>
 </template>
