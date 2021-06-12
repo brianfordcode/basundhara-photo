@@ -29,7 +29,8 @@
 
 </script>
 
-<style scoped>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 .main {
   display: flex;

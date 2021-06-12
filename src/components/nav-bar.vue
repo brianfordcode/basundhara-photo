@@ -80,7 +80,7 @@
 }
 
 .links > *:hover {
-  color: blue;
+  color:rgb(30, 30, 114);
 }
 
 /* SOCIAL LINKS */

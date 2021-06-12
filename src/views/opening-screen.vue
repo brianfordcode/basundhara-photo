@@ -107,7 +107,7 @@ export default {
   padding: 20px 40px;
   width: 150px;
   /* margin-top: 40px; */
-  border: 2px solid black;
+  border: 1px solid rgb(30, 30, 114);
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
@@ -118,7 +118,7 @@ export default {
 }
 
 .button:hover {
-  background-color: black;
+  background-color: rgb(30, 30, 114);
   color: white;
 }
 

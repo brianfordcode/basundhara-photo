@@ -63,7 +63,6 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 .container {
   /* border: 1px solid black; */
