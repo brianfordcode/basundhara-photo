@@ -104,6 +104,7 @@ h1 {
   /* padding: 0 0 0 50px; */
   text-align: center;
   /* margin: 0 50px; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .image-work {
@@ -123,7 +124,8 @@ h1 {
 
 h2 {
   font-family: 'dancing script', cursive;
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 .client-banner {
@@ -140,15 +142,10 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
-  /* justify-content: center;
-  align-items: center; */
-  /* border: 1px solid blue; */
-  /* width: 100%; */
 }
 
 .clients-logos {
-  width: 10%;
+  width: 20px;
   margin: 10px;
   flex: 1 0 25%;
 }
