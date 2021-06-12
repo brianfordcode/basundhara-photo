@@ -36,6 +36,7 @@
   justify-content: space-between;
   flex-shrink: 0;
   flex-grow: 0;
+  position:relative;
 }
 
 .content {
@@ -44,7 +45,11 @@
  align-items: center;
  justify-content: space-around;
  /* border: 1px solid blue; */
+ position: sticky;
+  top: 0;
+  left: 0;
  height: 100vh;
+ width: 210px;
 }
 
 
@@ -85,7 +90,7 @@
   cursor: pointer;
   height: 40px;
   transition: .2s, fade-in-out;
-  margin: 0 10px;
+  margin: 10px 10px;
 }
 
 .social:hover {
