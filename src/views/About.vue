@@ -4,7 +4,30 @@
     <div class="wrapper">
       <div class="content">
         <h1>About Me</h1>
-        <p class="about-para">{{ bio }}</p>
+        <p class="about-para">I'm Basundhara, a full-time photographer and traveller. 
+          <br>
+          <br>
+          Driven by the firm belief in Photography, I attempt to capture peoples' emotions in the most real terms. Be it for a professional headshot or capturing a couple on their retirement cruise, I manage to aid in creating fresh perspectives and everlasting moments.
+          <br>
+          <br>
+          Graduating with an Engineering degree, I began my career at a tech startup where I learned the necessary tools for survival in a competitive environment.
+          <br>
+          <br>
+          After a stint in Human Resources, I decided to take the plunge into professional photography in 2017. I found myself in a role that paid for me to travel on cruise ships and capture human emotions at their finest - with champagne and extraordinary vistas changing every moment. The joy of traveling over 40 countries is second only to the opportunity to meet people from twice as many nationalities. I found myself with people willing to share their stories and what traveling has taught them. It helped me mature as a photographer who captured not merely people's faces but the twinkle in their eyes.
+          <br>
+          <br>
+          As a corporate headshot photographer, I create a substantial portfolio for people to use in their professional domain. I challenge myself to meet and exceed client expectations. I bring to the role my vast experience and skill in portrait photography.
+          <br>
+          <br>
+          I love connecting with people, listening to their stories, mutually creating new opportunities and thereby adding value in each other's life.
+          <br>
+          <br>
+          So, Leaders, Stylists, Podcasters, Coach, Trainers, Actors, Writers, Influencers, Digital marketer, Speakers, Independent Consultants, freelancers, Individual job seekers, SME business owners, Startups, Entrepreneurs, Firms who need a fresh branding, <strong>let's work together!</strong></p>
+
+          <div class="contacts">
+            <a href="mailto:probasundhara@gmail.com">email: probasundhara@gmail.com</a>
+            <a href="tel:7042323412">phone: 7042323412</a>
+          </div>
       </div>
       
       <div class="image-work">
@@ -30,15 +53,6 @@
 
     data: function() {
       return {
-        bio: `I'm Basundhara, a full-time photographer and traveller.
-              Driven by the firm belief in Photography, I attempt to capture peoples' emotions in the most real terms. Be it for a professional headshot or capturing a couple on their retirement cruise, I manage to aid in creating fresh perspectives and everlasting moments.
-              Graduating with an Engineering degree, I began my career at a tech startup where I learned the necessary tools for survival in a competitive environment.
-              After a stint in Human Resources, I decided to take the plunge into professional photography in 2017. I found myself in a role that paid for me to travel on cruise ships and capture human emotions at their finest - with champagne and extraordinary vistas changing every moment.
-              The joy of traveling over 40 countries is second only to the opportunity to meet people from twice as many nationalities. I found myself with people willing to share their stories and what traveling has taught them. It helped me mature as a photographer who captured not merely people's faces but the twinkle in their eyes.
-              As a corporate headshot photographer, I create a substantial portfolio for people to use in their professional domain. I challenge myself to meet and exceed client expectations. I bring to the role my vast experience and skill in portrait photography.
-              I love connecting with people, listening to their stories, mutually creating new opportunities and thereby adding value in each other's life.
-              So, Leaders, Stylists, Podcasters, Coach, Trainers, Actors, Writers, Influencers, Digital marketer, Speakers, Independent Consultants, freelancers, Individual job seekers, SME business owners, Startups, Entrepreneurs, Firms who need a fresh branding, can reach out to me at probasundhara@gmail.com or just call/whatsapp me at 7042323412`,
-
         clients: [
           require('../assets/logos/ace-update-logo.png'),
           require('../assets/logos/burgeon-law-logo.png'),
@@ -104,6 +118,22 @@ h1 {
   text-align: center;
   /* margin: 0 50px; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contacts {
+  margin-top: 50px;
+}
+
+a {
+  margin: 20px;
+  text-decoration: none;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: .2s, fade-in-out;
+}
+
+a:hover {
+  color:rgb(30, 30, 114);
 }
 
 .image-work {
