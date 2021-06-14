@@ -15,6 +15,7 @@ h1 {
   margin: 0 auto;
   display: flex;
   align-items: center;
+  font-family: 'Dancing Script';
 }
 
 

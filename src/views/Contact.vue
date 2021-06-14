@@ -12,7 +12,6 @@
   <div class="contacts">
         <a href="mailto:probasundhara@gmail.com">email: probasundhara@gmail.com</a>
         <a href="tel:7042323412">phone: 7042323412</a>
-        
   </div>
 
 </div>
@@ -77,7 +76,7 @@ components: { contactform },
   /* margin-top: 50px; */
   /* border: 1px solid black; */
   /* padding: 20px; */
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 a {

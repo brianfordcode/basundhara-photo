@@ -3,18 +3,37 @@
 <div class="main-container">
   <h1>My Work</h1>  
   <div class="images-container">
-    <img class="images" v-for="image in images" :src="image" :key="image">
+    <img @click="expandPic" class="images" v-for="image in images" :src="image" :key="image">
   </div>
 </div>
+
  
-<div class="selected-image"></div>
+<div class="modal">
+  <img ref= "selectedImage" class="selected-image" src="#">
+  <span class="closeBtn">&#10005;</span>
+</div>
+
 
 
 </template>
 
 <script>
 
+
+
 export default {
+
+  methods: {
+
+    expandPic(e) {
+      console.log(e.target.src);
+
+      this.$refs.selectedImage.src = e.target.src;
+
+
+
+    }
+  },
 
   data() {
     return {
@@ -119,16 +138,37 @@ h1 {
   font-family: 'dancing script', cursive;
 }
 
-/* .selected-image {
-  position: absolute;
-  background-color: black;
-  height: 70%;
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 
-} */
+
+
+/* MODAL */
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(184, 184, 184, 0.5);
+  display: flex;
+  cursor: pointer;
+}
+
+.selected-image {
+  /* position: absolute; */
+  z-index: 1;
+  margin: auto;
+  top: 50%;
+  /* background-color: black; */
+  height: 70%;
+  width: auto;
+}
+
+.closeBtn {
+  position: absolute;
+  font-size: 30px;
+  cursor: pointer;
+  left: 95%;
+  top: 5%;
+}
 
 
 </style>
