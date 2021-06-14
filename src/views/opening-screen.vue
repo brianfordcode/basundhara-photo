@@ -33,7 +33,7 @@ import social from "../components/social-links.vue"
 
 
 export default {
-//   name: 'Home',
+  
   components: { social
   },
     methods: {

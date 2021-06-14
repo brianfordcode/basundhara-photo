@@ -1,19 +1,32 @@
 <template>
 
-<div class="main-container">
-  <h1>My Work</h1>  
+<!-- GALLERY -->
+<div ref="main-container" class="main-container">
+  <h1>My Work</h1>
   <div class="images-container">
-    <img @click="expandPic" class="images" v-for="image in images" :src="image" :key="image">
+    <img
+      v-for="image in images"
+      @click="expandPic(image)"
+      class="images"
+      :src="image"
+      :key="image"
+    >
   </div>
 </div>
 
+<!-- OPEN PICTURE -->
+
+<div @click="closePic" :class="{ modal: true, open: modalOpen }">
+
+  <div class="image-cap">
+    <img class="selected-image" :src="selectedImageSrc">
+    <p class="caption">CAPTION</p>
+  </div>
+  
+
  
-<div class="modal">
-  <img ref= "selectedImage" class="selected-image" src="#">
-  <span class="closeBtn">&#10005;</span>
+  <span @click="closePic" class="closeBtn">&#10005;</span>
 </div>
-
-
 
 </template>
 
@@ -25,19 +38,23 @@ export default {
 
   methods: {
 
-    expandPic(e) {
-      console.log(e.target.src);
+    expandPic(image) {
+      this.selectedImageSrc = image
+      this.modalOpen = true
+    },
 
-      this.$refs.selectedImage.src = e.target.src;
-
-
-
+    closePic() {
+      this.modalOpen = false
+      console.log('click')
     }
+
   },
 
   data() {
     return {
-      images: [      
+      modalOpen: false,
+      selectedImageSrc: null,
+      images: [    
         require("../assets/portraits/Amit Luthra_BRI_1671.jpg"),
         require("../assets/portraits/Amit Luthra_BRI_1711.jpg"),
         require("../assets/portraits/Amit Luthra_BRI_1722.jpg"),
@@ -139,27 +156,40 @@ h1 {
 }
 
 
-
-
 /* MODAL */
-
 .modal {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 210px;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: all;
   background-color: rgba(184, 184, 184, 0.5);
-  display: flex;
+  display: none;
   cursor: pointer;
 }
 
+.modal.open {
+  display: flex;
+}
+
 .selected-image {
-  /* position: absolute; */
-  z-index: 1;
-  margin: auto;
-  top: 50%;
-  /* background-color: black; */
-  height: 70%;
-  width: auto;
+  height: 80%;
+}
+
+.image-cap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.caption {
+  margin: 10px;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .closeBtn {
