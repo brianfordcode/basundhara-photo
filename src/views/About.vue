@@ -68,7 +68,8 @@
           require('../assets/logos/ria-dixit-logo.png'),
           require('../assets/logos/shaheen-logo.png'),
           require('../assets/logos/siliconindia-logo.gif'),
-          require('../assets/logos/vpop-logo.jpg')
+          require('../assets/logos/vpop-logo.jpg'),
+          require('../assets/logos/zolie-skin-clinic-logo.png')
         ]
       }
     }
@@ -174,9 +175,9 @@ h2 {
 }
 
 .clients-logos {
-  width: 20px;
+  width: 0px;
   margin: 10px;
-  flex: 1 0 25%;
+  flex: 70px
 }
 
 </style>
