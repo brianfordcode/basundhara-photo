@@ -43,9 +43,6 @@ export default {
     }
 }
 
-
-
-
 </script>
 
 
@@ -67,6 +64,7 @@ export default {
 #container {
   background-image: url('../assets/background.jpg');
   background-repeat: repeat;
+  background-size: 1500px auto;
   height: 100vh;
   width: 100%;
   display: flex;

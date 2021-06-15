@@ -1,34 +1,30 @@
 <template>
 
-<!-- GALLERY -->
-<div ref="main-container" class="main-container">
-  <h1>My Work</h1>
-  <div class="images-container">
-    <img
-      v-for="image in images"
-      @click="expandPic(image)"
-      class="images"
-      :src="image.url"
-      :key="image"
-    >
+  <!-- GALLERY -->
+  <div class="main-container">
+    <h1>My Work</h1>
+    <div class="images-container">
+      <img
+        v-for="image in images"
+        @click="expandPic(image)"
+        class="images"
+        :src="image.url"
+        :key="image"
+      >
+    </div>
   </div>
-</div>
 
-<!-- OPEN PICTURE -->
-
-<div
-  @click="closePic"
-  v-if="selectedImage"
-  :class="{ modal: true, open: modalOpen }">
-  <div class="image-cap">
-    <img class="selected-image" :src="selectedImage.url">
-    <p class="caption">{{ selectedImage.caption }}</p>
+  <!-- OPEN PICTURE -->
+  <div
+    @click="closePic"
+    v-if="selectedImage"
+    :class="{ modal: true, open: modalOpen }">
+    <div class="image-cap">
+      <img class="selected-image" :src="selectedImage.url">
+      <p class="caption">{{ selectedImage.caption }}</p>
+    </div>
+    <span @click="closePic" class="closeBtn">&#10005;</span>
   </div>
-  
-
- 
-  <span @click="closePic" class="closeBtn">&#10005;</span>
-</div>
 
 </template>
 
@@ -43,11 +39,13 @@ export default {
     expandPic(image) {
       this.selectedImage = image
       this.modalOpen = true
+      document.querySelector("body").style.overflow = 'hidden';
     },
 
     closePic() {
       this.modalOpen = false
       console.log('click')
+      document.querySelector("body").style.overflow = 'initial';
     }
 
   },
