@@ -1,6 +1,6 @@
 <template>
 
-  <div id="container">
+  <div v-if="openingScreen" id="container">
 
     <div class="banner">
       <div class="banner-content">
@@ -31,16 +31,24 @@
 
 import social from "../components/social-links.vue"
 
-
 export default {
+
   
-  components: { social
-  },
-    methods: {
-        onClick() {
-            // document.getElementById("container").style.display="none"
-        }
+
+  data() {
+    return {
+      openingScreen: true
+
     }
+  },
+  
+  components: { social },
+
+  methods: {
+      onClick() {
+          this.openingScreen = false
+      }
+  }
 }
 
 </script>
