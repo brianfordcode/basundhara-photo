@@ -36,7 +36,6 @@
   justify-content: space-between;
   flex-shrink: 0;
   flex-grow: 0;
-  position:relative;
 }
 
 .content {

@@ -4,12 +4,11 @@
   <div class="main-container">
     <h1>My Work</h1>
     <div class="images-container">
-      <img
-        v-for="image in images"
-        @click="expandPic(image)"
-        class="images"
-        :src="image.url"
-        :key="image"
+      <img class="images"
+      v-for="image in images"
+      @click="expandPic(image)"
+      :src="image.url"
+      :key="image"
       >
     </div>
   </div>
@@ -19,7 +18,7 @@
     @click="closePic"
     v-if="selectedImage"
     :class="{ modal: true, open: modalOpen }">
-    <div class="image-cap">
+    <div class="image-caption">
       <img class="selected-image" :src="selectedImage.url">
       <p class="caption">{{ selectedImage.caption }}</p>
     </div>
@@ -30,8 +29,6 @@
 
 <script>
 
-
-
 export default {
 
   methods: {
@@ -39,13 +36,10 @@ export default {
     expandPic(image) {
       this.selectedImage = image
       this.modalOpen = true
-      document.querySelector("body").style.overflow = 'hidden';
     },
 
     closePic() {
       this.modalOpen = false
-      console.log('click')
-      document.querySelector("body").style.overflow = 'initial';
     }
 
   },
@@ -297,32 +291,11 @@ export default {
 <style scoped>
 
 .main-container {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  /* border: 1px solid blue; */
-  width: 100%;
-}
-
-.images-container {
-  display: flex;
-  flex-wrap: wrap;
-  /* border: 1px solid black; */
-  justify-content: space-evenly;
-}
-
-.images {
-  width: auto;
-  height: 300px;
-  margin: 5px;
-  cursor: zoom-in;
-  transition: .2s, fade-in-out;
-  /* border: 1px solid blue; */
-}
-
-.images:hover {
-  transform: scale(1.03);
 }
 
 h1 {
@@ -331,16 +304,33 @@ h1 {
   font-family: 'dancing script', cursive;
 }
 
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.images {
+  height: 250px;
+  overflow: hidden;
+  margin: 5px;
+  transition: .2s, fade-in-out;
+  cursor: zoom-in;
+}
+
+.images:hover {
+  transform: scale(1.03);
+}
 
 /* MODAL */
 .modal {
   position: fixed;
+  border: 1px solid pink;
   top: 0;
   left: 210px;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  pointer-events: all;
   background-color: rgba(184, 184, 184, 0.5);
   display: none;
   cursor: pointer;
@@ -352,9 +342,26 @@ h1 {
 
 .selected-image {
   height: 80%;
+  transition: .2s, fade-in-out;
 }
 
-.image-cap {
+@media screen and (max-width: 1100px) {
+  .selected-image {
+    height: 60%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .selected-image {
+    height: 40%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .selected-image {
+    height: 40%;
+  }
+}
+
+.image-caption {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -371,10 +378,8 @@ h1 {
 .closeBtn {
   position: absolute;
   font-size: 30px;
-  cursor: pointer;
   left: 95%;
   top: 5%;
 }
-
 
 </style>

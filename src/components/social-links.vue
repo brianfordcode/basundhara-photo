@@ -49,11 +49,11 @@ export default {
     },
     methods: {
         goToSocial() {
-            if (this.social === 'facebook') window.open('https://www.facebook.com')
+            if (this.social === 'facebook') window.open('https://www.facebook.com/basundhara.b.p')
             
-            if (this.social === 'linkedin') window.open('https://www.linkedin.com')
+            if (this.social === 'linkedin') window.open('https://www.linkedin.com/in/basundhara/')
             
-            if (this.social === 'instagram') window.open('https://www.instagram.com')
+            if (this.social === 'instagram') window.open('https://www.instagram.com/basundhara10/')
         }
     }
 }

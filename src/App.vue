@@ -1,11 +1,8 @@
 <template>
-  <div class="container">
-
+  <div class="opening-screen">
     <openingscreen/>
-
-    
-
   </div>
+
   <div class="main">
       <navbar/>
       <router-view/>
@@ -31,10 +28,10 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-.container {
+.opening-screen {
   position: absolute;
   width: 100%;
-  z-index: 2;
+  z-index: 20;
 }
 
 .main {
