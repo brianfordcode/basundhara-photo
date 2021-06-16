@@ -15,7 +15,7 @@
 
 <script>
 
-import contactform from "../components/contact-form.vue"
+import contactform from "../../public/contact-form.vue"
 
 export default {
 
