@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
 
-    <div class="wrapper">
+    <div class="container">
+
       <div class="content">
         <h1>About Me</h1>
         <p class="about-para">I'm Basundhara, a full-time photographer and traveller. 
@@ -23,11 +23,6 @@
           <br>
           <br>
           So, Leaders, Stylists, Podcasters, Coach, Trainers, Actors, Writers, Influencers, Digital marketer, Speakers, Independent Consultants, freelancers, Individual job seekers, SME business owners, Startups, Entrepreneurs, Firms who need a fresh branding, <strong>let's work together!</strong></p>
-
-          <div class="contacts">
-            <a href="mailto:probasundhara@gmail.com">email: probasundhara@gmail.com</a>
-            <a href="tel:7042323412">phone: 7042323412</a>
-          </div>
       </div>
       
       <div class="image-work">
@@ -40,9 +35,8 @@
           </div>
         </div>
       </div>
-
+    
     </div>
-  </div>
 </template>
 
 <script>
@@ -69,7 +63,8 @@
           require('../assets/logos/shaheen-logo.png'),
           require('../assets/logos/siliconindia-logo.gif'),
           require('../assets/logos/vpop-logo.jpg'),
-          require('../assets/logos/zolie-skin-clinic-logo.png')
+          require('../assets/logos/zolie-skin-clinic-logo.png'),
+          require('../assets/logos/KSLF-London-24-logo.png')
         ]
       }
     }
@@ -80,76 +75,47 @@
 <style scoped>
 
 .container {
-  /* border: 1px solid black; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  /* justify-content: space-around; */
-  /* padding: 50px; */
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.wrapper {
-  display: flex;
-  /* align-items: center; */
-  margin: 5%;
-  max-width: 1500px;
-  min-width: 1000px;
-  /* border: 1px solid pink; */
-  /* padding: 30px; */
-  justify-content: space-around;
+@media screen and (max-width: 800px ) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .content {
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding: 20px;
 }
 
 h1 {
-  padding-bottom: 30px;
   font-family: 'dancing script', cursive;
+  padding-bottom: 20px;
+  font-size: 50px;
 }
 
 .about-para {
-  /* padding: 0 0 0 50px; */
   text-align: center;
-  /* margin: 0 50px; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.contacts {
-  margin-top: 50px;
-}
-
-a {
-  margin: 20px;
-  text-decoration: none;
-  color: black;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  transition: .2s, fade-in-out;
-}
-
-a:hover {
-  color:rgb(30, 30, 114);
 }
 
 .image-work {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  padding: 20px;
   align-items: center;
-
 }
 
 .basu-pic {
-  /* border: 1px solid blue; */
   height: 275px;
-  border-radius: 20px;
-  /* padding: 5% 5% 5% 0; */
 }
 
 h2 {
@@ -159,13 +125,10 @@ h2 {
 }
 
 .client-banner {
-  /* border: 1px solid black; */
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* margin-top: 50px; */
 }
 
 .clients {
@@ -177,7 +140,7 @@ h2 {
 .clients-logos {
   width: 0px;
   margin: 10px;
-  flex: 70px
+  flex: 70px;
 }
 
 </style>

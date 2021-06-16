@@ -89,7 +89,7 @@
   cursor: pointer;
   height: 40px;
   transition: .2s, fade-in-out;
-  margin: 10px 10px;
+  margin: 30px 10px;
 }
 
 .social:hover {

@@ -22,7 +22,7 @@
       <img class="selected-image" :src="selectedImage.url">
       <p class="caption">{{ selectedImage.caption }}</p>
     </div>
-    <span @click="closePic" class="closeBtn">&#10005;</span>
+    <span class="closeBtn">&#10005;</span>
   </div>
 
 </template>
@@ -326,7 +326,6 @@ h1 {
 /* MODAL */
 .modal {
   position: fixed;
-  border: 1px solid pink;
   top: 0;
   left: 210px;
   right: 0;

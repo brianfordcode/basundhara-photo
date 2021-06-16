@@ -1,26 +1,15 @@
 <template>
 
-<div class="main-container">
+  <div class="main-container">
 
-  <h1 class="contact-me-title">Contact Me</h1>
+    <h1 class="contact-me-title">Contact Me</h1>
 
-    <div class="form-pic">
-      <contactform />
-      <img class="basu-contact-pic" src="../assets/basu-contact-pic.jpg" alt="basu-contact-pic">
-    </div>
+      <div class="form-pic">
+        <contactform />
+        <img class="basu-contact-pic" src="../assets/basu-contact-pic.jpg" alt="basu-contact-pic">
+      </div>
 
-  <div class="contacts">
-        <a href="mailto:probasundhara@gmail.com">email: probasundhara@gmail.com</a>
-        <a href="tel:7042323412">phone: 7042323412</a>
   </div>
-
-</div>
-
- 
-  
-
-
-
 
 </template>
 
@@ -41,12 +30,10 @@ components: { contactform },
 
 .main-container {
   width: 100%;
-  /* max-width: 1000px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid blue; */
 }
 
 .contact-me-title {
@@ -54,7 +41,6 @@ components: { contactform },
   margin: 20px;
   font-size: 50px;
   text-align: center;
-  /* border: 1px solid black; */
 }
 
 .form-pic {
@@ -64,19 +50,17 @@ components: { contactform },
   justify-content: space-around;
   align-items: center;
   margin-top: 5%;
-  /* border: 1px solid black; */
+}
+
+@media screen and (max-width: 800px ) {
+  .form-pic {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .basu-contact-pic {
   height: 300px;
-  border-radius: 20px;
-}
-
-.contacts {
-  /* margin-top: 50px; */
-  /* border: 1px solid black; */
-  /* padding: 20px; */
-  margin-top: 100px;
 }
 
 a {
