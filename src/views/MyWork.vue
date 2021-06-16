@@ -51,236 +51,236 @@ export default {
       images: [
         {
           caption: "Amit Luthra_BRI_1671",
-          url: require("../assets/portraits/Amit Luthra_BRI_1671.jpg"),
+          url: "/portraits/Amit Luthra_BRI_1671.jpg",
         },
         {
           caption: "Amit Luthra_BRI_1711",
-          url: require("../assets/portraits/Amit Luthra_BRI_1711.jpg"),
+          url: "/portraits/Amit Luthra_BRI_1711.jpg",
         },
         {
           caption: "Amit Luthra_BRI_1722",
-          url: require("../assets/portraits/Amit Luthra_BRI_1722.jpg"),
+          url: "/portraits/Amit Luthra_BRI_1722.jpg",
         },
         {
           caption: "Brian-2",
-          url: require("../assets/portraits/Brian-2.jpeg"),
+          url: "/portraits/Brian-2.jpeg",
         },
         {
           caption: "Brian-3",
-          url: require("../assets/portraits/Brian-3.jpeg"),
+          url: "/portraits/Brian-3.jpeg",
         },
         {
           caption: "Brian-5",
-          url: require("../assets/portraits/Brian-5.jpeg"),
+          url: "/portraits/Brian-5.jpeg",
         },
         {
           caption: "Brian",
-          url: require("../assets/portraits/Brian.jpeg"),
+          url: "/portraits/Brian.jpeg",
         },
         {
           caption: "Chandita _BAS_3637",
-          url: require("../assets/portraits/Chandita _BAS_3637.jpg"),
+          url: "/portraits/Chandita _BAS_3637.jpg",
         },
         {
           caption: "Chandita_BAS_3669",
-          url: require("../assets/portraits/Chandita_BAS_3669.jpg"),
+          url: "/portraits/Chandita_BAS_3669.jpg",
         },
         {
           caption: "Deepak_DSC_4123_website",
-          url: require("../assets/portraits/Deepak_DSC_4123_website.jpg"),
+          url: "/portraits/Deepak_DSC_4123_website.jpg",
 
         },
         {
           caption: "Francis_BRI_2771-Edit",
-          url: require("../assets/portraits/Francis_BRI_2771-Edit.jpg"),
+          url: "/portraits/Francis_BRI_2771-Edit.jpg",
         },
         {
           caption: "Jayshree_BRI_4297",
-          url: require("../assets/portraits/Jayshree_BRI_4297.jpg"),
+          url: "/portraits/Jayshree_BRI_4297.jpg",
         },
         {
           caption: "Jayshree_BRI_4304_web",
-          url: require("../assets/portraits/Jayshree_BRI_4304_web.jpg"),
+          url: "/portraits/Jayshree_BRI_4304_web.jpg",
         },
         {
           caption: "Kakoli_thumbnail",
-          url: require("../assets/portraits/Kakoli_thumbnail.jpg"),
+          url: "/portraits/Kakoli_thumbnail.jpg",
         },
         {
           caption: "Kakoli_BRI_1479",
-          url: require("../assets/portraits/Kakoli_BRI_1479.jpg"),
+          url: "/portraits/Kakoli_BRI_1479.jpg",
         },
         {
           caption: "Kakoli_BRI_1810",
-          url: require("../assets/portraits/Kakoli_BRI_1810.jpg"),
+          url: "/portraits/Kakoli_BRI_1810.jpg",
         },
         {
           caption: "Kakoli_BRI_2190-Edit",
-          url: require("../assets/portraits/Kakoli_BRI_2190-Edit.jpg"),
+          url: "/portraits/Kakoli_BRI_2190-Edit.jpg",
         },
         {
           caption: "Priyal_BRI_2887",
-          url: require("../assets/portraits/Priyal_BRI_2887.jpg"),
+          url: "/portraits/Priyal_BRI_2887.jpg",
         },
         {
           caption: "Priyal_BRI_2902",
-          url: require("../assets/portraits/Priyal_BRI_2902.jpg"),
+          url: "/portraits/Priyal_BRI_2902.jpg",
         },
         {
           caption: "Priyal_BRI_2923",
-          url: require("../assets/portraits/Priyal_BRI_2923.jpg"),
+          url: "/portraits/Priyal_BRI_2923.jpg",
         },
         {
           caption: "Priyal_BRI_2993",
-          url: require("../assets/portraits/Priyal_BRI_2993.jpg"),
+          url: "/portraits/Priyal_BRI_2993.jpg",
         },
         {
           caption: "Ria_BRI_4254-Web",
-          url:require("../assets/portraits/Ria_BRI_4254-Web.jpg"),
+          url:"/portraits/Ria_BRI_4254-Web.jpg",
         },
         {
           caption: "Ria_BRI_4012-Web",
-          url: require("../assets/portraits/Ria_BRI_4012-Web.jpg"),
+          url: "/portraits/Ria_BRI_4012-Web.jpg",
         },
         {
           caption: "Ria_BRI_4076-Web",
-          url:require("../assets/portraits/Ria_BRI_4076-Web.jpg"),
+          url:"/portraits/Ria_BRI_4076-Web.jpg",
         },
         {
           caption: "Ria_BRI_4214-Web",
-          url:require("../assets/portraits/Ria_BRI_4214-Web.jpg"),
+          url:"/portraits/Ria_BRI_4214-Web.jpg",
         },
         {
           caption: "Ria_BRI_4239-Web",
-          url: require("../assets/portraits/Ria_BRI_4239-Web.jpg"),
+          url: "/portraits/Ria_BRI_4239-Web.jpg",
         },
         {
           caption: "Ria_BRI_4250-Web",
-          url:require("../assets/portraits/Ria_BRI_4250-Web.jpg"),
+          url:"/portraits/Ria_BRI_4250-Web.jpg",
         },
         {
           caption: "Ritesh_BRI_3778-Social Media",
-          url:require("../assets/portraits/Ritesh_BRI_3778-Social Media.jpg"),
+          url:"/portraits/Ritesh_BRI_3778-Social Media.jpg",
         },
         {
           caption: "Roma_2",
-          url: require("../assets/portraits/Roma_2.jpeg"),
+          url: "/portraits/Roma_2.jpeg",
         },
         {
           caption: "Roma_6",
-          url: require("../assets/portraits/Roma_6.jpeg"),
+          url: "/portraits/Roma_6.jpeg",
         },
         {
           caption: "ROMA_BRI_3351",
-          url: require("../assets/portraits/ROMA_BRI_3351.jpg"),
+          url: "/portraits/ROMA_BRI_3351.jpg",
         },
         {
           caption: "ROMA_BRI_3370",
-          url: require("../assets/portraits/ROMA_BRI_3370.jpg"),
+          url: "/portraits/ROMA_BRI_3370.jpg",
         },
         {
           caption: "ROMA_BRI_3351",
-          url: require("../assets/portraits/ROMA_BRI_3351.jpg"),
+          url: "/portraits/ROMA_BRI_3351.jpg",
         },
         {
           caption: "ROMA_BRI_9769_Large-Size",
-          url: require("../assets/portraits/ROMA_BRI_9769_Large-Size.jpg"),
+          url: "/portraits/ROMA_BRI_9769_Large-Size.jpg",
         },
         {
           caption: "ROMA_thumbnail",
-          url: require("../assets/portraits/ROMA_thumbnail.jpg"),
+          url: "/portraits/ROMA_thumbnail.jpg",
         },
         {
           caption: "Roma",
-          url: require("../assets/portraits/Roma.jpeg"),
+          url: "/portraits/Roma.jpeg",
         },
         {
           caption: "Rutuja",
-          url: require("../assets/portraits/Rutuja.jpg"),
+          url: "/portraits/Rutuja.jpg",
         },
         {
           caption: "Savita_BRI_3863",
-          url: require("../assets/portraits/Savita_BRI_3863 .jpg"),
+          url: "/portraits/Savita_BRI_3863 .jpg",
         },
         {
           caption: "Savita_BRI_3761-Social Media",
-          url: require("../assets/portraits/Savita_BRI_3761-Social Media.jpg"),
+          url: "/portraits/Savita_BRI_3761-Social Media.jpg",
         },
         {
           caption: "Savita_BRI_3863  copy",
-          url: require("../assets/portraits/Savita_BRI_3863  copy.jpg"),
+          url: "/portraits/Savita_BRI_3863  copy.jpg",
         },
         {
           caption: "Shaheen_BRI_4345_for Social Media",
-          url: require("../assets/portraits/Shaheen_BRI_4345_for Social Media.jpg"),
+          url: "/portraits/Shaheen_BRI_4345_for Social Media.jpg",
         },
         {
           caption: "Shaheen_BRI_4519_for Social Media",
-          url: require("../assets/portraits/Shaheen_BRI_4519_for Social Media.jpg"),
+          url: "/portraits/Shaheen_BRI_4519_for Social Media.jpg",
         },
         {
           caption: "Shaheen_BRI_4557_for Social Media",
-          url: require("../assets/portraits/Shaheen_BRI_4557_for Social Media.jpg"),
+          url: "/portraits/Shaheen_BRI_4557_for Social Media.jpg",
         },
         {
           caption: "ShaheenBRI_4399_for Social Media",
-          url:require("../assets/portraits/ShaheenBRI_4399_for Social Media.jpg"),
+          url:"/portraits/ShaheenBRI_4399_for Social Media.jpg",
         },
         {
           caption: "ShaheenBRI_4451_for Social Media",
-          url:require("../assets/portraits/ShaheenBRI_4451_for Social Media.jpg"),
+          url:"/portraits/ShaheenBRI_4451_for Social Media.jpg",
         },
         {
           caption: "Ship portrait 1",
-          url:require("../assets/portraits/Ship portrait 1.jpeg"),
+          url:"/portraits/Ship portrait 1.jpeg",
         },
         {
           caption: "Shivani_BRI_3516",
-          url:require("../assets/portraits/Shivani_BRI_3516.jpg"),
+          url:"/portraits/Shivani_BRI_3516.jpg",
         },
         {
           caption: "Shruti 2",
-          url:require("../assets/portraits/Shruti 2.jpeg"),
+          url:"/portraits/Shruti 2.jpeg",
         },
         {
           caption: "Shweta_2",
-          url: require("../assets/portraits/Shweta_2.jpeg"),
+          url: "/portraits/Shweta_2.jpeg",
         },
         {
           caption: "Shweta_BAS_3647_BlackBG",
-          url: require("../assets/portraits/Shweta_BAS_3647_BlackBG.jpg"),
+          url: "/portraits/Shweta_BAS_3647_BlackBG.jpg",
         },
         {
           caption: "Shweta_BAS_3647_BlackBG",
-          url: require("../assets/portraits/Shweta_BAS_3647_BlackBG.jpg"),
+          url: "/portraits/Shweta_BAS_3647_BlackBG.jpg",
         },
         {
           caption: "Vijay_BRI_1774",
-          url: require("../assets/portraits/Vijay_BRI_1774.jpg"),
+          url: "/portraits/Vijay_BRI_1774.jpg",
         },
         {
           caption: "Zolie_BRI_8446",
-          url: require("../assets/portraits/Zolie_BRI_8446.jpg"),
+          url: "/portraits/Zolie_BRI_8446.jpg",
         },
         {
           caption: "Zolie_BRI_8466",
-          url: require("../assets/portraits/Zolie_BRI_8466.jpg"),
+          url: "/portraits/Zolie_BRI_8466.jpg",
         },
         {
           caption: "Zolie_BRI_8525",
-          url: require("../assets/portraits/Zolie_BRI_8525.jpg"),
+          url: "/portraits/Zolie_BRI_8525.jpg",
         },
         {
           caption: "Zolie_BRI_8548",
-          url: require("../assets/portraits/Zolie_BRI_8548.jpg"),
+          url: "/portraits/Zolie_BRI_8548.jpg",
         },
         {
           caption: "Zolie_Nirupama 1",
-          url: require("../assets/portraits/Zolie_Nirupama 1.jpeg"),
+          url: "/portraits/Zolie_Nirupama 1.jpeg",
         },
         {
           caption: "Zolio_BRI_8437.",
-          url: require("../assets/portraits/Zolio_BRI_8437.jpg"),
+          url: "/portraits/Zolio_BRI_8437.jpg",
         },
       ]
     }
