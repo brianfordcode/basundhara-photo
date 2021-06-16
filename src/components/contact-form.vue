@@ -1,5 +1,8 @@
 <template>
-<form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+
+<iframe src="https://form.jotform.com/211666471899168" title="contact-me">test</iframe>
+
+<!-- <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
   <input type="hidden" name="form-name" value="contact" />
   <p>
     <label>Name: <input type="text" name="name" /></label>
@@ -12,10 +15,7 @@
     <textarea/>
     <button>Submit</button>
   </p>
-  
-
-</form>
-
+</form> -->
 
 
 </template>
@@ -40,7 +40,14 @@ body {
   align-items: left;
 }
 
-p {
+iframe {
+  height: 1000px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+/* p {
   padding: 10px;
 }
 
@@ -53,7 +60,6 @@ input {
   border-bottom: 1px solid rgb(30, 30, 114);
   outline: none;
   width: 250px;
-  /* font-size: 15px; */
 }
 
 .message-title {
@@ -61,7 +67,6 @@ input {
 }
 
 textarea {
-  /* margin-top: 10px; */
   height: 100px;
   width: 300px;
   border: 1.5px solid rgb(30, 30, 114);
@@ -90,7 +95,7 @@ button {
 
 button:hover {
   transform: scale(1.1);
-}
+} */
 
 
 
