@@ -38,6 +38,13 @@
   flex-grow: 0;
 }
 
+@media screen and (max-width: 700px) {
+
+  .nav {
+    display: none;
+  }
+}
+
 .content {
  display: flex;
  flex-direction: column;
@@ -100,7 +107,6 @@
 
 <script>
 import social from "../components/social-links.vue"
-// import about from "../views/About.vue"
 
 export default {
     components: { social }

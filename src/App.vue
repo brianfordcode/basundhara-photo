@@ -4,6 +4,7 @@
   </div>
 
   <div class="main">
+      <navbarmobile />
       <navbar/>
       <router-view/>
     </div>
@@ -15,10 +16,11 @@
 
   import navbar from './components/nav-bar'
   import openingscreen from './views/opening-screen'
+  import navbarmobile from './components/nav-bar-mobile'
 
   export default {
     components: {
-      navbar, openingscreen
+      navbar, navbarmobile, openingscreen
     }
   }
 
@@ -37,4 +39,13 @@
 .main {
   display: flex;
 }
+
+@media screen and (max-width: 700px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
 </style>

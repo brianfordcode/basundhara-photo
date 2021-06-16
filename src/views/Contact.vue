@@ -37,7 +37,7 @@ export default {
 }
 
 iframe {
-  height: 1000px;
+  height: 1150px;
   width: 100%;
   border: 0;
   outline: none;
