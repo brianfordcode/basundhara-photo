@@ -64,7 +64,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  transition: .5s, fade-in-out;
 }
 
 .banner {
@@ -78,10 +77,11 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border: 1px solid blue;
+  height: 100%;
 }
 
 .basu-logo {
-  height: auto;
   width: 300px;
 }
 
@@ -89,8 +89,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* border: 1px solid blue; */
-  height: 300px;
+  height: 100%;
 }
 
 .button {
@@ -98,10 +97,8 @@ export default {
   background-color: white;
   padding: 20px 40px;
   width: 150px;
-  /* margin-top: 40px; */
   border: 1px solid rgb(30, 30, 114);
   cursor: pointer;
-  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: black;
@@ -120,12 +117,41 @@ export default {
   transition: .2s, fade-in-out;
 }
 
+
+
 .social:nth-child(2) {
   margin: 0 20px;
 }
 
 .social:hover {
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 800px) {
+
+  .basu-logo {
+    width: 200px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+
+  }
+
+  .social:nth-child(2) {
+    margin: 20px 0;
+  }
+  
+  .banner-content {
+    padding: 0 5%;
+  }
+  
 }
 </style>
 
