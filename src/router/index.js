@@ -24,6 +24,11 @@ const routes = [
     path: '/MyWork',
     name: 'MyWork',
     component: () => import( '../views/MyWork.vue')
+  },
+  {
+    path: '/',
+    name: 'openingScreen',
+    component: () => import('../views/opening-screen.vue')
   }
 ]
 

@@ -1,11 +1,8 @@
 <template>
-  <div class="opening-screen">
-    <openingscreen/>
-  </div>
 
   <div class="main">
       <navbarmobile />
-      <navbar/>
+      <navbar v-if="currentRouteName !== 'openingScreen'"/>
       <router-view/>
     </div>
 
@@ -21,8 +18,14 @@
   export default {
     components: {
       navbar, navbarmobile, openingscreen
+    },
+    computed: {
+      currentRouteName() {
+        return this.$route.name;
+      }
     }
   }
+  
 
 
 </script>

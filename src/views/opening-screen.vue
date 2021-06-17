@@ -1,6 +1,6 @@
 <template>
 
-  <div v-if="openingScreen" id="container">
+  <div id="container">
 
     <div class="banner">
       <div class="banner-content">
@@ -8,7 +8,7 @@
         <div class="title">
           <img src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
           <h3>Professional Headshots | Corporate Photography | Branding and Commercial Photoshoots</h3>
-          <button class="button" @click="onClick">Enter</button>
+          <button class="button" @click="$router.push({ name: 'MyWork' })">Enter</button>
         <!-- <router-link class="button" to="/App.vue"><p>Enter</p></router-link> -->
         </div>
 
@@ -33,22 +33,8 @@ import social from "../components/social-links.vue"
 
 export default {
 
-  
-
-  data() {
-    return {
-      openingScreen: true
-
-    }
-  },
-  
   components: { social },
 
-  methods: {
-      onClick() {
-          this.openingScreen = false
-      }
-  }
 }
 
 </script>
