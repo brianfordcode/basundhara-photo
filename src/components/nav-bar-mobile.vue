@@ -3,14 +3,16 @@
         <div class="content">
             <img src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
 
-            <div @click="menuIsOpen = !menuIsOpen" class="hamb-menu">
-                <div></div>
-                <div></div>
-                <div></div>
+            <div @click="menuIsOpen = !menuIsOpen;"
+                 id= "hamb-menu"
+                 :class="{ 'open': menuIsOpen }">
+                <span class="burger-bar-1"></span>
+                <span class="burger-bar-2"></span>
+                <span class="burger-bar-3"></span>
             </div>
         </div>
 
-        <div v-if="menuIsOpen" class="links">
+        <div v-if="menuIsOpen"  class="links">
             <router-link to="./MyWork">My Work</router-link> 
             <router-link to="./About">About Me</router-link> 
             <router-link to="./Contact">Contact Me</router-link> 
@@ -35,7 +37,8 @@ export default {
 
     data() {
         return {
-            menuIsOpen: false
+            menuIsOpen: false,
+            isBurgerActive: true
         }
     }
 
@@ -56,7 +59,6 @@ export default {
     width: 100%;
     height: 50px;
     box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
-    /* position: fixed; */
     z-index: 1000;
 }
 
@@ -64,6 +66,7 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
 
 .basu-logo {
@@ -71,28 +74,49 @@ export default {
     margin: 5px 0;
 }
 
-.hamb-menu {
+#hamb-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    transition: transform .5s ease-in-out;
+    user-select: none;
 }
-.hamb-menu div:nth-child(2) {
+
+#hamb-menu span:nth-child(2) {
     margin: 5px 0;
 }
 
-.hamb-menu div {
+#hamb-menu span {
     height: 2px;
     width: 20px;
     background-color: black;
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out;
 }
+
+#hamb-menu.open .burger-bar-1 {
+    transform: translateY(7px) rotate(-45deg) ;
+}
+
+
+#hamb-menu.open .burger-bar-2 {
+    opacity: 0;
+}
+
+#hamb-menu.open .burger-bar-3 {
+    transform: translateY(-7px) rotate(45deg);
+    top: 10px;
+}
+
+
 
 .social-links {
     display: flex;
 }
 
 .links {
+    position: absolute;
+    right: 0;
     width: 200px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
