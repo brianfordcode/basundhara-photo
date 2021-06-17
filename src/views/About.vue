@@ -75,10 +75,11 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 800px ) {
+@media screen and (max-width: 700px ) {
   .container {
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
   }
 }
 
@@ -112,7 +113,7 @@
   height: 275px;
 }
 
-@media screen and (max-width: 800px ) {
+@media screen and (max-width: 900px ) {
   .bio-img {
     flex-direction: column;
     align-items: center;

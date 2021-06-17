@@ -18,6 +18,15 @@ h1 {
   font-family: 'Dancing Script';
 }
 
+@media screen and (max-width: 700px) {
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+
+  }
+}
+
+
 
 
 

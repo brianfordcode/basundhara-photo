@@ -77,7 +77,6 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid blue;
   height: 100%;
 }
 

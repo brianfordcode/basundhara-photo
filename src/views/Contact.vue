@@ -23,10 +23,15 @@ export default {
 
 .main-container {
   width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 700px ) {
+  .main-container {
+    margin-top: 40px;
+  }
 }
 
 .contact-me-title {
@@ -37,7 +42,7 @@ export default {
 }
 
 iframe {
-  height: 1150px;
+  height: 1850px;
   width: 100%;
   border: 0;
   outline: none;

@@ -298,6 +298,7 @@ export default {
   align-items: center;
 }
 
+
 h1 {
   padding: 30px;
   font-size: 50px;
@@ -344,21 +345,7 @@ h1 {
   transition: .2s, fade-in-out;
 }
 
-@media screen and (max-width: 1100px) {
-  .selected-image {
-    height: 60%;
-  }
-}
-@media screen and (max-width: 900px) {
-  .selected-image {
-    height: 40%;
-  }
-}
-@media screen and (max-width: 700px) {
-  .selected-image {
-    height: 40%;
-  }
-}
+
 
 .image-caption {
   display: flex;
@@ -380,5 +367,39 @@ h1 {
   left: 95%;
   top: 5%;
 }
+
+@media screen and (max-width: 1100px) {
+  .selected-image {
+    height: 60%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .selected-image {
+    height: 40%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .selected-image {
+    height: 40%;
+  }
+
+
+  .main-container {
+    margin-top: 50px;
+  }
+  .modal { 
+    left: 0;
+    background-color: black;
+  }
+  .closeBtn { 
+    color: white;
+    top: 20%;
+    left: 85%;
+  }
+}
+
+
+
 
 </style>
