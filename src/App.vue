@@ -1,7 +1,7 @@
 <template>
 
   <div class="main">
-      <navbarmobile />
+      <navbarmobile v-if="currentRouteName !== 'openingScreen'" />
       <navbar v-if="currentRouteName !== 'openingScreen'"/>
       <router-view/>
     </div>
@@ -32,12 +32,6 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-
-.opening-screen {
-  position: absolute;
-  width: 100%;
-  z-index: 20;
-}
 
 .main {
   display: flex;

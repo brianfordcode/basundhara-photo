@@ -2,18 +2,13 @@
 
     <div class="container">
 
-      <div class="content">
-        <h1>About Me</h1>
-        <p class="about-para">I'm Basundhara, a full-time photographer and traveller. 
+      <div class="bio-img">
+        <div class="text">
+        <h1 class="about-me-title">About Me</h1>
+        <p class="about-para">I'm Basundhara, a photographer and traveller. 
           <br>
           <br>
           Driven by the firm belief in Photography, I attempt to capture peoples' emotions in the most real terms. Be it for a professional headshot or capturing a couple on their retirement cruise, I manage to aid in creating fresh perspectives and everlasting moments.
-          <br>
-          <br>
-          Graduating with an Engineering degree, I began my career at a tech startup where I learned the necessary tools for survival in a competitive environment.
-          <br>
-          <br>
-          After a stint in Human Resources, I decided to take the plunge into professional photography in 2017. I found myself in a role that paid for me to travel on cruise ships and capture human emotions at their finest - with champagne and extraordinary vistas changing every moment. The joy of traveling over 40 countries is second only to the opportunity to meet people from twice as many nationalities. I found myself with people willing to share their stories and what traveling has taught them. It helped me mature as a photographer who captured not merely people's faces but the twinkle in their eyes.
           <br>
           <br>
           As a corporate headshot photographer, I create a substantial portfolio for people to use in their professional domain. I challenge myself to meet and exceed client expectations. I bring to the role my vast experience and skill in portrait photography.
@@ -22,19 +17,18 @@
           I love connecting with people, listening to their stories, mutually creating new opportunities and thereby adding value in each other's life.
           <br>
           <br>
-          So, Leaders, Stylists, Podcasters, Coach, Trainers, Actors, Writers, Influencers, Digital marketer, Speakers, Independent Consultants, freelancers, Individual job seekers, SME business owners, Startups, Entrepreneurs, Firms who need a fresh branding, <strong>let's work together!</strong></p>
+          <strong>Let's connect!</strong></p>
       </div>
-      
-      <div class="image-work">
-        <img class="basu-pic" src="../assets/basundhara.png" alt="basundhara">
-        
-        <div class="client-banner">
-          <h2>My Work Has Been Seen In:</h2>
-          <div class="clients">
-           <img class="clients-logos" v-for="clientlogo in clients" :src=clientlogo :key="clientlogo" />
-          </div>
+      <img class="basu-pic" src="../assets/basundhara.png" alt="basundhara">
+      </div>
+
+      <div class="client-banner">
+        <h1 class="my-work-title">My Work Has Been Seen In:</h1>
+        <div class="clients">
+          <img class="logos" v-for="clientlogo in clients" :src=clientlogo :key="clientlogo" />
         </div>
       </div>
+     
     
     </div>
 </template>
@@ -76,8 +70,7 @@
 
 .container {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -89,14 +82,16 @@
   }
 }
 
-.content {
+
+
+.text {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
 }
 
-h1 {
+.about-me-title {
   font-family: 'dancing script', cursive;
   padding-bottom: 20px;
   font-size: 50px;
@@ -107,40 +102,50 @@ h1 {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.image-work {
+.bio-img {
   display: flex;
-  flex-direction: column;
-  padding: 20px;
   align-items: center;
+  padding: 0 20px;
 }
 
 .basu-pic {
   height: 275px;
 }
 
-h2 {
+@media screen and (max-width: 800px ) {
+  .bio-img {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.my-work-title {
   font-family: 'dancing script', cursive;
-  margin-top: 20px;
-  margin-bottom: 5px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .client-banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  /* border: 1px solid green; */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
 }
 
 .clients {
+  position:;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
 }
 
-.clients-logos {
-  width: 0px;
+.logos {
+  width: 75px;
+  height: auto;
   margin: 10px;
-  flex: 70px;
+  /* border: 1px solid pink; */
 }
 
 </style>
