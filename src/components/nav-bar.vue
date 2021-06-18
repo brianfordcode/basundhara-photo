@@ -36,6 +36,7 @@
   justify-content: space-between;
   flex-shrink: 0;
   flex-grow: 0;
+  user-select: none;
 }
 
 @media screen and (max-width: 700px) {

@@ -8,10 +8,7 @@
         <p class="about-para">I'm Basundhara, a photographer and traveller. 
           <br>
           <br>
-          Driven by the firm belief in Photography, I attempt to capture peoples' emotions in the most real terms. Be it for a professional headshot or capturing a couple on their retirement cruise, I manage to aid in creating fresh perspectives and everlasting moments.
-          <br>
-          <br>
-          As a corporate headshot photographer, I create a substantial portfolio for people to use in their professional domain. I challenge myself to meet and exceed client expectations. I bring to the role my vast experience and skill in portrait photography.
+          Driven by the firm belief in Photography, I attempt to capture peoples' emotions in the most real terms. Be it for a professional headshot or capturing a couple on their retirement cruise, I manage to aid in creating fresh perspectives and everlasting moments.                    <br>
           <br>
           <br>
           I love connecting with people, listening to their stories, mutually creating new opportunities and thereby adding value in each other's life.
