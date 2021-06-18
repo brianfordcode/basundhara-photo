@@ -10,7 +10,7 @@
             <router-link class="router-link" to="./About">About Me</router-link> 
             <router-link class="router-link" to="./Contact">Contact Me</router-link> 
             <router-link class="router-link" to="./HeadshotTips">Headshot Tips</router-link>
-
+            <router-link to="./Testimonials">Testimonials</router-link>
             <div class="social-links">
                 <social class="social" social="facebook"></social>
                 <social class="social" social="linkedin"></social>

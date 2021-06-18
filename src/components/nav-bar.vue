@@ -9,6 +9,7 @@
             <router-link to="./About">About Me</router-link> 
             <router-link to="./Contact">Contact Me</router-link> 
             <router-link to="./HeadshotTips">Headshot Tips</router-link>
+            <router-link to="./Testimonials">Testimonials</router-link>
         </div>
 
         <div class="social-links">
