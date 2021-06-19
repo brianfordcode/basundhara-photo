@@ -51,236 +51,79 @@ export default {
       images: [
         {
           caption: "Amit Luthra_BRI_1671",
-          url: "/portraits/Amit Luthra_BRI_1671.jpg",
+          url: "/linkedIn-headshots-small/1-shweta-chauhan-human-resource-specialist.jpg",
         },
         {
           caption: "Amit Luthra_BRI_1711",
-          url: "/portraits/Amit Luthra_BRI_1711.jpg",
+          url: "/linkedIn-headshots-small/2-vandana-reception-manager-zolie-skin-clinic.jpg",
         },
         {
           caption: "Amit Luthra_BRI_1722",
-          url: "/portraits/Amit Luthra_BRI_1722.jpg",
+          url: "/linkedIn-headshots-small/3-ritesh-kumar-legal-counsel.jpg",
         },
         {
           caption: "Brian-2",
-          url: "/portraits/Brian-2.jpeg",
+          url: "/linkedIn-headshots-small/4-roma-priya-founder-burgeon-law.jpg",
         },
         {
           caption: "Brian-3",
-          url: "/portraits/Brian-3.jpeg",
+          url: "/linkedIn-headshots-small/5-priyal-keni-international-rifle-shooter.jpg",
         },
         {
           caption: "Brian-5",
-          url: "/portraits/Brian-5.jpeg",
+          url: "/linkedIn-headshots-small/6-rahul-rajput-pantry-manager-zolie-skin-clinic.jpg",
         },
         {
           caption: "Brian",
-          url: "/portraits/Brian.jpeg",
+          url: "/linkedIn-headshots-small/7-francis-rebello-professor.jpg",
         },
         {
           caption: "Chandita _BAS_3637",
-          url: "/portraits/Chandita _BAS_3637.jpg",
+          url: "/linkedIn-headshots-small/8-brian-ford-director.jpg",
         },
         {
           caption: "Chandita_BAS_3669",
-          url: "/portraits/Chandita_BAS_3669.jpg",
+          url: "/linkedIn-headshots-small/9-shaheen-chishti-author.jpg",
         },
         {
           caption: "Deepak_DSC_4123_website",
-          url: "/portraits/Deepak_DSC_4123_website.jpg",
-
+          url: "/linkedIn-headshots-small/10-savita-kumari-professor.jpg",
         },
         {
           caption: "Francis_BRI_2771-Edit",
-          url: "/portraits/Francis_BRI_2771-Edit.jpg",
+          url: "/linkedIn-headshots-small/11-shivani-khullar-analyst.jpg",
         },
         {
           caption: "Jayshree_BRI_4297",
-          url: "/portraits/Jayshree_BRI_4297.jpg",
+          url: "/linkedIn-headshots-small/12-dr-nirupama-parwanda-dermatologist-zolie-skin-clinic.jpg",
         },
         {
           caption: "Jayshree_BRI_4304_web",
-          url: "/portraits/Jayshree_BRI_4304_web.jpg",
+          url: "/linkedIn-headshots-small/13-raina-gupta-model.jpg",
         },
         {
           caption: "Kakoli_thumbnail",
-          url: "/portraits/Kakoli_thumbnail.jpg",
+          url: "/linkedIn-headshots-small/14-jayshree-dugar-legal-associate.jpg",
         },
         {
           caption: "Kakoli_BRI_1479",
-          url: "/portraits/Kakoli_BRI_1479.jpg",
+          url: "/linkedIn-headshots-small/15-Ship-portrait.jpg",
         },
         {
           caption: "Kakoli_BRI_1810",
-          url: "/portraits/Kakoli_BRI_1810.jpg",
+          url: "/linkedIn-headshots-small/16-ria-dixit-personal-stylist.jpg",
         },
         {
           caption: "Kakoli_BRI_2190-Edit",
-          url: "/portraits/Kakoli_BRI_2190-Edit.jpg",
+          url: "/linkedIn-headshots-small/17-sapna-skin-therapist-zolie-skin-clinic.jpg",
         },
         {
           caption: "Priyal_BRI_2887",
-          url: "/portraits/Priyal_BRI_2887.jpg",
+          url: "/linkedIn-headshots-small/18-Shrut-artist.jpg",
         },
         {
           caption: "Priyal_BRI_2902",
-          url: "/portraits/Priyal_BRI_2902.jpg",
-        },
-        {
-          caption: "Priyal_BRI_2923",
-          url: "/portraits/Priyal_BRI_2923.jpg",
-        },
-        {
-          caption: "Priyal_BRI_2993",
-          url: "/portraits/Priyal_BRI_2993.jpg",
-        },
-        {
-          caption: "Ria_BRI_4254-Web",
-          url:"/portraits/Ria_BRI_4254-Web.jpg",
-        },
-        {
-          caption: "Ria_BRI_4012-Web",
-          url: "/portraits/Ria_BRI_4012-Web.jpg",
-        },
-        {
-          caption: "Ria_BRI_4076-Web",
-          url:"/portraits/Ria_BRI_4076-Web.jpg",
-        },
-        {
-          caption: "Ria_BRI_4214-Web",
-          url:"/portraits/Ria_BRI_4214-Web.jpg",
-        },
-        {
-          caption: "Ria_BRI_4239-Web",
-          url: "/portraits/Ria_BRI_4239-Web.jpg",
-        },
-        {
-          caption: "Ria_BRI_4250-Web",
-          url:"/portraits/Ria_BRI_4250-Web.jpg",
-        },
-        {
-          caption: "Ritesh_BRI_3778-Social Media",
-          url:"/portraits/Ritesh_BRI_3778-Social Media.jpg",
-        },
-        {
-          caption: "Roma_2",
-          url: "/portraits/Roma_2.jpeg",
-        },
-        {
-          caption: "Roma_6",
-          url: "/portraits/Roma_6.jpeg",
-        },
-        {
-          caption: "ROMA_BRI_3351",
-          url: "/portraits/ROMA_BRI_3351.jpg",
-        },
-        {
-          caption: "ROMA_BRI_3370",
-          url: "/portraits/ROMA_BRI_3370.jpg",
-        },
-        {
-          caption: "ROMA_BRI_3351",
-          url: "/portraits/ROMA_BRI_3351.jpg",
-        },
-        {
-          caption: "ROMA_BRI_9769_Large-Size",
-          url: "/portraits/ROMA_BRI_9769_Large-Size.jpg",
-        },
-        {
-          caption: "ROMA_thumbnail",
-          url: "/portraits/ROMA_thumbnail.jpg",
-        },
-        {
-          caption: "Roma",
-          url: "/portraits/Roma.jpeg",
-        },
-        {
-          caption: "Rutuja",
-          url: "/portraits/Rutuja.jpg",
-        },
-        {
-          caption: "Savita_BRI_3863",
-          url: "/portraits/Savita_BRI_3863 .jpg",
-        },
-        {
-          caption: "Savita_BRI_3761-Social Media",
-          url: "/portraits/Savita_BRI_3761-Social Media.jpg",
-        },
-        {
-          caption: "Savita_BRI_3863  copy",
-          url: "/portraits/Savita_BRI_3863  copy.jpg",
-        },
-        {
-          caption: "Shaheen_BRI_4345_for Social Media",
-          url: "/portraits/Shaheen_BRI_4345_for Social Media.jpg",
-        },
-        {
-          caption: "Shaheen_BRI_4519_for Social Media",
-          url: "/portraits/Shaheen_BRI_4519_for Social Media.jpg",
-        },
-        {
-          caption: "Shaheen_BRI_4557_for Social Media",
-          url: "/portraits/Shaheen_BRI_4557_for Social Media.jpg",
-        },
-        {
-          caption: "ShaheenBRI_4399_for Social Media",
-          url:"/portraits/ShaheenBRI_4399_for Social Media.jpg",
-        },
-        {
-          caption: "ShaheenBRI_4451_for Social Media",
-          url:"/portraits/ShaheenBRI_4451_for Social Media.jpg",
-        },
-        {
-          caption: "Ship portrait 1",
-          url:"/portraits/Ship portrait 1.jpeg",
-        },
-        {
-          caption: "Shivani_BRI_3516",
-          url:"/portraits/Shivani_BRI_3516.jpg",
-        },
-        {
-          caption: "Shruti 2",
-          url:"/portraits/Shruti 2.jpeg",
-        },
-        {
-          caption: "Shweta_2",
-          url: "/portraits/Shweta_2.jpeg",
-        },
-        {
-          caption: "Shweta_BAS_3647_BlackBG",
-          url: "/portraits/Shweta_BAS_3647_BlackBG.jpg",
-        },
-        {
-          caption: "Shweta_BAS_3647_BlackBG",
-          url: "/portraits/Shweta_BAS_3647_BlackBG.jpg",
-        },
-        {
-          caption: "Vijay_BRI_1774",
-          url: "/portraits/Vijay_BRI_1774.jpg",
-        },
-        {
-          caption: "Zolie_BRI_8446",
-          url: "/portraits/Zolie_BRI_8446.jpg",
-        },
-        {
-          caption: "Zolie_BRI_8466",
-          url: "/portraits/Zolie_BRI_8466.jpg",
-        },
-        {
-          caption: "Zolie_BRI_8525",
-          url: "/portraits/Zolie_BRI_8525.jpg",
-        },
-        {
-          caption: "Zolie_BRI_8548",
-          url: "/portraits/Zolie_BRI_8548.jpg",
-        },
-        {
-          caption: "Zolie_Nirupama 1",
-          url: "/portraits/Zolie_Nirupama 1.jpeg",
-        },
-        {
-          caption: "Zolio_BRI_8437.",
-          url: "/portraits/Zolio_BRI_8437.jpg",
+          url: "/linkedIn-headshots-small/19-Vijay-jayswal-cloud-consultant.jpg",
         },
       ]
     }
@@ -318,6 +161,7 @@ h1 {
   margin: 5px;
   transition: .2s, fade-in-out;
   cursor: zoom-in;
+  user-select: none;
 }
 
 .images:hover {
@@ -341,6 +185,7 @@ h1 {
 }
 
 .selected-image {
+  user-select: none;
   height: 80%;
   transition: .2s, fade-in-out;
 }

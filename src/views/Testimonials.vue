@@ -89,6 +89,7 @@ export default {
 }
 
 .testimonials-container {
+    column-count: 3;
     /* border: 1px solid blue; */
     display: flex;
     width: 100%;
