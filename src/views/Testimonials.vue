@@ -1,17 +1,22 @@
 <template>
 <div class="main-container">
    <h1 class="title">Testimonials</h1>
-   <h2>test</h2>
-    <!-- <div class="testimonials-container">
-        <div v-for="testimonial in testimonials" class="testimonial" :key="testimonial">
-            <q>{{ testimonial.quote }}</q>
+
+
+    <div class="testimonials-container">
+        <div
+            v-for="testimonial in testimonials"    class="testimonial"
+            :key="testimonial"
+        >
+            <q class="quote">{{ testimonial.quote }}</q>
             <div class="image-name">
                 <img :src="testimonial.picture" alt="testimonial-pic">
                 <p class="name">{{ testimonial.name }}</p>
                 <p class="occupation">{{ testimonial.occupation }}</p>
             </div>
         </div> 
-    </div>  -->
+    </div>
+        
 </div>
 
   
@@ -36,6 +41,12 @@ export default {
                     picture: "https://picsum.photos/200/200"
                 },
                 {
+                    quote: "Basundhara was instrumental during the launch of Vpop. The inaugural product line was shot by her and as I was just starting out myself, she was patient, organised and prepared everytime she came for the shoot to put me at ease. She was open to discussions, brainstorming photo angles etc and didn't worry about the time invested as her focus was only a great outcome. Her level of professionalism and attention to detail gave me the confidence in the quality of the end result. She went above and beyond to make the final pics just perfect and the ones that were not, she came back to a repeat shoot!!! I would highly recommend her!",
+                    name: "Varuna Chand",
+                    occupation: "Founder and CEO at VPOP",
+                    picture: "https://picsum.photos/200/200"
+                },
+                {
                     quote: "Basundhara is an exceptionally skilled photographer. I've had the pleasure of engaging her for both our family and professional shoots and she always captures some really genuine moments. She is a perfectionist and is extremely meticulous in her work, which reflects in every photo she clicks! I would highly recommend her services to anyone.",
                     name: "Ritesh Kumar",
                     occupation: "Partner at KRN Law Offices LLP",
@@ -48,11 +59,12 @@ export default {
                     picture: "https://picsum.photos/200/200"
                 },
                 {
-                    quote: "Basundhara was instrumental during the launch of Vpop. The inaugural product line was shot by her and as I was just starting out myself, she was patient, organised and prepared everytime she came for the shoot to put me at ease. She was open to discussions, brainstorming photo angles etc and didn't worry about the time invested as her focus was only a great outcome. Her level of professionalism and attention to detail gave me the confidence in the quality of the end result. She went above and beyond to make the final pics just perfect and the ones that were not, she came back to a repeat shoot!!! I would highly recommend her!",
-                    name: "Varuna Chand",
-                    occupation: "Founder and CEO at VPOP",
+                    quote: "Basundhara did some branding pictures for me. I love how detail oriented she is; exactly the kind of people I absolutely enjoy working with 😍💖",
+                    name: "Ria Dixit",
+                    occupation: "Personal Stylist",
                     picture: "https://picsum.photos/200/200"
-                }
+                },
+
             ]
         }
     }
@@ -63,43 +75,43 @@ export default {
 <style scoped>
 
 .main-container {
-    border: 1px solid pink;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100vh;
     width: 100vw;
+    user-select: none;
 }
 .title {
     font-family: 'dancing script', cursive;
-    margin: 20px;
+    margin-top: 20px;
     font-size: 50px;
     text-align: center;
 }
 
 .testimonials-container {
-    position: relative;
+    /* border: 1px solid blue; */
     display: flex;
-    align-items: flex-start;
-    overflow: scroll;
-    height: 500px;
-    width: 100vw;
-    border: 1px solid blue;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* transform: translateX(200px); */
 }
 
 .testimonial {
+    
     cursor: pointer;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: white;
-    margin: 50px 0 50px 15px;
     box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
     border-radius: 20px;
-    padding: 20px;
-    width: 250px;
-    min-width: 300px;
+    width: 300px;
     height: 100%;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 20px;
+    margin: 30px 20px;
     transition: .2s, fade-in-out;
     text-align: center;
-    line-height: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -110,9 +122,9 @@ export default {
     z-index: 5
 }
 
-.image-name {
-    text-align: center;
-    padding: 20px 20px 0 20px;
+.quote {
+    line-height: 25px;
+    text-align: justify;
 }
 
 .name {
@@ -123,12 +135,12 @@ export default {
 
 .occupation {
     font-size: 15px;
-    
 }
 
 img {
     height: 120px;
-    border-radius: 50px;
+    border-radius: 500px;
+    margin: 20px 20px 0 20px;
 }
 
 
