@@ -7,9 +7,9 @@
         <div class="links">
             <router-link to="./Portfolio">Portfolio</router-link> 
             <router-link to="./About">About Me</router-link> 
-            <router-link to="./Contact">Contact Me</router-link> 
             <router-link to="./HeadshotTips">Headshot Tips</router-link>
             <router-link to="./Testimonials">Testimonials</router-link>
+            <router-link to="./Contact">Contact</router-link> 
         </div>
 
         <div class="social-links">

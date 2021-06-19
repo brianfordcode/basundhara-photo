@@ -190,8 +190,6 @@ h1 {
   transition: .2s, fade-in-out;
 }
 
-
-
 .image-caption {
   display: flex;
   flex-direction: column;
