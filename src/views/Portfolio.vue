@@ -2,7 +2,7 @@
 
   <!-- GALLERY -->
   <div class="main-container">
-    <h1>My Work</h1>
+    <h1>Portfolio</h1>
     <div class="images-container">
       <img class="images"
       v-for="image in images"

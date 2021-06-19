@@ -22,9 +22,9 @@ const routes = [
     component: () => import( '../views/HeadshotTips.vue')
   },
   {
-    path: '/MyWork',
-    name: 'MyWork',
-    component: () => import( '../views/MyWork.vue')
+    path: '/Portfolio',
+    name: 'Portfolio',
+    component: () => import( '../views/Portfolio.vue')
   },
   {
     path: '/Testimonials',

@@ -5,7 +5,7 @@
         <img src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
 
         <div class="links">
-            <router-link to="./MyWork">My Work</router-link> 
+            <router-link to="./Portfolio">Portfolio</router-link> 
             <router-link to="./About">About Me</router-link> 
             <router-link to="./Contact">Contact Me</router-link> 
             <router-link to="./HeadshotTips">Headshot Tips</router-link>

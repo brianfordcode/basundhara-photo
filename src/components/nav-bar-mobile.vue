@@ -6,7 +6,7 @@
         </div>
 
         <div v-if="isOpen" @click="closeMenu" class="links-container">
-            <router-link class="router-link" to="./MyWork">My Work</router-link> 
+            <router-link class="router-link" to="./Portfolio">Portfolio</router-link> 
             <router-link class="router-link" to="./About">About Me</router-link> 
             <router-link class="router-link" to="./Contact">Contact Me</router-link> 
             <router-link class="router-link" to="./HeadshotTips">Headshot Tips</router-link>

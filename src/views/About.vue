@@ -8,7 +8,7 @@
         <p class="about-para">I'm Basundhara, a photographer and traveller. 
           <br>
           <br>
-          Driven by the firm belief in Photography, I attempt to capture peoples' emotions in the most real terms. Be it for a professional headshot or capturing a couple on their retirement cruise, I manage to aid in creating fresh perspectives and everlasting moments.                    <br>
+          Driven by the firm belief in Photography, I attempt to capture peoples' emotions in the most real terms. Be it for a professional headshot or capturing a couple on their retirement cruise, I manage to aid in creating fresh perspectives and everlasting moments.
           <br>
           <br>
           I love connecting with people, listening to their stories, mutually creating new opportunities and thereby adding value in each other's life.
@@ -80,8 +80,6 @@
   }
 }
 
-
-
 .text {
   display: flex;
   flex-direction: column;
@@ -125,14 +123,13 @@
 
 .client-banner {
   /* border: 1px solid green; */
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
   position: relative;
 }
 
 .clients {
-  position:;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
