@@ -9,7 +9,7 @@
             <router-link class="router-link" to="./Portfolio">Portfolio</router-link> 
             <router-link class="router-link" to="./About">About Me</router-link>
             <router-link class="router-link" to="./HeadshotTips">Headshot Tips</router-link>
-            <router-link to="./Testimonials">Testimonials</router-link>
+            <router-link class="router-link" to="./Testimonials">Testimonials</router-link>
             <router-link class="router-link" to="./Contact">Contact</router-link> 
             <div class="social-links">
                 <social class="social" social="facebook"></social>
@@ -53,12 +53,14 @@ export default {
     box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
     z-index: 1000;
     position: fixed;
+    background-color: white;
 }
 
 .content {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 1000;
 }
 
 .basu-logo {
@@ -76,6 +78,7 @@ export default {
 }
 
 .links-container {
+    z-index: 999;
     position: absolute;
     right: 0;
     width: 200px;
@@ -84,6 +87,7 @@ export default {
     align-items: center;
     background-color: white;
     user-select: none;
+    box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.15);
 }
 
 .links-container > *:hover {
