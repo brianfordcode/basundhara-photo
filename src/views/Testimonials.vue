@@ -10,7 +10,7 @@
         >
             <q class="quote">{{ testimonial.quote }}</q>
             <div class="image-name">
-                <img :src="testimonial.picture" :alt="testimonial.name">
+                <img v-if="testimonial.picture" :src="testimonial.picture" :alt="testimonial.name">
                 <p class="name">{{ testimonial.name }}</p>
                 <p class="occupation">{{ testimonial.occupation }}</p>
             </div>
@@ -80,6 +80,7 @@ export default {
     height: 100vh;
     width: 100vw;
     user-select: none;
+    position: relative;
 }
 .title {
     font-family: 'dancing script', cursive;
@@ -89,13 +90,11 @@ export default {
 }
 
 .testimonials-container {
-    column-count: 3;
     /* border: 1px solid blue; */
     display: flex;
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
-    /* transform: translateX(200px); */
 }
 
 .testimonial {

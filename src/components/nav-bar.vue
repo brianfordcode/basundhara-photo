@@ -2,7 +2,10 @@
 
     <div class="nav">
       <div class="content">
-        <img src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
+        
+          <img @click="goHome" src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
+    
+        
 
         <div class="links">
             <router-link to="./Portfolio">Portfolio</router-link> 
@@ -33,7 +36,7 @@
   box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  /* border: 1px solid blue; */
   justify-content: space-between;
   flex-shrink: 0;
   flex-grow: 0;
@@ -52,7 +55,7 @@
  flex-direction: column;
  align-items: center;
  justify-content: space-around;
- /* border: 1px solid blue; */
+ /* border: 4px solid green; */
  position: sticky;
   top: 0;
   left: 0;
@@ -60,12 +63,12 @@
  width: 210px;
 }
 
-
 /* LOGO */
 .basu-logo {
   height: auto;
   width: 80%;
-  padding: 30px 0;
+  cursor: pointer;
+  margin: 30px 0;
   /* border: 1px solid pink; */
 }
 
@@ -109,9 +112,16 @@
 
 <script>
 import social from "../components/social-links.vue"
+import openingScreen from "../views/opening-screen.vue"
 
 export default {
-    components: { social }
+    components: { social, openingScreen },
+
+    methods: {
+      goHome() {
+        return this.$router.push('./');
+      }
+    }
 }
 
 </script>
