@@ -76,7 +76,7 @@ export default {
 
 .main-container {
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     height: 100vh;
     width: 100vw;
     user-select: none;
@@ -90,7 +90,7 @@ export default {
 }
 
 .testimonials-container {
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     display: flex;
     width: 100%;
     overflow-x: scroll;
@@ -98,7 +98,7 @@ export default {
 }
 
 .testimonial {
-    cursor: pointer;
+    cursor: grab;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: white;
     box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);

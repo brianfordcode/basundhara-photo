@@ -71,6 +71,7 @@ export default {
     height: 35px;
     margin: 5px 0;
     cursor: pointer;
+    user-select: none;
 }
 
 .social-links {

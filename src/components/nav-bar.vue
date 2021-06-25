@@ -69,6 +69,7 @@
   width: 80%;
   cursor: pointer;
   margin: 30px 0;
+  
   /* border: 1px solid pink; */
 }
 

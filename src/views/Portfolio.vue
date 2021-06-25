@@ -190,6 +190,7 @@ h1 {
   transition: .2s, fade-in-out;
 }
 
+
 .image-caption {
   display: flex;
   flex-direction: column;
@@ -213,18 +214,18 @@ h1 {
 
 @media screen and (max-width: 1100px) {
   .selected-image {
-    height: 60%;
+    height: 80%;
   }
 }
 @media screen and (max-width: 900px) {
   .selected-image {
-    height: 40%;
+    height: 60%;
   }
 }
 
 @media screen and (max-width: 700px) {
   .selected-image {
-    height: 40%;
+    height: 60%;
   }
 
 
@@ -237,7 +238,7 @@ h1 {
   }
   .closeBtn { 
     color: white;
-    top: 20%;
+    top: 10%;
     left: 85%;
   }
 }
