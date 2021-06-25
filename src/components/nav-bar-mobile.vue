@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
         <div class="content">
-            <img src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
+            <img @click="goHome" src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
             <hamb-menu @click="isOpen = !isOpen" :active="isOpen" />
         </div>
 
@@ -34,7 +34,11 @@ export default {
         closeMenu(e) {
             console.log(e.target);
             this.isOpen = false
-        }
+        },
+        
+        goHome() {
+            return this.$router.push('./');
+      }
     }
 }
 </script>
@@ -66,6 +70,7 @@ export default {
 .basu-logo {
     height: 35px;
     margin: 5px 0;
+    cursor: pointer;
 }
 
 .social-links {
