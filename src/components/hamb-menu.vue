@@ -15,12 +15,6 @@ export default {
             type: Boolean,
             required: true
         }
-    },
-    methods: {
-        openshit(event) {
-            console.log('shit')
-            this.$emit('click', event)
-        }
     }
 }
 </script>

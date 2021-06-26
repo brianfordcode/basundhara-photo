@@ -3,9 +3,19 @@
   <!-- GALLERY -->
   <div class="main-container">
     <h1>Portfolio</h1>
-    <div class="images-container">
+    
+    <div id="portraits" class="images-container">
       <img class="images"
-      v-for="image in images"
+      v-for="image in portraits"
+      @click="expandPic(image)"
+      :src="image.url"
+      :key="image"
+      >
+    </div>
+    
+    <div id="linkedin-headshots" class="images-container">
+      <img class="images"
+      v-for="image in linkedinHeadshots"
       @click="expandPic(image)"
       :src="image.url"
       :key="image"
@@ -48,7 +58,7 @@ export default {
     return {
       modalOpen: false,
       selectedImage: null,
-      images: [
+      linkedinHeadshots: [
         {
           caption: "Amit Luthra_BRI_1671",
           url: "/linkedIn-headshots-small/1-shweta-chauhan-human-resource-specialist.jpg",
@@ -125,6 +135,104 @@ export default {
           caption: "Priyal_BRI_2902",
           url: "/linkedIn-headshots-small/19-Vijay-jayswal-cloud-consultant.jpg",
         },
+      ],
+      portraits: [
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/1-raina-gupta-model-1.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/2-brian-ford-director-1.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/3-ria-dixit-personal-stylist.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/4-dr-nirupama-parwanda-dermatologist-zolie-skin-clinic.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/5-chandita-barman-legal-advisor.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/6-amit-luthra-photographer-artist-1.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/7-jayshree-dugar-legal-associate.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/8-shaheen-chishti-founder-1.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/9-brian-ford-director.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/9-ria-dixit-personal-stylist-1.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/10-priyal-keni-international-rifle-shooter-3.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/11-roma-priya-founder-burgeon-law-2.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/12-raina-gupta-model.-2.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/13-amit-luthra-photographer-artist-2.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/14-ria-dixit-personal-stylist-2.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/15-priyal-keni-international-rifle-shooter-1.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/16-raina-gupta-model-3.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/17-deepak-menon-partner-JP-kapur-&-uberai-chartered-accountants.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/18-priyal-keni-international-rifle-shooter-2.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/19-brian-ford-film-maker-2.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/20-roma-priya-founder-burgeon-law-1.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/21-Savita_BRI_3761-Social Media.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/22-shaheen-chishti-founder-2.jpg",
+        },
+        {
+          caption: "1-raina-gupta-model-1",
+          url: "/portraits/23-ria-dixit-personal-stylist-3.jpg",
+        },
       ]
     }
   }
@@ -132,6 +240,16 @@ export default {
 </script>
 
 <style scoped>
+
+#linkedin-headshots {
+  /* display: none; */
+}
+
+#portraits {
+  /* display: none; */
+}
+
+
 
 .main-container {
   width: 100%;

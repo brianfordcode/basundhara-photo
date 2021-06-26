@@ -5,8 +5,6 @@
         
           <img @click="goHome" src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
     
-        
-
         <div class="links">
             <router-link to="./Portfolio">Portfolio</router-link> 
             <router-link to="./About">About Me</router-link> 
@@ -61,6 +59,7 @@
   left: 0;
  height: 100vh;
  width: 210px;
+ /* overflow: hidden; */
 }
 
 /* LOGO */

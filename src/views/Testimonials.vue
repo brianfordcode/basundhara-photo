@@ -3,7 +3,7 @@
    <h1 class="title">Testimonials</h1>
 
 
-    <div class="testimonials-container">
+    <div @mousedown="mouseDown" @mouseup="mouseUp" class="testimonials-container">
         <div
             v-for="testimonial in testimonials" class="testimonial"
             :key="testimonial"
@@ -23,10 +23,15 @@
 </template>
 
 <script>
+
 export default {
 
+    
+    
     data() {
         return {
+            startingX: 0,
+            endingX: 0,
             testimonials: [
                 {
                     quote: "Basundhara is an amazing photographer and produces world class results. Her unique way of getting to know a client before the photoshoot and then not compromising on the day of the shoot is very comforting and also results in amazing quality. Basundhara is destined for greater things in life. Pride of India",
@@ -67,7 +72,26 @@ export default {
 
             ]
         }
-    }
+    },
+
+
+
+    methods: {
+        mouseDown(e) {
+            this.startingX = e.clientX
+            console.log('mouse down:', this.startingX)
+        },
+        mouseUp(e) {
+            this.endingX = e.clientX
+            console.log('mouse up:', this.endingX)
+            console.log('amount moved:', this.endingX - this.startingX)
+
+            document.querySelector('.testimonials-container').style.transform="translateX(-500px)"
+
+        }
+    },
+
+    
 
 }
 </script>
@@ -75,13 +99,14 @@ export default {
 <style scoped>
 
 .main-container {
+    /* border: 1px solid pink; */
     overflow-x: hidden;
-    /* overflow-y: hidden; */
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     user-select: none;
     position: relative;
 }
+
 .title {
     font-family: 'dancing script', cursive;
     margin-top: 20px;
@@ -90,15 +115,17 @@ export default {
 }
 
 .testimonials-container {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     width: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    /* overflow-x: scroll; */
+    /* overflow-y: hidden; */
+    cursor: grab;
+    /* transform: translateX(-1000px); */
+    position: relative;
 }
 
 .testimonial {
-    cursor: grab;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: white;
     box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
