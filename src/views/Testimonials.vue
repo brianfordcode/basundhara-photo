@@ -10,6 +10,7 @@
       class="testimonials-container"
       :style="{
           transform: `translateX(${amountMoved}px)`,
+          left: `${newPosition}px`
       }"
     >
         <div
@@ -40,7 +41,6 @@ export default {
             endingX: 0,
             amountMoved: 0,
             newPosition: 0,
-            endingPosition: 0,
             dragging: false,
             testimonials: [
                 {
@@ -87,25 +87,26 @@ export default {
     methods: {
 
         startDrag(e) {
+            
+            e.preventDefault()
             this.dragging = true
             this.startingX = e.clientX
-            console.log('starting: ' + this.startingX)
+            console.log("startingX: " + this.startingX)
         },
 
         mouseMove(e) {
+            e.preventDefault()
             this.endingX = e.clientX
 
             if (this.dragging) {
                 this.amountMoved = this.endingX - this.startingX
             }
-            
         },
 
         endDrag() {
-            this.endingPosition = this.amountMoved
             this.dragging = false;
-            
-            console.log(this.endingPosition)
+            this.newPosition = this.amountMoved + this.newPosition
+            this.amountMoved = 0
         }
 
     }
@@ -132,12 +133,11 @@ export default {
 }
 
 .testimonials-container {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     width: 100%;
     /* overflow-x: scroll; */
     /* overflow-y: hidden; */
-    
     position: relative;
 }
 
@@ -189,3 +189,4 @@ img {
 
 
 </style>
+
