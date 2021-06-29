@@ -3,7 +3,15 @@
    <h1 class="title">Testimonials</h1>
 
 
-    <div @mousedown="mouseDown" @mouseup="mouseUp" class="testimonials-container">
+    <div
+      @mousedown="startDrag"
+      @mousemove="mouseMove"
+      @mouseup="endDrag"
+      class="testimonials-container"
+      :style="{
+          transform: `translateX(${amountMoved}px)`,
+      }"
+    >
         <div
             v-for="testimonial in testimonials" class="testimonial"
             :key="testimonial"
@@ -26,12 +34,14 @@
 
 export default {
 
-    
-    
     data() {
         return {
             startingX: 0,
             endingX: 0,
+            amountMoved: 0,
+            newPosition: 0,
+            endingPosition: 0,
+            dragging: false,
             testimonials: [
                 {
                     quote: "Basundhara is an amazing photographer and produces world class results. Her unique way of getting to know a client before the photoshoot and then not compromising on the day of the shoot is very comforting and also results in amazing quality. Basundhara is destined for greater things in life. Pride of India",
@@ -74,26 +84,33 @@ export default {
         }
     },
 
-
-
     methods: {
-        mouseDown(e) {
+
+        startDrag(e) {
+            this.dragging = true
             this.startingX = e.clientX
-            console.log('mouse down:', this.startingX)
+            console.log('starting: ' + this.startingX)
         },
-        mouseUp(e) {
+
+        mouseMove(e) {
             this.endingX = e.clientX
-            console.log('mouse up:', this.endingX)
-            console.log('amount moved:', this.endingX - this.startingX)
 
-            document.querySelector('.testimonials-container').style.transform="translateX(-500px)"
+            if (this.dragging) {
+                this.amountMoved = this.endingX - this.startingX
+            }
+            
+        },
 
+        endDrag() {
+            this.endingPosition = this.amountMoved
+            this.dragging = false;
+            
+            console.log(this.endingPosition)
         }
-    },
 
-    
-
+    }
 }
+
 </script>
 
 <style scoped>
@@ -115,17 +132,17 @@ export default {
 }
 
 .testimonials-container {
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     display: flex;
     width: 100%;
     /* overflow-x: scroll; */
     /* overflow-y: hidden; */
-    cursor: grab;
-    /* transform: translateX(-1000px); */
+    
     position: relative;
 }
 
 .testimonial {
+    cursor: grab;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: white;
     box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
