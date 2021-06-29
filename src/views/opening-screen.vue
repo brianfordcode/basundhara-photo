@@ -8,7 +8,7 @@
         <div class="title">
           <img src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
           <h3>LinkedIn and Corporate Headshots | Branding and Editorial Portraits</h3>
-          <button class="button" @click="$router.push({ name: 'Portfolio' })">View My Gallery</button>
+          <button class="button" @click="$router.push({ name: 'Portfolio' })">View Gallery</button>
         <!-- <router-link class="button" to="/App.vue"><p>Enter</p></router-link> -->
         </div>
 

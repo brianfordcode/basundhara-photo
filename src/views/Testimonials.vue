@@ -1,16 +1,20 @@
 <template>
-<div class="main-container">
+  <div
+    ref="mainContainer"
+    class="main-container"
+    @mousedown="startDrag"
+    @mousemove="mouseMove"
+  >
    <h1 class="title">Testimonials</h1>
 
-
     <div
-      @mousedown="startDrag"
-      @mousemove="mouseMove"
-      @mouseup="endDrag"
-      class="testimonials-container"
+      ref="testimonialContainer"
+      :class="{
+          'testimonials-container': true,
+          'not-dragging': !dragging
+      }"
       :style="{
-          transform: `translateX(${amountMoved}px)`,
-          left: `${newPosition}px`
+          transform: `translateX(${ position }px)`
       }"
     >
         <div
@@ -19,7 +23,7 @@
         >
             <q class="quote">{{ testimonial.quote }}</q>
             <div class="image-name">
-                <img v-if="testimonial.picture" :src="testimonial.picture" :alt="testimonial.name">
+                <img draggable="false" v-if="testimonial.picture" :src="testimonial.picture" :alt="testimonial.name">
                 <p class="name">{{ testimonial.name }}</p>
                 <p class="occupation">{{ testimonial.occupation }}</p>
             </div>
@@ -34,14 +38,18 @@
 <script>
 
 export default {
-
+    mounted() {
+        window.addEventListener('mouseup', this.endDrag)
+    },
+    unmounted() {
+        window.removeEventListener('mouseup', this.endDrag)
+    },
     data() {
         return {
+            dragging: false,
             startingX: 0,
             endingX: 0,
-            amountMoved: 0,
-            newPosition: 0,
-            dragging: false,
+            position: 0,
             testimonials: [
                 {
                     quote: "Basundhara is an amazing photographer and produces world class results. Her unique way of getting to know a client before the photoshoot and then not compromising on the day of the shoot is very comforting and also results in amazing quality. Basundhara is destined for greater things in life. Pride of India",
@@ -87,28 +95,30 @@ export default {
     methods: {
 
         startDrag(e) {
-            
-            e.preventDefault()
             this.dragging = true
-            this.startingX = e.clientX
-            console.log("startingX: " + this.startingX)
+            this.lastX = e.clientX
         },
 
         mouseMove(e) {
-            e.preventDefault()
-            this.endingX = e.clientX
+            const changeInX = e.clientX - this.lastX
 
             if (this.dragging) {
-                this.amountMoved = this.endingX - this.startingX
+                this.position += changeInX
+                this.lastX = e.clientX
             }
         },
 
         endDrag() {
-            this.dragging = false;
-            this.newPosition = this.amountMoved + this.newPosition
-            this.amountMoved = 0
-        }
+            this.dragging = false
 
+            if (this.position > 0) this.position = 0
+            else {
+                const tWidth = this.$refs.testimonialContainer.offsetWidth
+                const mWidth = this.$refs.mainContainer.offsetWidth
+                // clamp new position so that there is no whitespace to the right
+                this.position = Math.max(mWidth - tWidth, this.position)
+            }
+        }
     }
 }
 
@@ -120,9 +130,17 @@ export default {
     /* border: 1px solid pink; */
     overflow-x: hidden;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     user-select: none;
     position: relative;
+    cursor: grab;
+}
+
+@media screen and (max-width: 700px) {
+    .main-container {
+        margin-top: 50px;
+    }
+    
 }
 
 .title {
@@ -135,14 +153,14 @@ export default {
 .testimonials-container {
     /* border: 1px solid blue; */
     display: flex;
-    width: 100%;
+    width: min-content;
     /* overflow-x: scroll; */
     /* overflow-y: hidden; */
     position: relative;
+    cursor: grab;
 }
 
 .testimonial {
-    cursor: grab;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: white;
     box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
@@ -158,6 +176,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    user-select: none;
 }
 
 .testimonial:hover {
@@ -176,11 +195,17 @@ export default {
     font-family: 'dancing script', cursive;
 }
 
+.not-dragging
+{
+    transition: 1s transform ease-out;
+}
+
 .occupation {
     font-size: 15px;
 }
 
 img {
+    user-select: none;
     height: 120px;
     border-radius: 500px;
     margin: 20px 20px 0 20px;
