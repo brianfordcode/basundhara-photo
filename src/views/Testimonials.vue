@@ -1,36 +1,40 @@
 <template>
-  <div
-    ref="mainContainer"
-    class="main-container"
-    @mousedown="startDrag"
-    @mousemove="mouseMove"
-  >
-   <h1 class="title">Testimonials</h1>
-
+    
+    
     <div
-      ref="testimonialContainer"
-      :class="{
-          'testimonials-container': true,
-          'not-dragging': !dragging
-      }"
-      :style="{
-          transform: `translateX(${ position }px)`
-      }"
+        ref="mainContainer"
+        class="main-container"
+        @mousedown="startDrag"
+        @mousemove="mouseMove"
     >
-        <div
-            v-for="testimonial in testimonials" class="testimonial"
-            :key="testimonial"
-        >
-            <q class="quote">{{ testimonial.quote }}</q>
-            <div class="image-name">
-                <img draggable="false" v-if="testimonial.picture" :src="testimonial.picture" :alt="testimonial.name">
-                <p class="name">{{ testimonial.name }}</p>
-                <p class="occupation">{{ testimonial.occupation }}</p>
-            </div>
-        </div> 
-    </div>
+    
+        <h1 class="title">Testimonials</h1>
         
-</div>
+        <div
+        ref="testimonialContainer"
+        :class="{
+            'testimonials-container': true,
+            'not-dragging': !dragging
+        }"
+        :style="{
+            transform: `translateX(${ position }px)`
+        }"
+        >
+            <div
+                v-for="testimonial in testimonials" class="testimonial"
+                :key="testimonial"
+            >
+                <q class="quote">{{ testimonial.quote }}</q>
+                <div class="image-name">
+                    <img draggable="false" v-if="testimonial.picture" :src="testimonial.picture" :alt="testimonial.name">
+                    <p class="name">{{ testimonial.name }}</p>
+                    <p class="occupation">{{ testimonial.occupation }}</p>
+                </div>
+            </div> 
+        </div>
+            
+    </div>
+
 
   
 </template>
@@ -136,12 +140,18 @@ export default {
     cursor: grab;
 }
 
+@media (hover:none){
+    .main-container {
+        overflow-x: scroll;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .main-container {
         margin-top: 50px;
     }
-    
 }
+
 
 .title {
     font-family: 'dancing script', cursive;
@@ -197,7 +207,7 @@ export default {
 
 .not-dragging
 {
-    transition: 1s transform ease-out;
+    transition: 0.20s transform ease-out;
 }
 
 .occupation {
