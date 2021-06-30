@@ -3,36 +3,42 @@
 
 
 <div class="entire-page">
-<h1 class="title">Portfolio</h1>
+
+  <h1 class="title">Portfolio</h1>
 
 
-<!-- PORTRAITS -->
-<h1 class="category-title">Portraits</h1>
-  <div class="main-container">
-      <div id="portraits" class="images-container">
-          <img class="images"
-          v-for="image in portraits"
-          @click="expandPic(image)"
-          :src="image.url"
-          :key="image"
-          >
-      </div>
-    </div>
-
-<!-- LINKEDIN HEADSHOTS -->
-    <h1 class="category-title">linkedIn Headshots</h1>
-      
+  <!-- PORTRAITS -->
+  <div class="category-container">
+    <h1 class="category-title">Portraits</h1>
     <div class="main-container">
-        <div id="linkedin-headshots" class="images-container">
-          <img class="images"
-          v-for="image in linkedinHeadshots"
-          @click="expandPic(image)"
-          :src="image.url"
-          :key="image"
-          >
+        <div id="portraits" class="images-container">
+            <img class="images"
+            v-for="image in portraits"
+            @click="expandPic(image)"
+            :src="image.url"
+            :key="image"
+            >
         </div>
-    </div>
+      </div>
+    <div class="position-bar">o o o o o o o o o o o o o</div>
+  </div>
+    
 
+  <!-- LINKEDIN HEADSHOTS -->
+  <div class="category-container">
+      <h1 class="category-title">LinkedIn Headshots</h1>
+      <div class="main-container">
+          <div id="linkedin-headshots" class="images-container">
+            <img class="images"
+            v-for="image in linkedinHeadshots"
+            @click="expandPic(image)"
+            :src="image.url"
+            :key="image"
+            >
+          </div>
+      </div>
+      <div class="position-bar">o o o o o o o o o o o o o</div>
+  </div>  
 </div>
   
 
@@ -270,8 +276,13 @@ export default {
 }
 
 .category-title {
-  padding: 20px;
+  margin-left: 30px;
   font-family: 'dancing script', cursive;
+}
+
+.category-container {
+  /* border: 1px solid black; */
+  margin-bottom: 30px;
 }
 
 .main-container {
@@ -279,6 +290,10 @@ export default {
   height: min-content;
   overflow-x: scroll;
   /* border: 1px solid green; */
+}
+
+.main-container::-webkit-scrollbar {
+  display: none;
 }
 
 .images-container {
@@ -298,6 +313,10 @@ export default {
 
 .images:hover {
   transform: scale(1.03);
+}
+
+.position-bar {
+  text-align: center;
 }
 
 /* MODAL */

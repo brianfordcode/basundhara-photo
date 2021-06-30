@@ -1,5 +1,9 @@
 <template>
     
+<div class="entire-page">
+    
+    <h1 class="title">Testimonials</h1>
+    
     
     <div
         ref="mainContainer"
@@ -32,8 +36,7 @@
         </div>
             
     </div>
-
-
+</div>
   
 </template>
 
@@ -128,11 +131,22 @@ export default {
 
 <style scoped>
 
+.entire-page {
+    overflow: hidden;
+    /* border: 1px solid green; */
+}
+.title {
+    text-align: center;
+    margin: 30px;
+    font-family: 'dancing script', cursive;
+    font-size: 50px;
+}
+
 .main-container {
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     overflow-x: scroll;
-    height: 100vh;
-    width: 100vw;
+    height: min-content;
+    /* width: 100vw; */
     user-select: none;
     position: relative;
     cursor: grab;
