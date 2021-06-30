@@ -39,6 +39,7 @@
   flex-shrink: 0;
   flex-grow: 0;
   user-select: none;
+  z-index: 50000;
 }
 
 @media screen and (max-width: 700px) {

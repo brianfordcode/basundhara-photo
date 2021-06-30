@@ -1,27 +1,42 @@
 <template>
 
-  <!-- GALLERY -->
+
+
+<div class="entire-page">
+<h1 class="title">Portfolio</h1>
+
+
+<!-- PORTRAITS -->
+<h1 class="category-title">Portraits</h1>
   <div class="main-container">
-    <h1>Portfolio</h1>
-    
-    <div id="portraits" class="images-container">
-      <img class="images"
-      v-for="image in portraits"
-      @click="expandPic(image)"
-      :src="image.url"
-      :key="image"
-      >
+      <div id="portraits" class="images-container">
+          <img class="images"
+          v-for="image in portraits"
+          @click="expandPic(image)"
+          :src="image.url"
+          :key="image"
+          >
+      </div>
     </div>
-    
-    <div id="linkedin-headshots" class="images-container">
-      <img class="images"
-      v-for="image in linkedinHeadshots"
-      @click="expandPic(image)"
-      :src="image.url"
-      :key="image"
-      >
+
+<!-- LINKEDIN HEADSHOTS -->
+    <h1 class="category-title">linkedIn Headshots</h1>
+      
+    <div class="main-container">
+        <div id="linkedin-headshots" class="images-container">
+          <img class="images"
+          v-for="image in linkedinHeadshots"
+          @click="expandPic(image)"
+          :src="image.url"
+          :key="image"
+          >
+        </div>
     </div>
-  </div>
+
+</div>
+  
+
+
 
   <!-- OPEN PICTURE -->
   <div
@@ -34,6 +49,7 @@
     </div>
     <span class="closeBtn">&#10005;</span>
   </div>
+
 
 </template>
 
@@ -241,41 +257,39 @@ export default {
 
 <style scoped>
 
-#linkedin-headshots {
-  /* display: none; */
+.entire-page {
+  /* border: 1px solid pink; */
+  overflow: hidden;
 }
 
-#portraits {
-  /* display: none; */
-}
-
-
-
-.main-container {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-h1 {
-  padding: 30px;
+.title {
+  text-align: center;
+  margin: 30px;
+  font-family: 'dancing script', cursive;
   font-size: 50px;
+}
+
+.category-title {
+  padding: 20px;
   font-family: 'dancing script', cursive;
 }
 
+.main-container {
+  position: relative;
+  height: min-content;
+  overflow-x: scroll;
+  /* border: 1px solid green; */
+}
+
 .images-container {
+  width: min-content;
+  height: min-content;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
+  /* border: 1px solid blue; */
 }
 
 .images {
-  height: 250px;
-  overflow: hidden;
+  height: 200px;
   margin: 5px;
   transition: .2s, fade-in-out;
   cursor: zoom-in;
@@ -340,15 +354,13 @@ h1 {
     height: 60%;
   }
 }
-
 @media screen and (max-width: 700px) {
+  .main-container {
+    width: 100%;
+    margin-top: 50px;
+  }
   .selected-image {
     height: 60%;
-  }
-
-
-  .main-container {
-    margin-top: 50px;
   }
   .modal { 
     left: 0;
@@ -360,8 +372,5 @@ h1 {
     left: 85%;
   }
 }
-
-
-
 
 </style>

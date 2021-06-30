@@ -69,7 +69,7 @@
   display: flex;
   flex-direction: column;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 @media screen and (max-width: 700px ) {

@@ -7,8 +7,6 @@
         @mousedown="startDrag"
         @mousemove="mouseMove"
     >
-    
-        <h1 class="title">Testimonials</h1>
         
         <div
         ref="testimonialContainer"
@@ -131,8 +129,8 @@ export default {
 <style scoped>
 
 .main-container {
-    /* border: 1px solid pink; */
-    overflow-x: hidden;
+    border: 1px solid pink;
+    overflow-x: scroll;
     height: 100vh;
     width: 100vw;
     user-select: none;
@@ -140,10 +138,8 @@ export default {
     cursor: grab;
 }
 
-@media (hover:none){
-    .main-container {
-        overflow-x: scroll;
-    }
+.main-container::-webkit-scrollbar {
+  display: none;
 }
 
 @media screen and (max-width: 700px) {
@@ -158,6 +154,7 @@ export default {
     margin-top: 20px;
     font-size: 50px;
     text-align: center;
+    /* border: 1px solid green; */
 }
 
 .testimonials-container {
