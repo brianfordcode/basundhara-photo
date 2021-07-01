@@ -4,24 +4,27 @@
     
     <h1 class="title">Testimonials</h1>
     
-    
+    <!-- MAIN VW PAGE PINK -->
     <div
         ref="mainContainer"
         class="main-container"
         @mousedown="startDrag"
         @mousemove="mouseMove"
     >
-        
+
+        <!-- BOX OF ALL TESTIMONIALS BLUE -->
         <div
-        ref="testimonialContainer"
-        :class="{
-            'testimonials-container': true,
-            'not-dragging': !dragging
-        }"
-        :style="{
-            transform: `translateX(${ position }px)`
-        }"
+            ref="testimonialContainer"
+            :class="{
+                'testimonials-container': true,
+                'not-dragging': !dragging
+            }"
+            :style="{
+                transform: `translateX(${ position }px)`
+            }"
         >
+
+            <!-- INDIVIDUAL TESTIMONIALS BLACK -->
             <div
                 v-for="testimonial in testimonials" class="testimonial"
                 :key="testimonial"
@@ -33,6 +36,7 @@
                     <p class="occupation">{{ testimonial.occupation }}</p>
                 </div>
             </div> 
+
         </div>
             
     </div>
@@ -43,6 +47,7 @@
 <script>
 
 export default {
+    
     mounted() {
         window.addEventListener('mouseup', this.endDrag)
     },
@@ -137,13 +142,12 @@ export default {
 }
 .title {
     text-align: center;
-    margin: 30px;
     font-family: 'dancing script', cursive;
     font-size: 50px;
 }
 
 .main-container {
-    /* border: 1px solid pink; */
+    border: 1px solid pink;
     overflow-x: scroll;
     height: min-content;
     /* width: 100vw; */
@@ -157,7 +161,7 @@ export default {
 }
 
 @media screen and (max-width: 700px) {
-    .main-container {
+    .entire-page {
         margin-top: 50px;
     }
 }
@@ -172,7 +176,7 @@ export default {
 }
 
 .testimonials-container {
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     display: flex;
     width: min-content;
     /* overflow-x: scroll; */
@@ -198,6 +202,7 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     user-select: none;
+    border: 1px solid black;
 }
 
 .testimonial:hover {

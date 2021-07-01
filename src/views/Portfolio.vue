@@ -1,31 +1,63 @@
 <template>
 
-
-
 <div class="entire-page">
 
   <h1 class="title">Portfolio</h1>
 
 
   <!-- PORTRAITS -->
-  <div class="category-container">
+
+  <!-- MAIN VW PAGE PINK -->
+  <div
+    ref="mainContainer"
+    class="category-container"
+    @mousedown="startDrag"
+    @mousemove="mouseMove"
+  >
     <h1 class="category-title">Portraits</h1>
-    <div class="main-container">
-        <div id="portraits" class="images-container">
-            <img class="images"
-            v-for="image in portraits"
-            @click="expandPic(image)"
-            :src="image.url"
-            :key="image"
-            >
-        </div>
+
+    <!-- BOX OF ALL PICTURES BLUE -->
+    <div
+      ref="testimonialContainer"
+      id="portraits"
+      @scroll="updatePortraitsScrollPosition"
+      :class="{
+              'images-container': true,
+              'not-dragging': !dragging
+          }"
+          :style="{
+              transform: `translateX(${ position }px)`
+          }"
+    >
+
+      <!-- INDIVIDUAL PICTURES BLACK -->
+      <img draggable="false" class="images"
+      v-for="image in portraits"
+      @dblclick="expandPic(image)"
+      :src="image.url"
+      :key="image"
+      >
+
+    </div>
+
+    <div class="scroll-bar">
+      <div
+        class="position-button"
+        v-for="(image, index) in portraits"
+        :key="image"
+        @click="scrollToChild(portraitsElement, index)"
+      >
       </div>
-    <div class="position-bar">o o o o o o o o o o o o o</div>
+    </div>
+  </div>
+
+      
+      
   </div>
     
 
   <!-- LINKEDIN HEADSHOTS -->
-  <div class="category-container">
+  <!-- <div class="category-container">
       <h1 class="category-title">LinkedIn Headshots</h1>
       <div class="main-container">
           <div id="linkedin-headshots" class="images-container">
@@ -37,9 +69,9 @@
             >
           </div>
       </div>
-      <div class="position-bar">o o o o o o o o o o o o o</div>
-  </div>  
-</div>
+      <div class="position-bar"></div>
+  </div> -->
+
   
 
 
@@ -63,21 +95,19 @@
 
 export default {
 
-  methods: {
-
-    expandPic(image) {
-      this.selectedImage = image
-      this.modalOpen = true
-    },
-
-    closePic() {
-      this.modalOpen = false
-    }
-
+  mounted() {
+      window.addEventListener('mouseup', this.endDrag)
+  },
+  unmounted() {
+      window.removeEventListener('mouseup', this.endDrag)
   },
 
   data() {
     return {
+      dragging: false,
+      startingX: 0,
+      endingX: 0,
+      position: 0,
       modalOpen: false,
       selectedImage: null,
       linkedinHeadshots: [
@@ -257,7 +287,50 @@ export default {
         },
       ]
     }
-  }
+  },
+
+  methods: {
+
+    // DRAGGING SLIDER
+    startDrag(e) {
+        this.dragging = true
+        this.lastX = e.clientX
+    },
+
+    mouseMove(e) {
+        const changeInX = e.clientX - this.lastX
+
+        if (this.dragging) {
+            this.position += changeInX
+            this.lastX = e.clientX
+        }
+    },
+
+    endDrag() {
+        this.dragging = false
+
+        if (this.position > 0) this.position = 0
+        else {
+            const tWidth = this.$refs.testimonialContainer.offsetWidth
+            const mWidth = this.$refs.mainContainer.offsetWidth
+            // clamp new position so that there is no whitespace to the right
+            this.position = Math.max(mWidth - tWidth, this.position)
+        }
+    },
+
+// EXPANDING IMAGE
+    expandPic(image) {
+      this.selectedImage = image
+      this.modalOpen = true
+    },
+
+    closePic() {
+      this.modalOpen = false
+    }
+
+  },
+
+  
 }
 </script>
 
@@ -281,15 +354,16 @@ export default {
 }
 
 .category-container {
-  /* border: 1px solid black; */
+  border: 1px solid pink;
   margin-bottom: 30px;
 }
 
 .main-container {
+  user-select: none;
   position: relative;
   height: min-content;
   overflow-x: scroll;
-  /* border: 1px solid green; */
+  /* border: 1px solid blue; */
 }
 
 .main-container::-webkit-scrollbar {
@@ -297,17 +371,19 @@ export default {
 }
 
 .images-container {
+  user-select: none;
   width: min-content;
   height: min-content;
   display: flex;
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
 }
 
 .images {
+  border: 1px solid black;
   height: 200px;
   margin: 5px;
   transition: .2s, fade-in-out;
-  cursor: zoom-in;
+  cursor: grab;
   user-select: none;
 }
 
@@ -315,8 +391,24 @@ export default {
   transform: scale(1.03);
 }
 
-.position-bar {
-  text-align: center;
+.not-dragging
+{
+    transition: 0.20s transform ease-out;
+}
+
+.scroll-bar {
+  display: flex;
+  max-width: min-content;
+  margin: 10px auto;
+}
+
+.position-button {
+  margin: 0 5px;
+  border: 1px solid rgba(0,0,0,0.4);
+  height: 7px;
+  width: 7px;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 /* MODAL */
