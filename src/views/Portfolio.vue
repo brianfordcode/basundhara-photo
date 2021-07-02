@@ -30,15 +30,25 @@
           }"
     >
 
-      <!-- INDIVIDUAL PICTURES BLACK -->
-      <img draggable="false" class="images"
-      v-for="image in portraits"
-      @dblclick="expandPic(image)"
-      :src="image.url"
-      :key="image"
+    <span
+      ref="tooltip"
+      v-if="tooltipIsVisible"
+      class="tooltip"
       >
+      Double Click to Expand
+      </span>
 
-    </div>
+      <!-- INDIVIDUAL PICTURES BLACK -->
+
+        <img draggable="false" class="images"
+          @mouseenter="makeTooltipVisible(e)"
+          @mouseleave="tooltipIsVisible = false"
+          v-for="image in portraits"
+          @dblclick="expandPic(image)"
+          :src="image.url"
+          :key="image"
+        >
+      </div>
 
     <div class="scroll-bar">
       <div
@@ -73,9 +83,6 @@
   </div> -->
 
   
-
-
-
   <!-- OPEN PICTURE -->
   <div
     @click="closePic"
@@ -110,6 +117,7 @@ export default {
       position: 0,
       modalOpen: false,
       selectedImage: null,
+      tooltipIsVisible: false,
       linkedinHeadshots: [
         {
           caption: "Amit Luthra_BRI_1671",
@@ -294,6 +302,7 @@ export default {
     // DRAGGING SLIDER
     startDrag(e) {
         this.dragging = true
+        this.tooltipIsVisible = false
         this.lastX = e.clientX
     },
 
@@ -303,6 +312,9 @@ export default {
         if (this.dragging) {
             this.position += changeInX
             this.lastX = e.clientX
+
+            // tooltip disappears
+            this.mouseEnter = false
         }
     },
 
@@ -317,6 +329,17 @@ export default {
             this.position = Math.max(mWidth - tWidth, this.position)
         }
     },
+
+
+    makeTooltipVisible(e) {
+      this.tooltipIsVisible = true
+      console.log('tooltipIsVisible')
+      this.posY = e.clientY
+      console.log(posY)
+    },
+
+
+
 
 // EXPANDING IMAGE
     expandPic(image) {
@@ -354,7 +377,7 @@ export default {
 }
 
 .category-container {
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
   margin-bottom: 30px;
 }
 
@@ -375,11 +398,11 @@ export default {
   width: min-content;
   height: min-content;
   display: flex;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .images {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 200px;
   margin: 5px;
   transition: .2s, fade-in-out;
@@ -394,6 +417,16 @@ export default {
 .not-dragging
 {
     transition: 0.20s transform ease-out;
+}
+
+.tooltip {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+  z-index: 10000;
 }
 
 .scroll-bar {
