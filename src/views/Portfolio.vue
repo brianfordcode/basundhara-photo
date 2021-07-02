@@ -30,18 +30,11 @@
           }"
     >
 
-    <span
-      ref="tooltip"
-      v-if="tooltipIsVisible"
-      class="tooltip"
-      >
-      Double Click to Expand
-      </span>
+    
 
       <!-- INDIVIDUAL PICTURES BLACK -->
-
         <img draggable="false" class="images"
-          @mouseenter="makeTooltipVisible(e)"
+          @mouseenter="makeTooltipVisible()"
           @mouseleave="tooltipIsVisible = false"
           v-for="image in portraits"
           @dblclick="expandPic(image)"
@@ -59,6 +52,20 @@
       >
       </div>
     </div>
+
+      <span
+        ref="tooltip"
+        v-if="tooltipIsVisible"
+        class="tooltip"
+        :style="{
+        transform: `translate(${ posX }px, ${ posY }px)`
+        }"
+      >
+      Double Click to Expand
+      </span>
+
+
+
   </div>
 
       
@@ -112,12 +119,12 @@ export default {
   data() {
     return {
       dragging: false,
-      startingX: 0,
-      endingX: 0,
       position: 0,
       modalOpen: false,
       selectedImage: null,
       tooltipIsVisible: false,
+      posX: 0,
+      posY: 0,
       linkedinHeadshots: [
         {
           caption: "Amit Luthra_BRI_1671",
@@ -309,17 +316,23 @@ export default {
     mouseMove(e) {
         const changeInX = e.clientX - this.lastX
 
+        // TOOLTIP MOVES WITH MOUSE
+        this.posX = e.clientX - 205
+        this.posY = e.clientY - 395
+
         if (this.dragging) {
+
             this.position += changeInX
             this.lastX = e.clientX
-
+            
             // tooltip disappears
-            this.mouseEnter = false
+            this.tooltipIsVisible = false
         }
     },
 
     endDrag() {
         this.dragging = false
+        this.tooltipIsVisible = false
 
         if (this.position > 0) this.position = 0
         else {
@@ -331,11 +344,8 @@ export default {
     },
 
 
-    makeTooltipVisible(e) {
-      this.tooltipIsVisible = true
-      console.log('tooltipIsVisible')
-      this.posY = e.clientY
-      console.log(posY)
+    makeTooltipVisible() {
+      setTimeout(() => {this.tooltipIsVisible = true}, 1250)
     },
 
 
@@ -427,7 +437,9 @@ export default {
   background-color: white;
   position: absolute;
   z-index: 10000;
+  opacity: 0.8;
 }
+
 
 .scroll-bar {
   display: flex;
