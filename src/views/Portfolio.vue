@@ -13,7 +13,6 @@
     class="category-container"
     @mousedown="startDrag"
     @mousemove="mouseMove"
-    @mouseleave="tooltipIsVisible = false"
   >
     <h1 class="category-title">Portraits</h1>
 
@@ -32,12 +31,10 @@
           }"
     >
 
-    
-
       <!-- INDIVIDUAL PICTURES BLACK -->
-        <img draggable="false" class="images"
-          @mouseenter="makeTooltipVisible()"
-          @mouseleave="tooltipIsVisible = false"
+        <img
+          draggable="false"
+          class="images"
           v-for="image in portraits"
           @click="expandPic(image)"
           :src="image.url"
@@ -54,19 +51,6 @@
       >
       </div>
     </div>
-
-      <span
-        ref="tooltip"
-        v-if="tooltipIsVisible"
-        class="tooltip"
-        :style="{
-          transform: `translate(${ posX }px, ${ posY }px)`
-        }"
-      >
-      Double Click to Expand
-      </span>
-
-
 
   </div>
 
@@ -120,11 +104,12 @@ export default {
 
   data() {
     return {
+      dragStarted: false,
       dragging: false,
       position: 0,
       modalOpen: false,
       selectedImage: null,
-      tooltipIsVisible: false,
+      preventOpen: false,
       posX: 0,
       posY: 0,
       linkedinHeadshots: [
@@ -311,43 +296,30 @@ export default {
     // DRAGGING SLIDER
     startDrag(e) {
         this.dragging = true
-        this.tooltipIsVisible = false
         this.lastX = e.clientX
-        this.modalOpen = false
+        
     },
 
     mouseMove(e) {
-        const changeInX = e.clientX - this.lastX
-this.modalOpen = false
-        // TOOLTIP MOVES WITH MOUSE
-        this.posX = e.clientX - 205
-        this.posY = e.clientY - 395
+      const changeInX = e.clientX - this.lastX
 
-        
-        // IF TOOLTIP IS AT EDGE OF RIGHT SCREEN, ALTER X
+      if (this.dragging) {
 
+        this.position += changeInX
 
-        const vw = document.documentElement.clientWidth;
-        
-        if (vw === ((this.posX + 205) - 37)) {
-          console.log('at the edge')
-        }
+        this.lastX = e.clientX
 
-        if (this.dragging) {
-
-            this.position += changeInX
-            this.lastX = e.clientX
-            
-            // tooltip disappears
-            this.tooltipIsVisible = false
-        }
+      }
     },
 
     endDrag() {
-      this.modalOpen = false
-        this.dragging = false
-        this.tooltipIsVisible = false
 
+        this.preventOpen = true,
+        console.log(this.preventOpen)
+
+        this.dragging = false
+
+        // last picture snaps back to end of window
         if (this.position > 0) this.position = 0
         else {
             const tWidth = this.$refs.testimonialContainer.offsetWidth
@@ -358,17 +330,14 @@ this.modalOpen = false
     },
 
 
-    makeTooltipVisible() {
-      setTimeout(() => {this.tooltipIsVisible = true}, 1500)
-    },
-
-
-
 
 // EXPANDING IMAGE
     expandPic(image) {
+      // this.preventOpen = false
+      if (!this.preventOpen) {
         this.selectedImage = image
         this.modalOpen = true
+      }
     },
 
     closePic() {
@@ -437,19 +406,6 @@ this.modalOpen = false
 {
     transition: 0.20s transform ease-out;
 }
-
-.tooltip {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 10px;
-  padding: 5px;
-  border-radius: 10px;
-  background-color: white;
-  position: absolute;
-  z-index: 10000;
-  opacity: 0.7;
-  user-select: none;
-}
-
 
 .scroll-bar {
   display: flex;
