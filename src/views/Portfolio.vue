@@ -13,6 +13,7 @@
     class="category-container"
     @mousedown="startDrag"
     @mousemove="mouseMove"
+    @mouseleave="tooltipIsVisible = false"
   >
     <h1 class="category-title">Portraits</h1>
 
@@ -20,6 +21,7 @@
     <div
       ref="testimonialContainer"
       id="portraits"
+      
       @scroll="updatePortraitsScrollPosition"
       :class="{
               'images-container': true,
@@ -37,7 +39,7 @@
           @mouseenter="makeTooltipVisible()"
           @mouseleave="tooltipIsVisible = false"
           v-for="image in portraits"
-          @dblclick="expandPic(image)"
+          @click="expandPic(image)"
           :src="image.url"
           :key="image"
         >
@@ -58,7 +60,7 @@
         v-if="tooltipIsVisible"
         class="tooltip"
         :style="{
-        transform: `translate(${ posX }px, ${ posY }px)`
+          transform: `translate(${ posX }px, ${ posY }px)`
         }"
       >
       Double Click to Expand
@@ -96,7 +98,7 @@
     v-if="selectedImage"
     :class="{ modal: true, open: modalOpen }">
     <div class="image-caption">
-      <img class="selected-image" :src="selectedImage.url">
+      <img draggable="false" class="selected-image" :src="selectedImage.url">
       <p class="caption">{{ selectedImage.caption }}</p>
     </div>
     <span class="closeBtn">&#10005;</span>
@@ -311,14 +313,25 @@ export default {
         this.dragging = true
         this.tooltipIsVisible = false
         this.lastX = e.clientX
+        this.modalOpen = false
     },
 
     mouseMove(e) {
         const changeInX = e.clientX - this.lastX
-
+this.modalOpen = false
         // TOOLTIP MOVES WITH MOUSE
         this.posX = e.clientX - 205
         this.posY = e.clientY - 395
+
+        
+        // IF TOOLTIP IS AT EDGE OF RIGHT SCREEN, ALTER X
+
+
+        const vw = document.documentElement.clientWidth;
+        
+        if (vw === ((this.posX + 205) - 37)) {
+          console.log('at the edge')
+        }
 
         if (this.dragging) {
 
@@ -331,6 +344,7 @@ export default {
     },
 
     endDrag() {
+      this.modalOpen = false
         this.dragging = false
         this.tooltipIsVisible = false
 
@@ -345,7 +359,7 @@ export default {
 
 
     makeTooltipVisible() {
-      setTimeout(() => {this.tooltipIsVisible = true}, 1250)
+      setTimeout(() => {this.tooltipIsVisible = true}, 1500)
     },
 
 
@@ -353,8 +367,8 @@ export default {
 
 // EXPANDING IMAGE
     expandPic(image) {
-      this.selectedImage = image
-      this.modalOpen = true
+        this.selectedImage = image
+        this.modalOpen = true
     },
 
     closePic() {
@@ -389,14 +403,8 @@ export default {
 .category-container {
   /* border: 1px solid pink; */
   margin-bottom: 30px;
-}
+  overflow: hidden;
 
-.main-container {
-  user-select: none;
-  position: relative;
-  height: min-content;
-  overflow-x: scroll;
-  /* border: 1px solid blue; */
 }
 
 .main-container::-webkit-scrollbar {
@@ -418,6 +426,7 @@ export default {
   transition: .2s, fade-in-out;
   cursor: grab;
   user-select: none;
+  box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
 }
 
 .images:hover {
@@ -437,7 +446,8 @@ export default {
   background-color: white;
   position: absolute;
   z-index: 10000;
-  opacity: 0.8;
+  opacity: 0.7;
+  user-select: none;
 }
 
 
