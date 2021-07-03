@@ -37,7 +37,13 @@
         :src="image.url"
         :key="image"
       >
+
     </div>
+    
+    <div class="arrow-container">
+      <p> prev </p>
+    </div>
+    
 
   </div>
 
@@ -327,10 +333,10 @@ export default {
 }
 
 .category-container {
-  /* border: 1px solid pink; */
+  border: 1px solid pink;
   margin-bottom: 30px;
   overflow: hidden;
-
+  position: relative;
 }
 
 .main-container::-webkit-scrollbar {
@@ -342,11 +348,11 @@ export default {
   width: min-content;
   height: min-content;
   display: flex;
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
 }
 
 .images {
-  /* border: 1px solid black; */
+  border: 1px solid black;
   height: 250px;
   margin: 5px;
   transition: .2s, fade-in-out;
@@ -359,25 +365,35 @@ export default {
   transform: scale(1.03);
 }
 
-.not-dragging
-{
-    transition: 0.20s transform ease-out;
+.not-dragging {
+  transition: 0.20s transform ease-out;
 }
 
-.scroll-bar {
-  display: flex;
-  max-width: min-content;
-  margin: 10px auto;
-}
 
-.position-button {
-  margin: 0 5px;
-  border: 1px solid rgba(0,0,0,0.4);
-  height: 7px;
-  width: 7px;
-  border-radius: 50px;
+
+.arrow-container {
+  position: absolute;
+  top: 65px;
+  left: -115px;
+  font-size: 25px;
+  padding: 5px;
+  background-color: rgba(255,255,255,0.8);
   cursor: pointer;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  /* transform: translateX(-140px); */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: .2s, fade-in-out;;
 }
+
+.arrow-container:hover {
+  transform: scale(1.1);
+}
+
+
 
 /* MODAL */
 .modal {
@@ -398,7 +414,7 @@ export default {
 .selected-image {
   user-select: none;
   height: 80%;
-  transition: .2s, fade-in-out;
+
 }
 
 
