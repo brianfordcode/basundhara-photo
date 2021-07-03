@@ -4,76 +4,54 @@
 
   <h1 class="title">Portfolio</h1>
 
-
   <!-- PORTRAITS -->
 
   <!-- MAIN VW PAGE PINK -->
   <div
     ref="mainContainer"
     class="category-container"
-    @mousedown="startDrag"
-    @mousemove="mouseMove"
   >
     <h1 class="category-title">Portraits</h1>
 
     <!-- BOX OF ALL PICTURES BLUE -->
     <div
-      ref="testimonialContainer"
+      ref="imageContainer"
       id="portraits"
-      
-      @scroll="updatePortraitsScrollPosition"
       :class="{
-              'images-container': true,
-              'not-dragging': !dragging
-          }"
-          :style="{
-              transform: `translateX(${ position }px)`
-          }"
+        'images-container': true,
+        'not-dragging': !dragging
+      }"
+      :style="{
+        transform: `translateX(${ position }px)`
+      }"
+      @mousedown="startDrag"
+      @mousemove="mouseMove"
     >
 
       <!-- INDIVIDUAL PICTURES BLACK -->
-        <img
-          draggable="false"
-          class="images"
-          v-for="image in portraits"
-          @click="expandPic(image)"
-          :src="image.url"
-          :key="image"
-        >
-      </div>
+      <img
+        draggable="false"
+        class="images"
+        v-for="image in portraits"
+        @click="expandPic(image)"
+        :src="image.url"
+        :key="image"
+      >
+    </div>
 
     <div class="scroll-bar">
       <div
         class="position-button"
         v-for="(image, index) in portraits"
         :key="image"
-        @click="scrollToChild(portraitsElement, index)"
+        @click="scrollToSelectedImage(image, index)"
       >
       </div>
     </div>
 
   </div>
 
-      
-      
-  </div>
-    
-
-  <!-- LINKEDIN HEADSHOTS -->
-  <!-- <div class="category-container">
-      <h1 class="category-title">LinkedIn Headshots</h1>
-      <div class="main-container">
-          <div id="linkedin-headshots" class="images-container">
-            <img class="images"
-            v-for="image in linkedinHeadshots"
-            @click="expandPic(image)"
-            :src="image.url"
-            :key="image"
-            >
-          </div>
-      </div>
-      <div class="position-bar"></div>
-  </div> -->
+</div>
 
   
   <!-- OPEN PICTURE -->
@@ -109,10 +87,10 @@ export default {
       position: 0,
       modalOpen: false,
       selectedImage: null,
-      preventOpen: false,
       posX: 0,
       posY: 0,
-      startX: 0,
+      portraitsElement: null,
+
       linkedinHeadshots: [
         {
           caption: "Amit Luthra_BRI_1671",
@@ -296,46 +274,34 @@ export default {
 
     // DRAGGING SLIDER
     startDrag(e) {
-        this.dragging = true
-
-        this.lastX = e.clientX
-
-        this.startX = e.clientX
-
-        
+      this.dragging = true
+      this.lastX = e.clientX
+      this.startX = e.clientX
     },
 
     mouseMove(e) {
       const changeInX = e.clientX - this.lastX
 
       if (this.dragging) {
-
         this.position += changeInX
-
         this.lastX = e.clientX
-
       }
     },
 
     endDrag() {
+      this.dragging = false
 
-        this.preventOpen = true,
-
-        this.dragging = false
-
-        // last picture snaps back to end of window
-        if (this.position > 0) this.position = 0
-        else {
-            const tWidth = this.$refs.testimonialContainer.offsetWidth
-            const mWidth = this.$refs.mainContainer.offsetWidth
-            // clamp new position so that there is no whitespace to the right
-            this.position = Math.max(mWidth - tWidth, this.position)
-        }
+      // last picture snaps back to end of window
+      if (this.position > 0) this.position = 0
+      else {
+        const tWidth = this.$refs.imageContainer.offsetWidth
+        const mWidth = this.$refs.mainContainer.offsetWidth
+        // clamp new position so that there is no whitespace to the right
+        this.position = Math.max(mWidth - tWidth, this.position)
+      }
     },
 
-
-
-// EXPANDING IMAGE
+    // EXPANDING IMAGE
     expandPic(image) {
       if (this.lastX == this.startX) {
         this.selectedImage = image
@@ -345,11 +311,18 @@ export default {
 
     closePic() {
       this.modalOpen = false
-    }
+    },
 
+    scrollToSelectedImage(something, index) {
+      const toScrollTo = this.$refs.imageContainer.querySelector(`:nth-child(${index})`)
+      toScrollTo.scrollIntoView()
+    }
   },
 
+  // SCROLL BAR BUTTONS AND FUNCTIONS
   
+  
+
 }
 </script>
 
@@ -393,7 +366,7 @@ export default {
 
 .images {
   /* border: 1px solid black; */
-  height: 200px;
+  height: 250px;
   margin: 5px;
   transition: .2s, fade-in-out;
   cursor: grab;
