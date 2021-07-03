@@ -39,16 +39,6 @@
       >
     </div>
 
-    <div class="scroll-bar">
-      <div
-        class="position-button"
-        v-for="(image, index) in portraits"
-        :key="image"
-        @click="scrollToSelectedImage(image, index)"
-      >
-      </div>
-    </div>
-
   </div>
 
 </div>
@@ -313,16 +303,7 @@ export default {
       this.modalOpen = false
     },
 
-    scrollToSelectedImage(something, index) {
-      const toScrollTo = this.$refs.imageContainer.querySelector(`:nth-child(${index})`)
-      toScrollTo.scrollIntoView()
-    }
   },
-
-  // SCROLL BAR BUTTONS AND FUNCTIONS
-  
-  
-
 }
 </script>
 
