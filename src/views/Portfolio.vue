@@ -112,6 +112,7 @@ export default {
       preventOpen: false,
       posX: 0,
       posY: 0,
+      startX: 0,
       linkedinHeadshots: [
         {
           caption: "Amit Luthra_BRI_1671",
@@ -296,7 +297,11 @@ export default {
     // DRAGGING SLIDER
     startDrag(e) {
         this.dragging = true
+
         this.lastX = e.clientX
+
+        this.startX = e.clientX
+
         
     },
 
@@ -315,7 +320,6 @@ export default {
     endDrag() {
 
         this.preventOpen = true,
-        console.log(this.preventOpen)
 
         this.dragging = false
 
@@ -333,8 +337,7 @@ export default {
 
 // EXPANDING IMAGE
     expandPic(image) {
-      // this.preventOpen = false
-      if (!this.preventOpen) {
+      if (this.lastX == this.startX) {
         this.selectedImage = image
         this.modalOpen = true
       }
