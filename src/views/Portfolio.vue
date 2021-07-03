@@ -40,8 +40,12 @@
 
     </div>
     
-    <div class="arrow-container">
+    <div id="arrow-right" class="arrow-container">
       <p> prev </p>
+    </div>
+
+    <div id="arrow-left" class="arrow-container">
+      <p> next </p>
     </div>
     
 
@@ -369,12 +373,9 @@ export default {
   transition: 0.20s transform ease-out;
 }
 
-
-
 .arrow-container {
   position: absolute;
-  top: 65px;
-  left: -115px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 25px;
   padding: 5px;
   background-color: rgba(255,255,255,0.8);
@@ -382,18 +383,26 @@ export default {
   height: 200px;
   width: 200px;
   border-radius: 100%;
-  /* transform: translateX(-140px); */
+  transition: .2s, fade-in-out;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  transition: .2s, fade-in-out;;
+}
+
+#arrow-right {
+  justify-content: flex-end;
+  top: 65px;
+  left: -130px;
+}
+
+#arrow-left {
+  justify-content: flex-start;
+  top: 65px;
+  right: -130px;
 }
 
 .arrow-container:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
-
-
 
 /* MODAL */
 .modal {
