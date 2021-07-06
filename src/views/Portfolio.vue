@@ -44,8 +44,9 @@
 
     </div>
     
+    
       <div v-if="showRightArrow"
-           @click="slidePics"
+           @click="slidePics(browserWidth)"
            id="arrow-right"
            class="arrow-container"
            ref="leftArrow"
@@ -54,7 +55,7 @@
       </div>
 
       <div v-if="showLeftArrow"
-           @click="slidePics"
+           @click="slidePics(-browserWidth)"
            id="arrow-left"
            class="arrow-container"
            ref="rightArrow"
@@ -295,6 +296,7 @@ export default {
       this.dragging = true
       this.lastX = e.clientX
       this.startX = e.clientX
+      console.log(this.position)
     },
 
     mouseMove(e) {
@@ -307,8 +309,13 @@ export default {
 
     endDrag() {
       this.dragging = false
+      this.clamp()
+
+    },
+    clamp() {
       // last picture snaps back to end of window
       if (this.position > 0) this.position = 0
+      
       else {
         const tWidth = this.$refs.imageContainer.offsetWidth
         const mWidth = this.$refs.mainContainer.offsetWidth
@@ -341,20 +348,11 @@ export default {
       this.showRightArrow = false
     },
 
-    slidePics(e) {
-      const imageContainer = this.$refs.imageContainer
-        
-        if (e.target === this.$refs.rightArrow) {
-          console.log('right arrow clicked')
-          
-          imageContainer.style.transform = `translateX(-${this.browserWidth}px)`
-          
-        }
-        if (e.target === this.$refs.leftArrow) {
-          console.log('left arrow clicked')
+    slidePics(distance) {
 
-          imageContainer.style.transform = `translateX(${this.browserWidth}px)`
-        }
+      this.position += distance
+
+      this.clamp()
       
       
     },
