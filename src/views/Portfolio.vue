@@ -10,6 +10,9 @@
   <div
     ref="mainContainer"
     class="category-container"
+    @mousemove="makeArrowAppear"
+    @mouseleave="mouseLeave"
+    
   >
     <h1 class="category-title">Portraits</h1>
 
@@ -26,6 +29,7 @@
       }"
       @mousedown="startDrag"
       @mousemove="mouseMove"
+      
     >
 
       <!-- INDIVIDUAL PICTURES BLACK -->
@@ -40,20 +44,33 @@
 
     </div>
     
-    <div id="arrow-right" class="arrow-container">
-      <p> prev </p>
-    </div>
+      <div v-if="showRightArrow"
+           @click="slidePics"
+           id="arrow-right"
+           class="arrow-container"
+           ref="leftArrow"
+      >
+      prev
+      </div>
 
-    <div id="arrow-left" class="arrow-container">
-      <p> next </p>
-    </div>
+      <div v-if="showLeftArrow"
+           @click="slidePics"
+           id="arrow-left"
+           class="arrow-container"
+           ref="rightArrow"
+      >
+      next
+      </div>
     
-
   </div>
+
+
+
 
 </div>
 
-  
+
+
   <!-- OPEN PICTURE -->
   <div
     @click="closePic"
@@ -90,6 +107,8 @@ export default {
       posX: 0,
       posY: 0,
       portraitsElement: null,
+      showRightArrow: false,
+      showLeftArrow: false,
 
       linkedinHeadshots: [
         {
@@ -271,8 +290,7 @@ export default {
   },
 
   methods: {
-
-    // DRAGGING SLIDER
+    // MOUSE DRAGGING
     startDrag(e) {
       this.dragging = true
       this.lastX = e.clientX
@@ -281,7 +299,6 @@ export default {
 
     mouseMove(e) {
       const changeInX = e.clientX - this.lastX
-
       if (this.dragging) {
         this.position += changeInX
         this.lastX = e.clientX
@@ -290,7 +307,6 @@ export default {
 
     endDrag() {
       this.dragging = false
-
       // last picture snaps back to end of window
       if (this.position > 0) this.position = 0
       else {
@@ -299,6 +315,48 @@ export default {
         // clamp new position so that there is no whitespace to the right
         this.position = Math.max(mWidth - tWidth, this.position)
       }
+    },
+
+    // PREV/NEXT BUTTONS
+    makeArrowAppear(e) {
+      this.mousePos = e.clientX - 210
+      this.browserWidth = this.$refs.mainContainer.offsetWidth
+
+      if (this.mousePos > this.browserWidth / 2) {
+        this.showLeftArrow = true
+        this.showRightArrow = false
+      }
+      if (this.mousePos < this.browserWidth / 2) {
+        this.showLeftArrow = false
+        this.showRightArrow = true
+      }
+      if (this.dragging) {
+        this.showLeftArrow = false
+        this.showRightArrow = false
+      }
+    },
+
+    mouseLeave() {
+      this.showLeftArrow = false
+      this.showRightArrow = false
+    },
+
+    slidePics(e) {
+      const imageContainer = this.$refs.imageContainer
+        
+        if (e.target === this.$refs.rightArrow) {
+          console.log('right arrow clicked')
+          
+          imageContainer.style.transform = `translateX(-${this.browserWidth}px)`
+          
+        }
+        if (e.target === this.$refs.leftArrow) {
+          console.log('left arrow clicked')
+
+          imageContainer.style.transform = `translateX(${this.browserWidth}px)`
+        }
+      
+      
     },
 
     // EXPANDING IMAGE
@@ -311,7 +369,7 @@ export default {
 
     closePic() {
       this.modalOpen = false
-    },
+    }
 
   },
 }
@@ -356,7 +414,7 @@ export default {
 }
 
 .images {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 250px;
   margin: 5px;
   transition: .2s, fade-in-out;
@@ -374,6 +432,7 @@ export default {
 }
 
 .arrow-container {
+  user-select: none;
   position: absolute;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 25px;
@@ -386,17 +445,18 @@ export default {
   transition: .2s, fade-in-out;
   display: flex;
   align-items: center;
+  top: 60px;
 }
 
 #arrow-right {
+  transition: .2s, fade-in-out;
   justify-content: flex-end;
-  top: 65px;
   left: -130px;
 }
 
 #arrow-left {
+  transition: .2s, fade-in-out;
   justify-content: flex-start;
-  top: 65px;
   right: -130px;
 }
 
