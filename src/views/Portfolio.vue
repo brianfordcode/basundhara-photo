@@ -296,7 +296,6 @@ export default {
       this.dragging = true
       this.lastX = e.clientX
       this.startX = e.clientX
-      console.log(this.position)
     },
 
     mouseMove(e) {
@@ -310,13 +309,13 @@ export default {
     endDrag() {
       this.dragging = false
       this.clamp()
-
     },
+
     clamp() {
       // last picture snaps back to end of window
-      if (this.position > 0) this.position = 0
-      
-      else {
+      if (this.position >= 0) {
+        this.position = 0
+      } else {
         const tWidth = this.$refs.imageContainer.offsetWidth
         const mWidth = this.$refs.mainContainer.offsetWidth
         // clamp new position so that there is no whitespace to the right
@@ -328,19 +327,24 @@ export default {
     makeArrowAppear(e) {
       this.mousePos = e.clientX - 210
       this.browserWidth = this.$refs.mainContainer.offsetWidth
-
+      // MOUSE ON LEFT SIDE OF WINDOW
       if (this.mousePos > this.browserWidth / 2) {
         this.showLeftArrow = true
         this.showRightArrow = false
       }
+      // MOUSE ON RIGHT SIDE OF WINDOW
       if (this.mousePos < this.browserWidth / 2) {
         this.showLeftArrow = false
         this.showRightArrow = true
       }
+      // MOUSE DRAGGING
       if (this.dragging) {
         this.showLeftArrow = false
         this.showRightArrow = false
       }
+      // IF IMAGE SLIDER IS AT END OF IMAGES
+      if (this.position === 0) this.showRightArrow = false
+      if ((Math.abs(this.position) + this.browserWidth) === this.$refs.imageContainer.offsetWidth) this.showLeftArrow = false
     },
 
     mouseLeave() {
@@ -349,15 +353,11 @@ export default {
     },
 
     slidePics(distance) {
-
       this.position += distance
-
       this.clamp()
-      
-      
     },
 
-    // EXPANDING IMAGE
+    // EXPAND IMAGE
     expandPic(image) {
       if (this.lastX == this.startX) {
         this.selectedImage = image
@@ -393,7 +393,7 @@ export default {
 }
 
 .category-container {
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
   margin-bottom: 30px;
   overflow: hidden;
   position: relative;
@@ -408,7 +408,7 @@ export default {
   width: min-content;
   height: min-content;
   display: flex;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .images {
