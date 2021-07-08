@@ -403,6 +403,11 @@ export default {
 
     showImage(index) {
       this.selectedImageIndex = index
+      console.log(this.selectedImageIndex)
+
+      if (this.selectedImageIndex < 0) this.selectedImageIndex += this.portraits.length
+      if (this.selectedImageIndex === this.portraits.length) this.selectedImageIndex = 0
+
     }
     
 
