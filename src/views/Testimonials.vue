@@ -147,7 +147,7 @@ export default {
 }
 
 .main-container {
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     overflow-x: scroll;
     height: min-content;
     /* width: 100vw; */
@@ -176,7 +176,7 @@ export default {
 }
 
 .testimonials-container {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     width: min-content;
     /* overflow-x: scroll; */
@@ -202,7 +202,7 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     user-select: none;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .testimonial:hover {

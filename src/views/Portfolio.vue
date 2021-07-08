@@ -36,8 +36,8 @@
       <img
         draggable="false"
         class="images"
-        v-for="image in portraits"
-        @click="expandPic(image)"
+        v-for="(image, index) in portraits"
+        @click="expandPic(index)"
         :src="image.url"
         :key="image"
       >
@@ -47,42 +47,66 @@
     
       <div v-if="showRightArrow"
            @click="slidePics(browserWidth)"
-           id="arrow-right"
+           id="prev-arrow"
            class="arrow-container"
-           ref="leftArrow"
       >
       prev
       </div>
 
       <div v-if="showLeftArrow"
            @click="slidePics(-browserWidth)"
-           id="arrow-left"
+           id="next-arrow"
            class="arrow-container"
-           ref="rightArrow"
       >
       next
       </div>
-    
+
   </div>
-
-
-
 
 </div>
 
 
 
-  <!-- OPEN PICTURE -->
-  <div
-    @click="closePic"
-    v-if="selectedImage"
-    :class="{ modal: true, open: modalOpen }">
-    <div class="image-caption">
-      <img draggable="false" class="selected-image" :src="selectedImage.url">
-      <p class="caption">{{ selectedImage.caption }}</p>
-    </div>
-    <span class="closeBtn">&#10005;</span>
+<!-- OPEN PICTURE -->
+
+<div
+  @click="closePic"
+  v-if="selectedImage"
+  :class="{ modal: true, open: modalOpen }"
+>
+  <div class="image-caption">
+    <img draggable="false" class="selected-image" :src="selectedImage.url">
+    <p class="caption">{{ selectedImage.caption }}</p>
   </div>
+  
+  <span class="closeBtn">&#10005;</span>
+
+  <!-- NEXT/PREV IMAGE BUTTONS -->
+  <div class="modal-arrow-container">
+    <div
+      class="modal-arrow"
+      @click.stop="showImage(selectedImageIndex - 1)"
+      ref="prevArrow"
+      id="prev-arrow"
+    >
+    prev
+    </div>
+    <div
+      class="modal-arrow"
+      @click.stop="showImage(selectedImageIndex + 1)"
+      ref="nextArrow"
+      id="next-arrow"
+    >
+    next
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  
 
 
 </template>
@@ -93,9 +117,11 @@ export default {
 
   mounted() {
       window.addEventListener('mouseup', this.endDrag)
+      window.addEventListener('resize', this.clamp)
   },
   unmounted() {
       window.removeEventListener('mouseup', this.endDrag)
+      window.removeEventListener('resize', this.clamp)
   },
 
   data() {
@@ -104,7 +130,7 @@ export default {
       dragging: false,
       position: 0,
       modalOpen: false,
-      selectedImage: null,
+      selectedImageIndex: null,
       posX: 0,
       posY: 0,
       portraitsElement: null,
@@ -290,6 +316,12 @@ export default {
     }
   },
 
+  computed: {
+    selectedImage() {
+      return this.portraits[this.selectedImageIndex]
+    }
+  },
+
   methods: {
     // MOUSE DRAGGING
     startDrag(e) {
@@ -357,17 +389,22 @@ export default {
       this.clamp()
     },
 
-    // EXPAND IMAGE
-    expandPic(image) {
+    // MODAL
+    expandPic(index) {
       if (this.lastX == this.startX) {
-        this.selectedImage = image
+        this.selectedImageIndex = index
         this.modalOpen = true
       }
     },
 
     closePic() {
       this.modalOpen = false
+    },
+
+    showImage(index) {
+      this.selectedImageIndex = index
     }
+    
 
   },
 }
@@ -446,13 +483,13 @@ export default {
   top: 60px;
 }
 
-#arrow-right {
+#prev-arrow {
   transition: .2s, fade-in-out;
   justify-content: flex-end;
   left: -130px;
 }
 
-#arrow-left {
+#next-arrow {
   transition: .2s, fade-in-out;
   justify-content: flex-start;
   right: -130px;
@@ -481,8 +518,33 @@ export default {
 .selected-image {
   user-select: none;
   height: 80%;
-
 }
+
+.modal-arrow-container {
+  display: flex;
+  align-items: center;
+}
+
+.modal-arrow {
+  user-select: none;
+  position: absolute;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 25px;
+  padding: 5px;
+  background-color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  transition: .2s, fade-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.modal-arrow:hover {
+  transform: scale(1.05);
+}
+
 
 
 .image-caption {
