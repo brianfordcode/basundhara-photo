@@ -35,7 +35,7 @@
         id="prev-arrow"
         class="arrow-container"
     >
-    prev
+        <img src="https://img.icons8.com/ios-filled/50/000000/long-arrow-left.png"/>
     </div>
 
     <div v-if="showLeftArrow"
@@ -43,7 +43,7 @@
         id="next-arrow"
         class="arrow-container"
     >
-    next
+        <img src="https://img.icons8.com/ios-filled/50/000000/long-arrow-right.png"/>
     </div>
 </div>
 </template>
@@ -76,15 +76,21 @@ data() {
     dragStarted: false,
     dragging: false,
     position: 0,
-    modalOpen: false,
-    selectedImageIndex: null,
     posX: 0,
     posY: 0,
-    portraitsElement: null,
     showRightArrow: false,
     showLeftArrow: false,
+    portraitsElement: null,
+    modalOpen: false,
+    selectedImageIndex: null,
     }
 },
+
+  computed: {
+    selectedImage() {
+      return this.portraits[this.selectedImageIndex]
+    }
+  },
 
   methods: {
     handleKeyPress(e) {
@@ -161,7 +167,12 @@ data() {
       this.position += distance
       this.clamp()
     },
-    
+
+
+
+
+
+
   }
 }
 
@@ -214,10 +225,11 @@ data() {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 25px;
         padding: 5px;
+        margin: 5px;
         background-color: rgba(255,255,255,0.8);
         cursor: pointer;
-        height: 200px;
-        width: 200px;
+        height: 50px;
+        width: 50px;
         border-radius: 100%;
         display: flex;
         align-items: center;
@@ -227,13 +239,13 @@ data() {
     }
 
     #prev-arrow {
-        justify-content: flex-end;
-        left: -130px;
+        justify-content: center;
+        left: 0;
     }
 
     #next-arrow {
-        justify-content: flex-start;
-        right: -130px;
+        justify-content: center;
+        right: 0;
     }
 
     .arrow-container:hover {

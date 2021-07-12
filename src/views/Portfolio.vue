@@ -10,6 +10,9 @@
     <div>
       <h1 class="category-title">Portraits</h1>
       <Carousel :items="portraits" />
+
+      <h1 class="category-title">linkedin Headshots</h1>
+      <Carousel :items="linkedinHeadshots" />
     </div>
 
   </div>
@@ -242,11 +245,7 @@ export default {
     }
   },
 
-  computed: {
-    selectedImage() {
-    return this.portraits[this.selectedImageIndex]
-    }
-  },
+
 
   methods: {
 
@@ -296,66 +295,6 @@ export default {
 
 .main-container::-webkit-scrollbar {
   display: none;
-}
-
-.images-container {
-  user-select: none;
-  width: min-content;
-  height: min-content;
-  display: flex;
-  /* border: 1px solid blue; */
-}
-
-.images {
-  /* border: 1px solid black; */
-  height: 250px;
-  margin: 5px;
-  transition: .2s, fade-in-out;
-  user-select: none;
-  box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
-}
-
-.images:hover {
-  transform: scale(1.03);
-}
-
-.not-dragging {
-  cursor: grab;
-  transition: 0.20s transform ease-out;
-}
-
-.dragging {
-    cursor: grabbing;
-}
-
-.arrow-container {
-  user-select: none;
-  position: absolute;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 25px;
-  padding: 5px;
-  background-color: rgba(255,255,255,0.8);
-  cursor: pointer;
-  height: 200px;
-  width: 200px;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  top: 60px;
-}
-
-#prev-arrow {
-  justify-content: flex-end;
-  left: -130px;
-}
-
-#next-arrow {
-  justify-content: flex-start;
-  right: -130px;
-}
-
-.arrow-container:hover {
-  transform: scale(1.05);
 }
 
 /* MODAL */
