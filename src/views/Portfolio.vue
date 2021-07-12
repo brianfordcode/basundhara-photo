@@ -7,57 +7,9 @@
     <!-- PORTRAITS -->
 
     <!-- MAIN VW PAGE PINK -->
-    <div
-      ref="mainContainer"
-      class="category-container"
-      @mousemove="makeArrowAppear"
-      @mouseleave="mouseLeave"
-    >
+    <div>
       <h1 class="category-title">Portraits</h1>
-
-      <!-- BOX OF ALL PICTURES BLUE -->
-      <div
-        ref="imageContainer"
-        id="portraits"
-        :class="{
-          'images-container': true,
-          'not-dragging': !dragging,
-          'dragging': dragging
-        }"
-        :style="{
-          transform: `translateX(${ position }px)`
-        }"
-        @mousedown="startDrag"
-        @mousemove="mouseMove"
-      >
-
-        <!-- INDIVIDUAL PICTURES BLACK -->
-        <img
-          draggable="false"
-          class="images"
-          v-for="(image, index) in portraits"
-          @click="expandPic(index)"
-          :src="image.url"
-          :key="image"
-        >
-      </div>
-
-        <div v-if="showRightArrow"
-            @click="slidePics(browserWidth)"
-            id="prev-arrow"
-            class="arrow-container"
-        >
-        prev
-        </div>
-
-        <div v-if="showLeftArrow"
-            @click="slidePics(-browserWidth)"
-            id="next-arrow"
-            class="arrow-container"
-        >
-        next
-        </div>
-
+      <Carousel :items="portraits" />
     </div>
 
   </div>
@@ -102,34 +54,15 @@
 
 <script>
 
-
+import Carousel from '../components/Carousel'
 
 export default {
-
-  mounted() {
-      window.addEventListener('mouseup', this.endDrag)
-      window.addEventListener('resize', this.clamp)
-      window.addEventListener('keydown', this.handleKeyPress)
-  },
-  unmounted() {
-      window.removeEventListener('mouseup', this.endDrag)
-      window.removeEventListener('resize', this.clamp)
-      window.removeEventListener('keydown', this.handleKeyPress)
+  components: {
+    Carousel
   },
 
   data() {
     return {
-      dragStarted: false,
-      dragging: false,
-      position: 0,
-      modalOpen: false,
-      selectedImageIndex: null,
-      posX: 0,
-      posY: 0,
-      portraitsElement: null,
-      showRightArrow: false,
-      showLeftArrow: false,
-
       linkedinHeadshots: [
         {
           caption: "Amit Luthra_BRI_1671",
@@ -311,85 +244,12 @@ export default {
 
   computed: {
     selectedImage() {
-      return this.portraits[this.selectedImageIndex]
+    return this.portraits[this.selectedImageIndex]
     }
   },
 
   methods: {
-    handleKeyPress(e) {
-      if (e.key === 'ArrowRight') this.showImage(this.selectedImageIndex + 1)
-      if (e.key === 'ArrowLeft') this.showImage(this.selectedImageIndex - 1)
-      if (e.key === 'Enter') this.closePic()
-    },
 
-// MAIN PAGE
-
-    // MOUSE DRAGGING
-    startDrag(e) {
-      this.dragging = true
-      this.lastX = e.clientX
-      this.startX = e.clientX
-      this.dragging = true
-    },
-
-    mouseMove(e) {
-      const changeInX = e.clientX - this.lastX
-      if (this.dragging) {
-        this.position += changeInX
-        this.lastX = e.clientX
-      }
-    },
-
-    endDrag() {
-      this.dragging = false
-      this.clamp()
-    },
-
-    clamp() {
-      // last picture snaps back to end of window
-      if (this.position >= 0) {
-        this.position = 0
-      } else {
-        const tWidth = this.$refs.imageContainer.offsetWidth
-        const mWidth = this.$refs.mainContainer.offsetWidth
-        // clamp new position so that there is no whitespace to the right
-        this.position = Math.max(mWidth - tWidth, this.position)
-      }
-    },
-
-    // PREV/NEXT BUTTONS
-    makeArrowAppear(e) {
-      this.mousePos = e.clientX - 210
-      this.browserWidth = this.$refs.mainContainer.offsetWidth
-      // MOUSE ON LEFT SIDE OF WINDOW
-      if (this.mousePos > this.browserWidth / 2) {
-        this.showLeftArrow = true
-        this.showRightArrow = false
-      }
-      // MOUSE ON RIGHT SIDE OF WINDOW
-      if (this.mousePos < this.browserWidth / 2) {
-        this.showLeftArrow = false
-        this.showRightArrow = true
-      }
-      // MOUSE DRAGGING
-      if (this.dragging) {
-        this.showLeftArrow = false
-        this.showRightArrow = false
-      }
-      // IF IMAGE SLIDER IS AT END OF IMAGES
-      if (this.position === 0) this.showRightArrow = false
-      if ((Math.abs(this.position) + this.browserWidth) === this.$refs.imageContainer.offsetWidth) this.showLeftArrow = false
-    },
-
-    mouseLeave() {
-      this.showLeftArrow = false
-      this.showRightArrow = false
-    },
-
-    slidePics(distance) {
-      this.position += distance
-      this.clamp()
-    },
 
 // MODAL
     expandPic(index) {
@@ -432,13 +292,6 @@ export default {
 .category-title {
   margin-left: 30px;
   font-family: 'dancing script', cursive;
-}
-
-.category-container {
-  /* border: 1px solid pink; */
-  margin-bottom: 30px;
-  overflow: hidden;
-  position: relative;
 }
 
 .main-container::-webkit-scrollbar {
