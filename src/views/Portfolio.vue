@@ -1,127 +1,120 @@
 <template>
 
-<div class="entire-page">
+  <div class="entire-page">
 
-  <h1 class="title">Portfolio</h1>
+    <h1 class="title">Portfolio</h1>
 
-  <!-- PORTRAITS -->
+    <!-- PORTRAITS -->
 
-  <!-- MAIN VW PAGE PINK -->
+    <!-- MAIN VW PAGE PINK -->
+    <div
+      ref="mainContainer"
+      class="category-container"
+      @mousemove="makeArrowAppear"
+      @mouseleave="mouseLeave"
+    >
+      <h1 class="category-title">Portraits</h1>
+
+      <!-- BOX OF ALL PICTURES BLUE -->
+      <div
+        ref="imageContainer"
+        id="portraits"
+        :class="{
+          'images-container': true,
+          'not-dragging': !dragging,
+          'dragging': dragging
+        }"
+        :style="{
+          transform: `translateX(${ position }px)`
+        }"
+        @mousedown="startDrag"
+        @mousemove="mouseMove"
+      >
+
+        <!-- INDIVIDUAL PICTURES BLACK -->
+        <img
+          draggable="false"
+          class="images"
+          v-for="(image, index) in portraits"
+          @click="expandPic(index)"
+          :src="image.url"
+          :key="image"
+        >
+      </div>
+
+        <div v-if="showRightArrow"
+            @click="slidePics(browserWidth)"
+            id="prev-arrow"
+            class="arrow-container"
+        >
+        prev
+        </div>
+
+        <div v-if="showLeftArrow"
+            @click="slidePics(-browserWidth)"
+            id="next-arrow"
+            class="arrow-container"
+        >
+        next
+        </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- OPEN PICTURE -->
+
   <div
-    ref="mainContainer"
-    class="category-container"
-    @mousemove="makeArrowAppear"
-    @mouseleave="mouseLeave"
-    
+    @click="closePic"
+    v-if="selectedImage"
+    :class="{ modal: true, open: modalOpen }"
   >
-    <h1 class="category-title">Portraits</h1>
-
-    <!-- BOX OF ALL PICTURES BLUE -->
-    <div
-      ref="imageContainer"
-      id="portraits"
-      :class="{
-        'images-container': true,
-        'not-dragging': !dragging
-      }"
-      :style="{
-        transform: `translateX(${ position }px)`
-      }"
-      @mousedown="startDrag"
-      @mousemove="mouseMove"
-      
-    >
-
-      <!-- INDIVIDUAL PICTURES BLACK -->
-      <img
-        draggable="false"
-        class="images"
-        v-for="(image, index) in portraits"
-        @click="expandPic(index)"
-        :src="image.url"
-        :key="image"
-      >
-
+    <div class="image-caption">
+      <img draggable="false" class="selected-image" :src="selectedImage.url">
+      <p class="caption">{{ selectedImage.caption }}</p>
     </div>
     
-    
-      <div v-if="showRightArrow"
-           @click="slidePics(browserWidth)"
-           id="prev-arrow"
-           class="arrow-container"
+    <span class="closeBtn">&#10005;</span>
+
+    <!-- NEXT/PREV IMAGE BUTTONS -->
+    <div class="modal-arrow-container">
+      <div
+        class="modal-arrow"
+        @click.stop="showImage(selectedImageIndex - 1)"
+        id="prev-arrow"
       >
-      prev
+      <img src="https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-left.png"/>
       </div>
-
-      <div v-if="showLeftArrow"
-           @click="slidePics(-browserWidth)"
-           id="next-arrow"
-           class="arrow-container"
+      <div
+        class="modal-arrow"
+        @click.stop="showImage(selectedImageIndex + 1)"
+        id="next-arrow"
       >
-      next
+      <img src="https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-right.png"/>
       </div>
-
-  </div>
-
-</div>
-
-
-
-<!-- OPEN PICTURE -->
-
-<div
-  @click="closePic"
-  v-if="selectedImage"
-  :class="{ modal: true, open: modalOpen }"
->
-  <div class="image-caption">
-    <img draggable="false" class="selected-image" :src="selectedImage.url">
-    <p class="caption">{{ selectedImage.caption }}</p>
-  </div>
-  
-  <span class="closeBtn">&#10005;</span>
-
-  <!-- NEXT/PREV IMAGE BUTTONS -->
-  <div class="modal-arrow-container">
-    <div
-      class="modal-arrow"
-      @click.stop="showImage(selectedImageIndex - 1)"
-      ref="prevArrow"
-      id="prev-arrow"
-    >
-    prev
     </div>
-    <div
-      class="modal-arrow"
-      @click.stop="showImage(selectedImageIndex + 1)"
-      ref="nextArrow"
-      id="next-arrow"
-    >
-    next
-    </div>
+
   </div>
-
-</div>
-
-
-
-
-  
-
 
 </template>
 
 <script>
+
+
 
 export default {
 
   mounted() {
       window.addEventListener('mouseup', this.endDrag)
       window.addEventListener('resize', this.clamp)
+      window.addEventListener('keydown', this.handleKeyPress)
   },
   unmounted() {
       window.removeEventListener('mouseup', this.endDrag)
       window.removeEventListener('resize', this.clamp)
+      window.removeEventListener('keydown', this.handleKeyPress)
   },
 
   data() {
@@ -323,11 +316,20 @@ export default {
   },
 
   methods: {
+    handleKeyPress(e) {
+      if (e.key === 'ArrowRight') this.showImage(this.selectedImageIndex + 1)
+      if (e.key === 'ArrowLeft') this.showImage(this.selectedImageIndex - 1)
+      if (e.key === 'Enter') this.closePic()
+    },
+
+// MAIN PAGE
+
     // MOUSE DRAGGING
     startDrag(e) {
       this.dragging = true
       this.lastX = e.clientX
       this.startX = e.clientX
+      this.dragging = true
     },
 
     mouseMove(e) {
@@ -389,7 +391,7 @@ export default {
       this.clamp()
     },
 
-    // MODAL
+// MODAL
     expandPic(index) {
       if (this.lastX == this.startX) {
         this.selectedImageIndex = index
@@ -403,11 +405,9 @@ export default {
 
     showImage(index) {
       this.selectedImageIndex = index
-      console.log(this.selectedImageIndex)
 
       if (this.selectedImageIndex < 0) this.selectedImageIndex += this.portraits.length
       if (this.selectedImageIndex === this.portraits.length) this.selectedImageIndex = 0
-
     }
     
 
@@ -458,7 +458,6 @@ export default {
   height: 250px;
   margin: 5px;
   transition: .2s, fade-in-out;
-  cursor: grab;
   user-select: none;
   box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
 }
@@ -468,7 +467,12 @@ export default {
 }
 
 .not-dragging {
+  cursor: grab;
   transition: 0.20s transform ease-out;
+}
+
+.dragging {
+    cursor: grabbing;
 }
 
 .arrow-container {
@@ -482,20 +486,17 @@ export default {
   height: 200px;
   width: 200px;
   border-radius: 100%;
-  transition: .2s, fade-in-out;
   display: flex;
   align-items: center;
   top: 60px;
 }
 
 #prev-arrow {
-  transition: .2s, fade-in-out;
   justify-content: flex-end;
   left: -130px;
 }
 
 #next-arrow {
-  transition: .2s, fade-in-out;
   justify-content: flex-start;
   right: -130px;
 }
@@ -513,7 +514,7 @@ export default {
   bottom: 0;
   background-color: rgba(184, 184, 184, 0.5);
   display: none;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .modal.open {
@@ -533,14 +534,10 @@ export default {
 .modal-arrow {
   user-select: none;
   position: absolute;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 25px;
-  padding: 5px;
-  background-color: rgba(255,255,255,0.8);
+  /* background-color: rgba(255,255,255,0.8); */
   cursor: pointer;
-  height: 200px;
+  height: 50%;
   width: 200px;
-  border-radius: 100%;
   transition: .2s, fade-in-out;
   display: flex;
   align-items: center;
@@ -549,8 +546,6 @@ export default {
 .modal-arrow:hover {
   transform: scale(1.05);
 }
-
-
 
 .image-caption {
   display: flex;
@@ -571,6 +566,7 @@ export default {
   font-size: 30px;
   left: 95%;
   top: 5%;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1100px) {
@@ -593,10 +589,9 @@ export default {
   }
   .modal { 
     left: 0;
-    background-color: black;
+    /* background-color: black; */
   }
-  .closeBtn { 
-    color: white;
+  .closeBtn {
     top: 10%;
     left: 85%;
   }
