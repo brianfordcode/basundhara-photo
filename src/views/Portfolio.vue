@@ -234,5 +234,12 @@ export default {
   font-family: 'dancing script', cursive;
 }
 
+@media screen and (max-width: 700px) {
+  .entire-page {
+    margin-top: 35px;
+  }
+  
+}
+
 
 </style>

@@ -63,10 +63,9 @@
         @click.stop="showImage(selectedImageIndex - 1)"
         id="modal-prev-arrow"
     >
-        <img src="https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-left.png"/>
     </div>
     <!-- image -->
-        <div class="image-caption">
+        <div class="image-caption-container">
             <img draggable="false" class="selected-image" :src="selectedImage.url">
             <p class="caption">{{ selectedImage.caption }}</p>
         </div>
@@ -76,7 +75,7 @@
             @click.stop="showImage(selectedImageIndex + 1)"
             id="modal-next-arrow"
         >
-            <img src="https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-right.png"/>
+            
         </div>
         <span class="closeBtn">&#10005;</span>
     </div>
@@ -142,11 +141,11 @@ export default {
             this.dragging = true
             this.lastX = e.clientX
             this.startX = e.clientX
-            this.dragging = true
         },
 
         mouseMove(e) {
             const changeInX = e.clientX - this.lastX
+            
             if (this.dragging) {
                 this.position += changeInX
                 this.lastX = e.clientX
@@ -156,18 +155,6 @@ export default {
         endDrag() {
             this.dragging = false
             this.clamp()
-        },
-
-        clamp() {
-            // last picture snaps back to end of window
-            if (this.position >= 0) {
-                this.position = 0
-            } else {
-                const tWidth = this.$refs.imageContainer.offsetWidth
-                const mWidth = this.$refs.mainContainer.offsetWidth
-                // clamp new position so that there is no whitespace to the right
-                this.position = Math.max(mWidth - tWidth, this.position)
-            }
         },
 
         // PREV/NEXT BUTTONS
@@ -202,6 +189,18 @@ export default {
         slidePics(distance) {
         this.position += distance
         this.clamp()
+        },
+
+        clamp() {
+            // last picture snaps back to end of window
+            if (this.position >= 0) {
+                this.position = 0
+            } else {
+                const tWidth = this.$refs.imageContainer.offsetWidth
+                const mWidth = this.$refs.mainContainer.offsetWidth
+                // clamp new position so that there is no whitespace to the right
+                this.position = Math.max(mWidth - tWidth, this.position)
+            }
         },
 
     // MODAL
@@ -312,7 +311,7 @@ export default {
   left: 210px;
   right: 0;
   bottom: 0;
-  background-color: rgba(184, 184, 184, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -321,39 +320,47 @@ export default {
 
 .selected-image {
   user-select: none;
-  max-width: 70%;
+  max-width: 100%;
   max-height: 80vh;
   /* border: 1px solid pink; */
 }
 
 .modal-arrow {
   /* border: 1px solid green; */
+  height: 50px;
+  min-width: 50px;
   user-select: none;
   cursor: pointer;
   transition: .2s, fade-in-out;
+  z-index: 100;
 }
 
 #modal-prev-arrow {
     margin-left: 20px;
+    background-image: url('https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-left.png');
+    background-repeat: no-repeat;
 }
 
 #modal-next-arrow {
     margin-right: 20px;
+    background-image: url('https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-right.png');
+    background-repeat: no-repeat;
 }
 
 .modal-arrow:hover {
   transform: scale(1.05);
 }
 
-.image-caption {
+.image-caption-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .caption {
+    user-select: none;
   margin: 10px;
   font-size: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -370,6 +377,14 @@ export default {
 @media screen and (max-width: 700px) {
     .modal.open { 
         left: 0;
+        margin-top: 30px;
+    }
+    .closeBtn {
+        top: 15%;
+        left: 90%;
+    }
+    .selected-image {
+        max-width: 150%;
     }
 }
 
