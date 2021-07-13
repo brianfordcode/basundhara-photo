@@ -1,7 +1,10 @@
 <template>
     <div
         ref="mainContainer"
-        class="category-container"
+        :class="{
+            'category-container': true,
+            'touch-device': touch
+        }"
         @mousemove="makeArrowAppear"
         @mouseleave="mouseLeave"
     >
@@ -90,6 +93,10 @@ export default {
         window.addEventListener('mouseup', this.endDrag)
         window.addEventListener('resize', this.clamp)
         window.addEventListener('keydown', this.handleKeyPress)
+        window.addEventListener('touchstart', () => {
+            this.touch = true
+            console.log(this.touch)
+        })
     },
 
     unmounted() {
@@ -117,6 +124,7 @@ export default {
             portraitsElement: null,
             modalOpen: false,
             selectedImageIndex: null,
+            touch: false,
         }
     },
 
@@ -145,7 +153,6 @@ export default {
 
         mouseMove(e) {
             const changeInX = e.clientX - this.lastX
-            
             if (this.dragging) {
                 this.position += changeInX
                 this.lastX = e.clientX
@@ -237,6 +244,10 @@ export default {
         position: relative;
     }
 
+    .touch-device {
+        overflow: scroll;
+    }
+
     .images-container {
         user-select: none;
         width: min-content;
@@ -305,7 +316,7 @@ export default {
 }
 
 .modal.open {
-    z-index: 999;
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 210px;
