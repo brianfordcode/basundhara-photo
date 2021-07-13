@@ -19,40 +19,6 @@
 
 
 
-  <!-- OPEN PICTURE -->
-
-  <div
-    @click="closePic"
-    v-if="selectedImage"
-    :class="{ modal: true, open: modalOpen }"
-  >
-    <div class="image-caption">
-      <img draggable="false" class="selected-image" :src="selectedImage.url">
-      <p class="caption">{{ selectedImage.caption }}</p>
-    </div>
-    
-    <span class="closeBtn">&#10005;</span>
-
-    <!-- NEXT/PREV IMAGE BUTTONS -->
-    <div class="modal-arrow-container">
-      <div
-        class="modal-arrow"
-        @click.stop="showImage(selectedImageIndex - 1)"
-        id="prev-arrow"
-      >
-      <img src="https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-left.png"/>
-      </div>
-      <div
-        class="modal-arrow"
-        @click.stop="showImage(selectedImageIndex + 1)"
-        id="next-arrow"
-      >
-      <img src="https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-right.png"/>
-      </div>
-    </div>
-
-  </div>
-
 </template>
 
 <script>
@@ -245,32 +211,7 @@ export default {
     }
   },
 
-
-
-  methods: {
-
-
-// MODAL
-    expandPic(index) {
-      if (this.lastX == this.startX) {
-        this.selectedImageIndex = index
-        this.modalOpen = true
-      }
-    },
-
-    closePic() {
-      this.modalOpen = false
-    },
-
-    showImage(index) {
-      this.selectedImageIndex = index
-
-      if (this.selectedImageIndex < 0) this.selectedImageIndex += this.portraits.length
-      if (this.selectedImageIndex === this.portraits.length) this.selectedImageIndex = 0
-    }
-    
-
-  },
+  methods: { }
 }
 </script>
 
@@ -283,7 +224,7 @@ export default {
 
 .title {
   text-align: center;
-  margin: 30px;
+  margin-top: 30px;
   font-family: 'dancing script', cursive;
   font-size: 50px;
 }
@@ -293,100 +234,5 @@ export default {
   font-family: 'dancing script', cursive;
 }
 
-.main-container::-webkit-scrollbar {
-  display: none;
-}
-
-/* MODAL */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 210px;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(184, 184, 184, 0.5);
-  display: none;
-  /* cursor: pointer; */
-}
-
-.modal.open {
-  display: flex;
-}
-
-.selected-image {
-  user-select: none;
-  height: 80%;
-}
-
-.modal-arrow-container {
-  display: flex;
-  align-items: center;
-}
-
-.modal-arrow {
-  user-select: none;
-  position: absolute;
-  /* background-color: rgba(255,255,255,0.8); */
-  cursor: pointer;
-  height: 50%;
-  width: 200px;
-  transition: .2s, fade-in-out;
-  display: flex;
-  align-items: center;
-}
-
-.modal-arrow:hover {
-  transform: scale(1.05);
-}
-
-.image-caption {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.caption {
-  margin: 10px;
-  font-size: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.closeBtn {
-  position: absolute;
-  font-size: 30px;
-  left: 95%;
-  top: 5%;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 1100px) {
-  .selected-image {
-    height: 80%;
-  }
-}
-@media screen and (max-width: 900px) {
-  .selected-image {
-    height: 60%;
-  }
-}
-@media screen and (max-width: 700px) {
-  .main-container {
-    width: 100%;
-    margin-top: 50px;
-  }
-  .selected-image {
-    height: 60%;
-  }
-  .modal { 
-    left: 0;
-    /* background-color: black; */
-  }
-  .closeBtn {
-    top: 10%;
-    left: 85%;
-  }
-}
 
 </style>
