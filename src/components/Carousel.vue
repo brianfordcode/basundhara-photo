@@ -47,45 +47,39 @@
         </div>
     </div>
 
-  <div
-    @click="closePic"
-    v-if="selectedImage"
-    :class="{ modal: true, open: modalOpen }"
-  >
-    <div class="image-caption">
-      <img draggable="false" class="selected-image" :src="selectedImage.url">
-      <p class="caption">{{ selectedImage.caption }}</p>
-    </div>
-    
-    <span class="closeBtn">&#10005;</span>
 
-    <!-- NEXT/PREV IMAGE BUTTONS -->
-    <div class="modal-arrow-container">
-      <div
+
+
+
+<!-- MODAL -->
+    <div
+        @click="closePic"
+        v-if="selectedImage"
+        :class="{ modal: true, open: modalOpen }"
+    >
+      <!-- prev arrow -->
+    <div
         class="modal-arrow"
         @click.stop="showImage(selectedImageIndex - 1)"
-        id="prev-arrow"
-      >
-      <img src="https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-left.png"/>
-      </div>
-      <div
-        class="modal-arrow"
-        @click.stop="showImage(selectedImageIndex + 1)"
-        id="next-arrow"
-      >
-      <img src="https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-right.png"/>
-      </div>
+        id="modal-prev-arrow"
+    >
+        <img src="https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-left.png"/>
     </div>
-
-  </div>
-
-
-
-
-
-
-
-
+    <!-- image -->
+        <div class="image-caption">
+            <img draggable="false" class="selected-image" :src="selectedImage.url">
+            <p class="caption">{{ selectedImage.caption }}</p>
+        </div>
+    <!-- next arrow -->
+        <div
+            class="modal-arrow"
+            @click.stop="showImage(selectedImageIndex + 1)"
+            id="modal-next-arrow"
+        >
+            <img src="https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-right.png"/>
+        </div>
+        <span class="closeBtn">&#10005;</span>
+    </div>
 
 </template>
 
@@ -144,71 +138,71 @@ export default {
     // MAIN PAGE
 
     // MOUSE DRAGGING
-    startDrag(e) {
-        this.dragging = true
-        this.lastX = e.clientX
-        this.startX = e.clientX
-        this.dragging = true
-    },
-
-    mouseMove(e) {
-        const changeInX = e.clientX - this.lastX
-        if (this.dragging) {
-            this.position += changeInX
+        startDrag(e) {
+            this.dragging = true
             this.lastX = e.clientX
-        }
-    },
+            this.startX = e.clientX
+            this.dragging = true
+        },
 
-    endDrag() {
-        this.dragging = false
+        mouseMove(e) {
+            const changeInX = e.clientX - this.lastX
+            if (this.dragging) {
+                this.position += changeInX
+                this.lastX = e.clientX
+            }
+        },
+
+        endDrag() {
+            this.dragging = false
+            this.clamp()
+        },
+
+        clamp() {
+            // last picture snaps back to end of window
+            if (this.position >= 0) {
+                this.position = 0
+            } else {
+                const tWidth = this.$refs.imageContainer.offsetWidth
+                const mWidth = this.$refs.mainContainer.offsetWidth
+                // clamp new position so that there is no whitespace to the right
+                this.position = Math.max(mWidth - tWidth, this.position)
+            }
+        },
+
+        // PREV/NEXT BUTTONS
+        makeArrowAppear(e) {
+            this.mousePos = e.clientX - 210
+            this.browserWidth = this.$refs.mainContainer.offsetWidth
+            // MOUSE ON LEFT SIDE OF WINDOW
+            if (this.mousePos > this.browserWidth / 2) {
+                this.showLeftArrow = true
+                this.showRightArrow = false
+            }
+            // MOUSE ON RIGHT SIDE OF WINDOW
+            if (this.mousePos < this.browserWidth / 2) {
+                this.showLeftArrow = false
+                this.showRightArrow = true
+            }
+            // MOUSE DRAGGING
+            if (this.dragging) {
+                this.showLeftArrow = false
+                this.showRightArrow = false
+            }
+            // IF IMAGE SLIDER IS AT END OF IMAGES
+            if (this.position === 0) this.showRightArrow = false
+            if ((Math.abs(this.position) + this.browserWidth) === this.$refs.imageContainer.offsetWidth) this.showLeftArrow = false
+        },
+
+        mouseLeave() {
+            this.showLeftArrow = false
+            this.showRightArrow = false
+        },
+
+        slidePics(distance) {
+        this.position += distance
         this.clamp()
-    },
-
-    clamp() {
-        // last picture snaps back to end of window
-        if (this.position >= 0) {
-            this.position = 0
-        } else {
-            const tWidth = this.$refs.imageContainer.offsetWidth
-            const mWidth = this.$refs.mainContainer.offsetWidth
-            // clamp new position so that there is no whitespace to the right
-            this.position = Math.max(mWidth - tWidth, this.position)
-        }
-    },
-
-    // PREV/NEXT BUTTONS
-    makeArrowAppear(e) {
-        this.mousePos = e.clientX - 210
-        this.browserWidth = this.$refs.mainContainer.offsetWidth
-        // MOUSE ON LEFT SIDE OF WINDOW
-        if (this.mousePos > this.browserWidth / 2) {
-            this.showLeftArrow = true
-            this.showRightArrow = false
-        }
-        // MOUSE ON RIGHT SIDE OF WINDOW
-        if (this.mousePos < this.browserWidth / 2) {
-            this.showLeftArrow = false
-            this.showRightArrow = true
-        }
-        // MOUSE DRAGGING
-        if (this.dragging) {
-            this.showLeftArrow = false
-            this.showRightArrow = false
-        }
-        // IF IMAGE SLIDER IS AT END OF IMAGES
-        if (this.position === 0) this.showRightArrow = false
-        if ((Math.abs(this.position) + this.browserWidth) === this.$refs.imageContainer.offsetWidth) this.showLeftArrow = false
-    },
-
-    mouseLeave() {
-        this.showLeftArrow = false
-        this.showRightArrow = false
-    },
-
-    slidePics(distance) {
-      this.position += distance
-      this.clamp()
-    },
+        },
 
     // MODAL
     expandPic(index) {
@@ -308,47 +302,43 @@ export default {
 
     /* MODAL */
 .modal {
-  z-index: 100000;
+  display: none;
+}
+
+.modal.open {
+    z-index: 999;
   position: fixed;
   top: 0;
   left: 210px;
   right: 0;
   bottom: 0;
   background-color: rgba(184, 184, 184, 0.5);
-  display: none;
-}
-
-.modal.open {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid blue; */
 }
 
 .selected-image {
   user-select: none;
-  height: 80%;
+  max-width: 70%;
+  max-height: 80vh;
+  /* border: 1px solid pink; */
 }
 
-/* .modal-arrow-container {
-    position: absolute;
-    height: 100vh;
-    width: calc(100vw - 227px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid blue;
-} */
-
 .modal-arrow {
-  border: 1px solid green;
-  margin: 10px;
+  /* border: 1px solid green; */
   user-select: none;
-  position: absolute;
-  /* background-color: rgba(255,255,255,0.8); */
   cursor: pointer;
   transition: .2s, fade-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  /* transform: translateX(210px); */
+}
+
+#modal-prev-arrow {
+    margin-left: 20px;
+}
+
+#modal-next-arrow {
+    margin-right: 20px;
 }
 
 .modal-arrow:hover {
@@ -377,33 +367,10 @@ export default {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1100px) {
-  .selected-image {
-    height: 80%;
-  }
-}
-@media screen and (max-width: 900px) {
-  .selected-image {
-    height: 60%;
-  }
-}
 @media screen and (max-width: 700px) {
-  .main-container {
-    width: 100%;
-    margin-top: 50px;
-  }
-  .selected-image {
-    height: 60%;
-  }
-  .modal { 
-    left: 0;
-    /* background-color: black; */
-  }
-  .closeBtn {
-    top: 10%;
-    left: 85%;
-  }
+    .modal.open { 
+        left: 0;
+    }
 }
 
-    
 </style>
