@@ -97,7 +97,7 @@ export default {
 }
 
 .links-container > *:hover {
-  color:rgb(30, 30, 114);
+  text-decoration: underline;
 }
 
 .links-container > * {

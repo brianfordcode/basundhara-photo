@@ -1,4 +1,5 @@
 <template>
+
     <div
         ref="mainContainer"
         :class="{
@@ -50,10 +51,6 @@
         </div>
     </div>
 
-
-
-
-
 <!-- MODAL -->
     <div
         @click="closePic"
@@ -61,20 +58,20 @@
         :class="{ modal: true, open: modalOpen }"
     >
       <!-- prev arrow -->
-    <div
-        class="modal-arrow"
-        @click.stop="showImage(selectedImageIndex - 1)"
-        id="modal-prev-arrow"
-    >
-        <img src="https://img.icons8.com/ios-filled/50/000000/long-arrow-left.png"/>
-    </div>
-    <!-- image -->
+        <div
+            class="modal-arrow"
+            @click.stop="showImage(selectedImageIndex - 1)"
+            id="modal-prev-arrow"
+        >
+            <img src="https://img.icons8.com/ios-filled/50/000000/long-arrow-left.png"/>
+        </div>
+      <!-- image -->
         <div class="image-caption-container">
             <img draggable="false" class="selected-image" :src="selectedImage.url">
             <p class="name">{{ selectedImage.name }}</p>
             <p class="occupation">{{ selectedImage.occupation }}</p>
         </div>
-    <!-- next arrow -->
+      <!-- next arrow -->
         <div
             class="modal-arrow"
             @click.stop="showImage(selectedImageIndex + 1)"
@@ -102,6 +99,7 @@ export default {
         window.removeEventListener('mouseup', this.endDrag)
         window.removeEventListener('resize', this.clamp)
         window.removeEventListener('keydown', this.handleKeyPress)
+        window.removeEventListener('touchstart', () => {this.touch = true})
     },
 
     props: {
@@ -381,6 +379,7 @@ export default {
 
 .occupation {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
 }
 
 .closeBtn {

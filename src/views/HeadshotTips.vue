@@ -1,17 +1,19 @@
 <template>
 
 <div class="container">
+
   <h1>How To Overcome Anxiety for a Photoshoot</h1>
   <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT4dynTcUKfw9hWPUZsjLEqxTrXC6-0SdeT9GBPKQL8vRrdW1Mg45AnbBVH9uP29CyzIathtz2SgTUY/embed?start=true&loop=true&delayms=3000" frameborder="0" width="800" height="490" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  
   <span></span>
+
   <h1>Clothing Tips for Men</h1>
   <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSGQ5ntcHgPpPs_cPfngF7T9x61tTM1CVlNciT6SCdqWpPSM7F8-KI9wFIzUZZcs4yTv9DQMb4o52zi/embed?start=true&loop=true&delayms=3000" frameborder="0" width="800" height="490" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  
   <span></span>
+
   <h1>Podcast about Corporate Photography with Surojit Mahato</h1>
   <iframe width="800" height="490" src="https://www.youtube.com/embed/T4uz10czIOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
-
-
 
 </div>
 
@@ -29,19 +31,15 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px auto;
-  font-family: 'Dancing Script';
+  margin: 60px auto;
+  
 }
 
 h1 {
+  font-family: 'Dancing Script';
   font-size: 30px;
   text-align: center;
 }
-
-/* span {
-  border: 1px solid black;
-  width: 100%;
-} */
 
 iframe {
   margin-top: 5px;
@@ -60,8 +58,8 @@ span {
     height: 375px;
   }
   h1 {
-  font-size: 25px;
-}
+    font-size: 25px;
+  }
 }
 @media screen and (max-width: 900px) {
   iframe {
@@ -69,26 +67,22 @@ span {
     height: 320px;
   }
   h1 {
-  font-size: 20px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 700px) {
-  .container {
-    margin-top: 60px;
-  }
   iframe {
     width: 350px;
     height: 233px;
   }
 }
 @media screen and (max-width: 400px) {
-
   iframe {
     width: 350px;
     height: 233px;
   }
   h1 {
-  font-size: 15px;
+    font-size: 15px;
   }
 }
 

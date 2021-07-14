@@ -1,31 +1,32 @@
 <template>
 
-    <div class="container">
-      <div class="bio-img">
-        <div class="text">
+  <div class="container">
+
+    <div class="bio-img">
+      <div class="text">
         <h1 class="about-me-title">Hello!</h1>
         <p class="about-para">I'm Basundhara, a photographer and traveller. 
-          <br>
-          <br>
-          Driven by the firm belief in Photography, I attempt to capture peoples' emotions in the most real terms. Be it for a professional headshot or capturing a couple on their retirement cruise, I manage to aid in creating fresh perspectives and everlasting moments.
-          <br>
-          <br>
-          I love connecting with people, listening to their stories, mutually creating new opportunities and thereby adding value in each other's life.
-          <br>
-          <br>
-          <strong>Let's connect!</strong></p>
-        </div>
-        <img class="basu-pic" src="../assets/basundhara.png" alt="basundhara">
+        <br>
+        <br>
+        Driven by the firm belief in Photography, I attempt to capture peoples' emotions in the most real terms. Be it for a professional headshot or capturing a couple on their retirement cruise, I manage to aid in creating fresh perspectives and everlasting moments.
+        <br>
+        <br>
+        I love connecting with people, listening to their stories, mutually creating new opportunities and thereby adding value in each other's life.
+        <br>
+        <br>
+        <strong>Let's connect!</strong></p>
       </div>
-
-      <div class="client-banner">
-        <h1 class="my-work-title">My Work Has Been Seen In:</h1>
-        <div class="clients">
-          <img class="logos" v-for="clientlogo in clients" :src=clientlogo :key="clientlogo" />
-        </div>
-      </div>
-
+      <img class="basu-pic" src="../assets/basundhara.png" alt="basundhara">
     </div>
+
+    <div class="client-banner">
+      <h1 class="my-work-title">My Work Has Been Seen In:</h1>
+      <div class="clients">
+        <img class="logos" v-for="clientlogo in clients" :src=clientlogo :key="clientlogo" />
+      </div>
+    </div>
+
+  </div>
 </template>
 
 <script>
@@ -61,86 +62,69 @@
 
 <style scoped>
 
-.container {
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  margin: 60px auto;
-  /* border: 1px solid purple; */
-}
-
-@media screen and (max-width: 700px ) {
   .container {
+    max-width: 1200px;
+    margin: 60px auto;
+  }
+
+  .text {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
+    padding: 0 20px 20px 20px;
   }
-}
 
-.text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 20px 20px 20px;
-  /* border: 1px solid blue; */
-}
+  .about-me-title {
+    font-family: 'dancing script', cursive;
+    padding-bottom: 20px;
+    font-size: 50px;
+  }
 
-.about-me-title {
-  font-family: 'dancing script', cursive;
-  padding-bottom: 20px;
-  font-size: 50px;
-}
+  .about-para {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
 
-.about-para {
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.bio-img {
-  /* border: 1px solid pink; */
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.basu-pic {
-  height: 230px;
-}
-
-
-@media screen and (max-width: 900px ) {
   .bio-img {
-    flex-direction: column;
+    display: flex;
     align-items: center;
+    padding: 0 20px;
   }
-}
 
-.my-work-title {
-  font-family: 'dancing script', cursive;
-  text-align: center;
-  margin-top: 10px;
-}
+  .basu-pic {
+    height: 230px;
+  }
 
-.client-banner {
-  /* border: 1px solid green; */
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  position: relative;
-}
 
-.clients {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-}
+  @media screen and (max-width: 900px ) {
+    .bio-img {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
-.logos {
-  width: 75px;
-  height: auto;
-  margin: 10px;
-  /* border: 1px solid pink; */
-}
+  .my-work-title {
+    font-family: 'dancing script', cursive;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .client-banner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .clients {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .logos {
+    width: 75px;
+    margin: 10px;
+  }
 
 </style>

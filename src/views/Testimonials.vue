@@ -2,7 +2,7 @@
     
 <div class="entire-page">
     
-    <!-- MAIN VW PAGE PINK -->
+    <!-- MAIN VW PAGE -->
     <div
         ref="mainContainer"
         class="main-container"
@@ -10,19 +10,19 @@
         @mousemove="mouseMove"
     >
 
-        <!-- BOX OF ALL TESTIMONIALS BLUE -->
+        <!-- BOX OF ALL TESTIMONIALS -->
         <div
             ref="testimonialContainer"
             :class="{
                 'testimonials-container': true,
-                'not-dragging': !dragging
+                'not-dragging': !dragging,
+                'dragging': dragging
             }"
             :style="{
                 transform: `translateX(${ position }px)`
             }"
         >
-
-            <!-- INDIVIDUAL TESTIMONIALS BLACK -->
+            <!-- INDIVIDUAL TESTIMONIALS  -->
             <div
                 v-for="testimonial in testimonials" class="testimonial"
                 :key="testimonial"
@@ -52,6 +52,7 @@ export default {
     unmounted() {
         window.removeEventListener('mouseup', this.endDrag)
     },
+    
     data() {
         return {
             dragging: false,
@@ -134,103 +135,85 @@ export default {
 
 <style scoped>
 
-.entire-page {
-    overflow: hidden;
-    margin-top: 30px;
-}
-
-.main-container {
-    /* border: 1px solid pink; */
-    overflow-x: scroll;
-    height: min-content;
-    /* width: 100vw; */
-    user-select: none;
-    position: relative;
-    cursor: grab;
-}
-
-.main-container::-webkit-scrollbar {
-  display: none;
-}
-
-@media screen and (max-width: 700px) {
     .entire-page {
-        margin-top: 50px;
+        overflow: hidden;
+        margin-top: 30px;
     }
-}
 
+    .main-container {
+        overflow-x: scroll;
+        user-select: none;
+        position: relative;
+        cursor: grab;
+    }
 
-.title {
-    font-family: 'dancing script', cursive;
-    margin-top: 20px;
-    font-size: 50px;
-    text-align: center;
-    /* border: 1px solid green; */
-}
+    .main-container::-webkit-scrollbar {
+        display: none;
+    }
 
-.testimonials-container {
-    /* border: 1px solid blue; */
-    display: flex;
-    width: min-content;
-    /* overflow-x: scroll; */
-    /* overflow-y: hidden; */
-    position: relative;
-    cursor: grab;
-}
+    @media screen and (max-width: 700px) {
+        .entire-page {
+            margin-top: 50px;
+        }
+    }
 
-.testimonial {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: white;
-    box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
-    border-radius: 20px;
-    width: 300px;
-    height: 100%;
-    min-width: 300px;
-    max-width: 300px;
-    padding: 20px;
-    margin: 30px 20px;
-    transition: .2s, fade-in-out;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    user-select: none;
-    /* border: 1px solid black; */
-}
+    .testimonials-container {
+        display: flex;
+        width: min-content;
+        position: relative;
+        cursor: grab;
+    }
 
-.testimonial:hover {
-    transform: scale(1.05);
-    z-index: 5
-}
+    .dragging {
+        cursor: grabbing;
+    }
 
-.quote {
-    line-height: 25px;
-    text-align: justify;
-}
+    .testimonial {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: white;
+        box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
+        border-radius: 20px;
+        height: 100%;
+        min-width: 300px;
+        max-width: 300px;
+        padding: 20px;
+        margin: 30px 20px;
+        transition: .2s, fade-in-out;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        user-select: none;
+    }
 
-.name {
-    font-size: 20px;
-    padding: 10px;
-    font-family: 'dancing script', cursive;
-}
+    .testimonial:hover {
+        transform: scale(1.05);
+    }
 
-.not-dragging
-{
-    transition: 0.20s transform ease-out;
-}
+    .quote {
+        line-height: 25px;
+        text-align: justify;
+    }
 
-.occupation {
-    font-size: 15px;
-}
+    .name {
+        font-size: 20px;
+        padding: 10px;
+        font-family: 'dancing script', cursive;
+    }
 
-img {
-    user-select: none;
-    height: 120px;
-    border-radius: 500px;
-    margin: 20px 20px 0 20px;
-}
+    .not-dragging {
+        transition: 0.20s transform ease-out;
+    }
 
+    .occupation {
+        font-size: 15px;
+    }
 
+    img {
+        user-select: none;
+        height: 120px;
+        border-radius: 500px;
+        margin: 20px 20px 0 20px;
+    }
 
 </style>
 
