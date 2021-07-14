@@ -93,21 +93,22 @@ export default {
 
 .button {
   display: inline-block;
-  background-color: white;
+  background-color: black;
   padding: 15px 20px;
   width: 210px;
-  border: 1px solid rgb(124, 124, 124);
+  border: 1px solid black;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: black;
+  color: white;
   transition: .2s, fade-in-out;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .button:hover {
-  background-color: rgb(124, 124, 124);
-  color: white;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 
 .social {

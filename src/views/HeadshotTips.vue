@@ -4,11 +4,12 @@
   <h1>How To Overcome Anxiety for a Photoshoot</h1>
   <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT4dynTcUKfw9hWPUZsjLEqxTrXC6-0SdeT9GBPKQL8vRrdW1Mg45AnbBVH9uP29CyzIathtz2SgTUY/embed?start=true&loop=true&delayms=3000" frameborder="0" width="800" height="490" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
   <span></span>
-  <h1>Podcast about Corporate Photography with Surojit Mahato</h1>
-  <iframe width="800" height="490" src="https://www.youtube.com/embed/T4uz10czIOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <span></span>
   <h1>Clothing Tips for Men</h1>
   <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSGQ5ntcHgPpPs_cPfngF7T9x61tTM1CVlNciT6SCdqWpPSM7F8-KI9wFIzUZZcs4yTv9DQMb4o52zi/embed?start=true&loop=true&delayms=3000" frameborder="0" width="800" height="490" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  <span></span>
+  <h1>Podcast about Corporate Photography with Surojit Mahato</h1>
+  <iframe width="800" height="490" src="https://www.youtube.com/embed/T4uz10czIOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
 
 
 

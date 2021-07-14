@@ -71,7 +71,8 @@
     <!-- image -->
         <div class="image-caption-container">
             <img draggable="false" class="selected-image" :src="selectedImage.url">
-            <p class="caption">{{ selectedImage.caption }}</p>
+            <p class="name">{{ selectedImage.name }}</p>
+            <p class="occupation">{{ selectedImage.occupation }}</p>
         </div>
     <!-- next arrow -->
         <div
@@ -369,12 +370,17 @@ export default {
   /* width: 100%; */
 }
 
-.caption {
+.name {
   user-select: none;
-  margin: 10px;
-  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 30px;
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'dancing script', cursive;
+}
+
+.occupation {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .closeBtn {
@@ -391,8 +397,9 @@ export default {
         margin-top: 30px;
     }
     .closeBtn {
-        top: 15%;
+        top: 5%;
         left: 90%;
+        color: black;
     }
     .selected-image {
         max-width: 150%;
