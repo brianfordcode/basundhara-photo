@@ -132,7 +132,6 @@ export default {
     },
 
     methods: {
-
         handleKeyPress(e) {
             if (e.key === 'ArrowRight') this.showImage(this.selectedImageIndex + 1)
             if (e.key === 'ArrowLeft') this.showImage(this.selectedImageIndex - 1)
@@ -308,101 +307,97 @@ export default {
     }
 
     /* MODAL */
-.modal {
-  display: none;
-}
-
-.modal.open {
-  z-index: 999;
-  position: fixed;
-  top: 0;
-  left: 210px;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* border: 1px solid blue; */
-}
-
-.selected-image {
-  user-select: none;
-  max-width: 100%;
-  max-height: 80vh;
-  /* border: 1px solid pink; */
-}
-
-.modal-arrow {
-  /* border: 1px solid green; */
-  height: 50px;
-  min-width: 50px;
-  padding: 5px;
-  user-select: none;
-  cursor: pointer;
-  transition: .2s, fade-in-out;
-  z-index: 100;
-  background-color: rgba(255,255,255,0.8);
-  cursor: pointer;
-  border-radius: 100%;
-}
-
-#modal-prev-arrow {
-    margin-left: 20px;
-}
-
-#modal-next-arrow {
-    margin-right: 20px;
-
-}
-
-.modal-arrow:hover {
-  transform: scale(1.05);
-}
-
-.image-caption-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* width: 100%; */
-}
-
-.name {
-  user-select: none;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-size: 30px;
-  text-align: center;
-  font-family: 'dancing script', cursive;
-}
-
-.occupation {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-}
-
-.closeBtn {
-  position: absolute;
-  font-size: 30px;
-  left: 95%;
-  top: 5%;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 700px) {
-    .modal.open { 
-        left: 0;
-        margin-top: 30px;
+    .modal {
+        display: none;
     }
-    .closeBtn {
-        top: 5%;
-        left: 90%;
-        color: black;
+
+    .modal.open {
+        z-index: 999;
+        position: fixed;
+        top: 0;
+        left: 210px;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
+
     .selected-image {
-        max-width: 150%;
+        user-select: none;
+        max-width: 100%;
+        max-height: 80vh;
     }
-}
+
+    .modal-arrow {
+        height: 50px;
+        min-width: 50px;
+        padding: 5px;
+        user-select: none;
+        cursor: pointer;
+        transition: .2s, fade-in-out;
+        z-index: 100;
+        background-color: rgba(255,255,255,0.8);
+        cursor: pointer;
+        border-radius: 100%;
+    }
+
+    #modal-prev-arrow {
+        margin-left: 20px;
+    }
+
+    #modal-next-arrow {
+        margin-right: 20px;
+
+    }
+
+    .modal-arrow:hover {
+        transform: scale(1.05);
+    }
+
+    .image-caption-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .name {
+        user-select: none;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 30px;
+        text-align: center;
+        font-family: 'dancing script', cursive;
+    }
+
+    .occupation {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+    }
+
+    .closeBtn {
+        position: absolute;
+        font-size: 30px;
+        left: 95%;
+        top: 5%;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 700px) {
+        .modal.open { 
+            left: 0;
+            margin-top: 30px;
+        }
+        .closeBtn {
+            top: 5%;
+            left: 90%;
+            color: black;
+        }
+        .selected-image {
+            max-width: 150%;
+        }
+    }
 
 </style>

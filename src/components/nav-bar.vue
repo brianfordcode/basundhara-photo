@@ -28,87 +28,76 @@
 
 <style scoped>
 
-.nav {
-  width: 210px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
-  display: flex;
-  flex-direction: column;
-  /* border: 1px solid blue; */
-  justify-content: space-between;
-  flex-shrink: 0;
-  flex-grow: 0;
-  user-select: none;
-  z-index: 50000;
-}
-
-@media screen and (max-width: 700px) {
-
   .nav {
-    display: none;
+    width: 210px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    flex-grow: 0;
+    user-select: none;
+    z-index: 50000;
   }
-}
 
-.content {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: space-around;
- /* border: 4px solid green; */
- position: sticky;
-  top: 0;
-  left: 0;
- height: 100vh;
- width: 210px;
- /* overflow: hidden; */
-}
+  @media screen and (max-width: 700px) {
+    .nav {
+      display: none;
+    }
+  }
 
-/* LOGO */
-.basu-logo {
-  height: auto;
-  width: 80%;
-  cursor: pointer;
-  margin: 30px 0;
-  
-  /* border: 1px solid pink; */
-}
-
-/* PAGE LINKS */
-.links {
+  .content {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  /* border: 1px solid black; */
-  flex-grow: 1;
-}
+  align-items: center;
+  position: sticky;
+    top: 0;
+  height: 100vh;
+  }
 
-.links > * {
-  text-decoration: none;
-  color: black;
-  margin: 20px 0;
-  font-size: 20px;
-  transition: .2s, fade-in-out;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+  /* LOGO */
+  .basu-logo {
+    width: 80%;
+    cursor: pointer;
+    margin: 30px 0;
+  }
 
-.router-link-active {
-  /* color:rgb(124, 124, 124); */
-  text-decoration: underline;
-}
+  /* PAGE LINKS */
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-grow: 1;
+  }
 
-/* SOCIAL LINKS */
+  .links > * {
+    text-decoration: none;
+    color: black;
+    margin: 20px 0;
+    font-size: 20px;
+    transition: .2s, fade-in-out;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .router-link-active {
+    text-decoration: underline;
+  }
+
+  /* SOCIAL LINKS */
 
 
-.social {
-  cursor: pointer;
-  height: 40px;
-  transition: .2s, fade-in-out;
-  margin: 30px 10px;
-}
+  .social {
+    cursor: pointer;
+    height: 40px;
+    transition: .2s, fade-in-out;
+    margin: 30px 10px;
+  }
 
-.social:hover {
-  transform: scale(1.2);
-}
+  .social:hover {
+    transform: scale(1.2);
+  }
+
 </style>
 
 

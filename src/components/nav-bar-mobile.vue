@@ -45,86 +45,83 @@ export default {
 
 <style scoped>
 
-@media screen and (min-width: 700px) {
-    .nav {
-        display: none;
+    @media screen and (min-width: 700px) {
+        .nav {
+            display: none;
+        }
     }
-}
 
-.nav {
-    width: 100%;
-    height: 50px;
-    box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
-    z-index: 1000;
-    position: fixed;
-    background-color: white;
-}
+    .nav {
+        width: 100%;
+        height: 50px;
+        box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
+        z-index: 1000;
+        position: fixed;
+        background-color: white;
+    }
 
-.content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 1000;
-}
+    .content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+    }
 
-.basu-logo {
-    height: 35px;
-    margin: 5px 0;
-    cursor: pointer;
-    user-select: none;
-}
+    .basu-logo {
+        height: 35px;
+        margin: 5px 0;
+        cursor: pointer;
+        user-select: none;
+    }
 
-.social-links {
-    display: flex;
-}
+    .social-links {
+        display: flex;
+    }
 
-.router-link {
-    width: 100%;
-    text-align: center;
-}
+    .router-link {
+        width: 100%;
+        text-align: center;
+    }
 
-.links-container {
-    z-index: 999;
-    position: absolute;
-    right: 0;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    user-select: none;
-    box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.15);
-}
+    .links-container {
+        z-index: 999;
+        position: absolute;
+        right: 0;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        user-select: none;
+        box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.15);
+    }
 
-.links-container > *:hover {
-  text-decoration: underline;
-}
+    .links-container > *:hover {
+        text-decoration: underline;
+    }
 
-.links-container > * {
-  text-decoration: none;
-  color: black;
-  padding: 20px 0;
-  font-size: 20px;
-  transition: .2s, fade-in-out;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-.social {
-  cursor: pointer;
-  height: 25px;
-  transition: .2s, fade-in-out;
-}
-
-.social:nth-child(2) {
-    margin: 0 20px;
-}
-
-.social:hover {
-  transform: scale(1.2);
-}
+    .links-container > * {
+        text-decoration: none;
+        color: black;
+        padding: 20px 0;
+        font-size: 20px;
+        transition: .2s, fade-in-out;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
 
 
+    .social {
+        cursor: pointer;
+        height: 25px;
+        transition: .2s, fade-in-out;
+    }
 
+    .social:nth-child(2) {
+        margin: 0 20px;
+    }
+
+    .social:hover {
+        transform: scale(1.2);
+    }
 
 </style>
