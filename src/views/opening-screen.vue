@@ -8,7 +8,7 @@
         <div class="title">
           <img src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
           <h3>LinkedIn and Corporate Headshots | Branding and Editorial Portraits</h3>
-          <button class="button" @click="$router.push({ name: 'Portfolio' })">View Gallery</button>
+          <button class="button" @click="$router.push({ name: 'Portfolio' })">View Portfolio</button>
         <!-- <router-link class="button" to="/App.vue"><p>Enter</p></router-link> -->
         </div>
 
@@ -96,7 +96,7 @@ export default {
   background-color: white;
   padding: 15px 20px;
   width: 210px;
-  border: 1px solid rgb(30, 30, 114);
+  border: 1px solid rgb(124, 124, 124);
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -106,7 +106,7 @@ export default {
 }
 
 .button:hover {
-  background-color: rgb(30, 30, 114);
+  background-color: rgb(124, 124, 124);
   color: white;
 }
 

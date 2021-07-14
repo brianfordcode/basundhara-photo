@@ -8,7 +8,7 @@
         <div class="links">
             <router-link to="./Portfolio">Portfolio</router-link> 
             <router-link to="./About">About Me</router-link> 
-            <router-link to="./HeadshotTips">Headshot Tips</router-link>
+            <router-link to="./HeadshotTips">Photoshoot Tips</router-link>
             <router-link to="./Testimonials">Testimonials</router-link>
             <router-link to="./Contact">Contact</router-link> 
         </div>
@@ -91,8 +91,9 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.links > *:hover {
-  color:rgb(30, 30, 114);
+.router-link-active {
+  /* color:rgb(124, 124, 124); */
+  text-decoration: underline;
 }
 
 /* SOCIAL LINKS */

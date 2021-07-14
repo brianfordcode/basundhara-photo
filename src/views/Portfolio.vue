@@ -2,16 +2,11 @@
 
   <div class="entire-page">
 
-    <h1 class="title">Portfolio</h1>
-
-    <!-- PORTRAITS -->
-
-    <!-- MAIN VW PAGE PINK -->
     <div>
-      <h1 class="category-title">Portraits</h1>
+      <p class="category-title">Portraits</p>
       <Carousel :items="portraits" />
 
-      <h1 class="category-title">linkedin Headshots</h1>
+      <p class="category-title">Linkedin Headshots</p>
       <Carousel :items="linkedinHeadshots" />
     </div>
 
@@ -34,15 +29,15 @@ export default {
     return {
       linkedinHeadshots: [
         {
-          caption: "Amit Luthra_BRI_1671",
+          caption: "Shweta Chauhan - Human Resource Specialist",
           url: "/linkedIn-headshots-small/1-shweta-chauhan-human-resource-specialist.jpg",
         },
         {
-          caption: "Amit Luthra_BRI_1711",
+          caption: "vandana-reception-manager-zolie-skin-clinic",
           url: "/linkedIn-headshots-small/2-vandana-reception-manager-zolie-skin-clinic.jpg",
         },
         {
-          caption: "Amit Luthra_BRI_1722",
+          caption: "ritesh-kumar-legal-counsel",
           url: "/linkedIn-headshots-small/3-ritesh-kumar-legal-counsel.jpg",
         },
         {
@@ -209,36 +204,21 @@ export default {
         },
       ]
     }
-  },
-
-  methods: { }
+  }
 }
 </script>
 
 <style scoped>
 
 .entire-page {
-  /* border: 1px solid pink; */
+  margin-top: 50px;
   overflow: hidden;
 }
 
-.title {
-  text-align: center;
-  margin-top: 30px;
-  font-family: 'dancing script', cursive;
-  font-size: 50px;
-}
-
 .category-title {
-  margin-left: 30px;
+  margin-left: 20px;
   font-family: 'dancing script', cursive;
-}
-
-@media screen and (max-width: 700px) {
-  .entire-page {
-    margin-top: 35px;
-  }
-  
+  font-size: 25px;
 }
 
 

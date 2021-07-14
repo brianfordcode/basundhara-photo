@@ -66,6 +66,7 @@
         @click.stop="showImage(selectedImageIndex - 1)"
         id="modal-prev-arrow"
     >
+        <img src="https://img.icons8.com/ios-filled/50/000000/long-arrow-left.png"/>
     </div>
     <!-- image -->
         <div class="image-caption-container">
@@ -78,7 +79,7 @@
             @click.stop="showImage(selectedImageIndex + 1)"
             id="modal-next-arrow"
         >
-            
+            <img src="https://img.icons8.com/ios-filled/50/000000/long-arrow-right.png"/>
         </div>
         <span class="closeBtn">&#10005;</span>
     </div>
@@ -93,10 +94,7 @@ export default {
         window.addEventListener('mouseup', this.endDrag)
         window.addEventListener('resize', this.clamp)
         window.addEventListener('keydown', this.handleKeyPress)
-        window.addEventListener('touchstart', () => {
-            this.touch = true
-            console.log(this.touch)
-        })
+        window.addEventListener('touchstart', () => {this.touch = true})
     },
 
     unmounted() {
@@ -340,22 +338,23 @@ export default {
   /* border: 1px solid green; */
   height: 50px;
   min-width: 50px;
+  padding: 5px;
   user-select: none;
   cursor: pointer;
   transition: .2s, fade-in-out;
   z-index: 100;
+  background-color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  border-radius: 100%;
 }
 
 #modal-prev-arrow {
     margin-left: 20px;
-    background-image: url('https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-left.png');
-    background-repeat: no-repeat;
 }
 
 #modal-next-arrow {
     margin-right: 20px;
-    background-image: url('https://img.icons8.com/fluent-systems-regular/48/000000/circled-chevron-right.png');
-    background-repeat: no-repeat;
+
 }
 
 .modal-arrow:hover {
@@ -371,9 +370,10 @@ export default {
 }
 
 .caption {
-    user-select: none;
+  user-select: none;
   margin: 10px;
   font-size: 20px;
+  text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 

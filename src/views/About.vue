@@ -1,10 +1,9 @@
 <template>
 
     <div class="container">
-
       <div class="bio-img">
         <div class="text">
-        <h1 class="about-me-title">About Me</h1>
+        <h1 class="about-me-title">Hello!</h1>
         <p class="about-para">I'm Basundhara, a photographer and traveller. 
           <br>
           <br>
@@ -15,8 +14,8 @@
           <br>
           <br>
           <strong>Let's connect!</strong></p>
-      </div>
-      <img class="basu-pic" src="../assets/basundhara.png" alt="basundhara">
+        </div>
+        <img class="basu-pic" src="../assets/basundhara.png" alt="basundhara">
       </div>
 
       <div class="client-banner">
@@ -25,14 +24,11 @@
           <img class="logos" v-for="clientlogo in clients" :src=clientlogo :key="clientlogo" />
         </div>
       </div>
-     
-    
+
     </div>
 </template>
 
 <script>
-
-  
 
   export default {
 
@@ -69,7 +65,8 @@
   display: flex;
   flex-direction: column;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 50px auto;
+  /* border: 1px solid purple; */
 }
 
 @media screen and (max-width: 700px ) {
@@ -84,7 +81,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
+  /* border: 1px solid blue; */
 }
 
 .about-me-title {
@@ -99,14 +97,16 @@
 }
 
 .bio-img {
+  /* border: 1px solid pink; */
   display: flex;
   align-items: center;
   padding: 0 20px;
 }
 
 .basu-pic {
-  height: 275px;
+  height: 230px;
 }
+
 
 @media screen and (max-width: 900px ) {
   .bio-img {

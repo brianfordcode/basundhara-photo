@@ -2,8 +2,6 @@
     
 <div class="entire-page">
     
-    <h1 class="title">Testimonials</h1>
-    
     <!-- MAIN VW PAGE PINK -->
     <div
         ref="mainContainer"
@@ -138,12 +136,7 @@ export default {
 
 .entire-page {
     overflow: hidden;
-    /* border: 1px solid green; */
-}
-.title {
-    text-align: center;
-    font-family: 'dancing script', cursive;
-    font-size: 50px;
+    margin-top: 50px;
 }
 
 .main-container {

@@ -2,8 +2,6 @@
 
   <div class="main-container">
 
-    <h1 class="contact-me-title">Contact Me</h1>
-
     <iframe src="https://form.jotform.com/211670931018046" frameBorder="0" title="contact-me">test</iframe>
 
   </div>
@@ -30,15 +28,8 @@ export default {
 
 @media screen and (max-width: 700px ) {
   .main-container {
-    margin-top: 40px;
+    margin-top: 50px;
   }
-}
-
-.contact-me-title {
-  font-family: 'dancing script', cursive;
-  margin: 20px;
-  font-size: 50px;
-  text-align: center;
 }
 
 iframe {
