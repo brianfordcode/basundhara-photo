@@ -65,7 +65,7 @@
   display: flex;
   flex-direction: column;
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 60px auto;
   /* border: 1px solid purple; */
 }
 
@@ -73,7 +73,7 @@
   .container {
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 60px;
   }
 }
 

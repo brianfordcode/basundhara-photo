@@ -252,7 +252,7 @@ export default {
 <style scoped>
 
 .entire-page {
-  margin-top: 50px;
+  margin-top: 30px;
   overflow: hidden;
 }
 

@@ -136,7 +136,7 @@ export default {
 
 .entire-page {
     overflow: hidden;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .main-container {

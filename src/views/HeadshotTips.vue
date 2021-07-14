@@ -35,6 +35,7 @@ export default {
 
 h1 {
   font-size: 30px;
+  text-align: center;
 }
 
 /* span {
@@ -74,6 +75,10 @@ span {
 @media screen and (max-width: 700px) {
   .container {
     margin-top: 60px;
+  }
+  iframe {
+    width: 350px;
+    height: 233px;
   }
 }
 @media screen and (max-width: 400px) {
