@@ -11,8 +11,8 @@ const routes = [
   },
   {
     path: '/about',
-    name: 'about',
-    component: () => import('../views/about.vue'),
+    name: 'About',
+    component: () => import('../views/About.vue'),
     meta: {
       title: "About | Portraits by Basundhara"
     }
