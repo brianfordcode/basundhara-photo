@@ -11,40 +11,40 @@ const routes = [
   },
   {
     path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue'),
+    name: 'about',
+    component: () => import('../views/about.vue'),
     meta: {
       title: "About | Portraits by Basundhara"
     }
   },
   {
     path: '/contact',
-    name: 'Contact',
-    component: () => import( '../views/Contact.vue'),
+    name: 'contact',
+    component: () => import( '../views/contact.vue'),
     meta: {
       title: "Contact | Portraits by Basundhara"
     }
   },
   {
     path: '/photoshoottips',
-    name: 'PhotoshootTips',
-    component: () => import( '../views/PhotoshootTips.vue'),
+    name: 'photoshoottips',
+    component: () => import( '../views/photoshoottips.vue'),
     meta: {
       title: "Photoshoot Tips | Portraits by Basundhara"
     }
   },
   {
     path: '/portfolio',
-    name: 'Portfolio',
-    component: () => import( '../views/Portfolio.vue'),
+    name: 'portfolio',
+    component: () => import( '../views/portfolio.vue'),
     meta: {
       title: "Portfolio | Portraits by Basundhara"
     }
   },
   {
     path: '/testimonials',
-    name: 'Testimonials',
-    component: () => import( '../views/Testimonials.vue'),
+    name: 'testimonials',
+    component: () => import( '../views/testimonials.vue'),
     meta: {
       title: "Testimonials | Portraits by Basundhara"
     }
