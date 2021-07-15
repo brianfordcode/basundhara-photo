@@ -57,6 +57,7 @@ const router = createRouter({
   routes
 })
 
+// browser tab names
 router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title}`
   next();
