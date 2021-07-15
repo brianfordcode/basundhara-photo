@@ -12,22 +12,22 @@ const routes = [
     component: () => import('../views/About.vue')
   },
   {
-    path: '/Contact',
+    path: '/contact',
     name: 'Contact',
     component: () => import( '../views/Contact.vue')
   },
   {
-    path: '/HeadshotTips',
-    name: 'HeadshotTips',
-    component: () => import( '../views/HeadshotTips.vue')
+    path: '/photoshoottips',
+    name: 'PhotoshootTips',
+    component: () => import( '../views/PhotoshootTips.vue')
   },
   {
-    path: '/Portfolio',
+    path: '/portfolio',
     name: 'Portfolio',
     component: () => import( '../views/Portfolio.vue')
   },
   {
-    path: '/Testimonials',
+    path: '/testimonials',
     name: 'Testimonials',
     component: () => import( '../views/Testimonials.vue')
   },
