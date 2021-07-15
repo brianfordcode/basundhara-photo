@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: () => import('../views/About.vue'),
+    component: () => import('../views/about.vue'),
     meta: {
       title: "About | Portraits by Basundhara"
     }
