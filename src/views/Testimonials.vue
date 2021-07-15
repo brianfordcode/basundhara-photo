@@ -61,10 +61,22 @@ export default {
             position: 0,
             testimonials: [
                 {
-                    quote: "Basundhara is an amazing photographer and produces world class results. Her unique way of getting to know a client before the photoshoot and then not compromising on the day of the shoot is very comforting and also results in amazing quality. Basundhara is destined for greater things in life. Pride of India",
-                    name: "Syed Shaheen Chishti",
-                    occupation: "Author and Chairman of Chishti Industries",
-                    picture: "/linkedIn-headshots-small/9-shaheen-chishti-author.jpg"
+                    quote: "Working with Basundhara was extremely effortless and comfortable. We hadn't met before in person but her warm nature and dynamic personality helped us gel well in no time. Her passion for photography clearly reflects in her work. She is extremely committed towards ensuring that she tries to get the best version of you captured in the frame. Her professionalism and disciplined work ethic add more value to her flawless photography skills. I definitely look forward to shooting several more features with her in the future :)",
+                    name: "Priyal Keni",
+                    occupation: "Deloitte Consulting | McKinsey Next Gen. Women Leader | 2x TEDx Speaker | Chartered Accountant | CFA Level 2 Candidate | International Rifle Shooter | GGI Scholar'21",
+                    picture: "/linkedIn-headshots-small/5-priyal-keni-international-rifle-shooter.jpg"
+                },
+                {
+                    quote: "Basundhara is an exceptionally skilled photographer. I've had the pleasure of engaging her for both our family and professional shoots and she always captures some really genuine moments. She is a perfectionist and is extremely meticulous in her work, which reflects in every photo she clicks! I would highly recommend her services to anyone.",
+                    name: "Ritesh Kumar",
+                    occupation: "Partner at KRN Law Offices LLP",
+                    picture: "/linkedIn-headshots-small/3-ritesh-kumar-legal-counsel.jpg"
+                },
+                {
+                    quote: "Basundhara did some branding pictures for me. I love how detail oriented she is; exactly the kind of people I absolutely enjoy working with 😍💖",
+                    name: "Ria Dixit",
+                    occupation: "Personal Stylist",
+                    picture: "/linkedIn-headshots-small/16-ria-dixit-personal-stylist.jpg"
                 },
                 {
                     quote: "Basundhara makes the often nervy task of being clicked easy. If you have never been photographed professionally, she will make it easy, affordable and top class. Highly recommended.",
@@ -79,24 +91,11 @@ export default {
                     picture: ""
                 },
                 {
-                    quote: "Basundhara is an exceptionally skilled photographer. I've had the pleasure of engaging her for both our family and professional shoots and she always captures some really genuine moments. She is a perfectionist and is extremely meticulous in her work, which reflects in every photo she clicks! I would highly recommend her services to anyone.",
-                    name: "Ritesh Kumar",
-                    occupation: "Partner at KRN Law Offices LLP",
-                    picture: "/linkedIn-headshots-small/3-ritesh-kumar-legal-counsel.jpg"
+                    quote: "Basundhara is an amazing photographer and produces world class results. Her unique way of getting to know a client before the photoshoot and then not compromising on the day of the shoot is very comforting and also results in amazing quality. Basundhara is destined for greater things in life. Pride of India",
+                    name: "Syed Shaheen Chishti",
+                    occupation: "Author and Chairman of Chishti Industries",
+                    picture: "/linkedIn-headshots-small/9-shaheen-chishti-author.jpg"
                 },
-                {
-                    quote: "Working with Basundhara was extremely effortless and comfortable. We hadn't met before in person but her warm nature and dynamic personality helped us gel well in no time. Her passion for photography clearly reflects in her work. She is extremely committed towards ensuring that she tries to get the best version of you captured in the frame. Her professionalism and disciplined work ethic add more value to her flawless photography skills. I definitely look forward to shooting several more features with her in the future :)",
-                    name: "Priyal Keni",
-                    occupation: "Deloitte Consulting | McKinsey Next Gen. Women Leader | 2x TEDx Speaker | Chartered Accountant | CFA Level 2 Candidate | International Rifle Shooter | GGI Scholar'21",
-                    picture: "/linkedIn-headshots-small/5-priyal-keni-international-rifle-shooter.jpg"
-                },
-                {
-                    quote: "Basundhara did some branding pictures for me. I love how detail oriented she is; exactly the kind of people I absolutely enjoy working with 😍💖",
-                    name: "Ria Dixit",
-                    occupation: "Personal Stylist",
-                    picture: "/linkedIn-headshots-small/16-ria-dixit-personal-stylist.jpg"
-                },
-
             ]
         }
     },

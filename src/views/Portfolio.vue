@@ -19,6 +19,7 @@
   import Carousel from '../components/Carousel'
 
   export default {
+    name: 'Portfolio',
     components: {
       Carousel
     },
