@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
@@ -14,7 +14,7 @@ const routes = [
     name: 'About',
     component: () => import('../views/About.vue'),
     meta: {
-      title: "About"
+      title: "About | Portraits by Basundhara"
     }
   },
   {
@@ -22,7 +22,7 @@ const routes = [
     name: 'Contact',
     component: () => import( '../views/Contact.vue'),
     meta: {
-      title: "Contact"
+      title: "Contact | Portraits by Basundhara"
     }
   },
   {
@@ -30,7 +30,7 @@ const routes = [
     name: 'PhotoshootTips',
     component: () => import( '../views/PhotoshootTips.vue'),
     meta: {
-      title: "Photoshoot Tips"
+      title: "Photoshoot Tips | Portraits by Basundhara"
     }
   },
   {
@@ -38,7 +38,7 @@ const routes = [
     name: 'Portfolio',
     component: () => import( '../views/Portfolio.vue'),
     meta: {
-      title: "Portfolio"
+      title: "Portfolio | Portraits by Basundhara"
     }
   },
   {
@@ -46,14 +46,14 @@ const routes = [
     name: 'Testimonials',
     component: () => import( '../views/Testimonials.vue'),
     meta: {
-      title: "Testimonials"
+      title: "Testimonials | Portraits by Basundhara"
     }
   },
 
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 
