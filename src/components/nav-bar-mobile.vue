@@ -6,11 +6,11 @@
         </div>
 
         <div v-if="isOpen" @click="closeMenu" class="links-container">
-            <router-link class="router-link" to="./portfolio">Portfolio</router-link> 
-            <router-link class="router-link" to="./about">About Me</router-link>
-            <router-link class="router-link" to="./photoshoottips">Photoshoot Tips</router-link>
-            <router-link class="router-link" to="./testimonials">Testimonials</router-link>
-            <router-link class="router-link" to="./contact">Contact</router-link> 
+            <router-link class="router-link" to="./Portfolio">Portfolio</router-link> 
+            <router-link class="router-link" to="./About">About Me</router-link>
+            <router-link class="router-link" to="./PhotoshootTips">Photoshoot Tips</router-link>
+            <router-link class="router-link" to="./Testimonials">Testimonials</router-link>
+            <router-link class="router-link" to="./Contact">Contact</router-link> 
             <div class="social-links">
                 <social class="social" social="facebook"></social>
                 <social class="social" social="linkedin"></social>

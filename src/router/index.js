@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: () => import('../views/about.vue'),
+    component: () => import('../views/About.vue'),
     meta: {
       title: "About | Portraits by Basundhara"
     }
@@ -20,7 +20,7 @@ const routes = [
   {
     path: '/contact',
     name: 'contact',
-    component: () => import( '../views/contact.vue'),
+    component: () => import( '../views/Contact.vue'),
     meta: {
       title: "Contact | Portraits by Basundhara"
     }
@@ -28,7 +28,7 @@ const routes = [
   {
     path: '/photoshoottips',
     name: 'photoshoottips',
-    component: () => import( '../views/photoshoottips.vue'),
+    component: () => import( '../views/PhotoshootTips.vue'),
     meta: {
       title: "Photoshoot Tips | Portraits by Basundhara"
     }
@@ -36,7 +36,7 @@ const routes = [
   {
     path: '/portfolio',
     name: 'portfolio',
-    component: () => import( '../views/portfolio.vue'),
+    component: () => import( '../views/Portfolio.vue'),
     meta: {
       title: "Portfolio | Portraits by Basundhara"
     }
@@ -44,7 +44,7 @@ const routes = [
   {
     path: '/testimonials',
     name: 'testimonials',
-    component: () => import( '../views/testimonials.vue'),
+    component: () => import( '../views/Testimonials.vue'),
     meta: {
       title: "Testimonials | Portraits by Basundhara"
     }
