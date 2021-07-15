@@ -6,11 +6,11 @@
           <img @click="goHome" src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
     
         <div class="links">
-            <router-link to="./Portfolio">Portfolio</router-link> 
-            <router-link to="./about">About Me</router-link> 
-            <router-link to="./PhotoshootTips">Photoshoot Tips</router-link>
-            <router-link to="./Testimonials">Testimonials</router-link>
-            <router-link to="./Contact">Contact</router-link> 
+            <router-link :to="{name: 'portfolio'}">Portfolio</router-link> 
+            <router-link :to="{name: 'about'}">About Me</router-link> 
+            <router-link :to="{name: 'photoshoottips'}">Photoshoot Tips</router-link>
+            <router-link :to="{name: 'testimonials'}">Testimonials</router-link>
+            <router-link :to="{name: 'contact'}">Contact</router-link> 
         </div>
 
         <div class="social-links">
