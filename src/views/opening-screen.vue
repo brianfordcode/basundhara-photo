@@ -7,7 +7,6 @@
 
         <div class="title">
           <img src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
-          <h3>LinkedIn and Corporate Headshots | Branding and Editorial Portraits</h3>
           <button class="button" @click="$router.push({ name: 'portfolio' })">View Portfolio</button>
         </div>
 
@@ -46,7 +45,6 @@
 
 <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-
 
   #container {
     background-image: url('../assets/background.jpg');
@@ -117,6 +115,10 @@
   }
 
   @media screen and (max-width: 800px) {
+
+    #container {
+      background-size: 100%;
+    }
 
     .basu-logo {
       width: 200px;

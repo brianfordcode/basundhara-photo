@@ -3,10 +3,11 @@
   <div class="entire-page">
 
     <div>
-      <p class="category-title">Portraits</p>
+
+      <p class="category-title">Branding and Editorial Portraits</p>
       <Carousel :items="portraits" />
 
-      <p class="category-title">Linkedin Headshots</p>
+      <p class="category-title">LinkedIn and Corporate Headshots</p>
       <Carousel :items="linkedinHeadshots" />
     </div>
 
@@ -19,7 +20,6 @@
   import Carousel from '../components/Carousel'
 
   export default {
-    name: 'Portfolio',
     components: {
       Carousel
     },
@@ -235,7 +235,7 @@
             url: "/portraits/21-Savita_BRI_3761-Social Media.jpg",
           },
           {
-            name: "Shaheen Chisti",
+            name: "Shaheen Chishti",
             occupation: "Author",
             url: "/portraits/22-shaheen-chishti-founder-2.jpg",
           },
@@ -256,6 +256,7 @@
     margin-top: 30px;
     overflow: hidden;
   }
+
 
   .category-title {
     margin-left: 20px;

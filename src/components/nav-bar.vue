@@ -10,7 +10,7 @@
             <router-link :to="{name: 'about'}">About Me</router-link> 
             <router-link :to="{name: 'photoshoottips'}">Photoshoot Tips</router-link>
             <router-link :to="{name: 'testimonials'}">Testimonials</router-link>
-            <router-link :to="{name: 'contact'}">Contact</router-link> 
+            <router-link :to="{name: 'contact'}">Let's Talk!</router-link> 
         </div>
 
         <div class="social-links">
