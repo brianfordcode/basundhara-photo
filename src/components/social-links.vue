@@ -49,7 +49,7 @@ export default {
     },
     methods: {
         goToSocial() {
-            if (this.social === 'facebook') window.open('https://www.facebook.com/basundhara.b.p')
+            if (this.social === 'facebook') window.open('https://fb.me/portraitsbybasundhara')
             
             if (this.social === 'linkedin') window.open('https://www.linkedin.com/in/basundhara/')
             
