@@ -265,6 +265,10 @@
   }
 
   @media screen and (max-width: 700px) {
+    .category-title {
+      font-size: 20px;
+    }
+
     .entire-page {
       margin-top: 60px;
     }

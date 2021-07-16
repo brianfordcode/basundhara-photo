@@ -93,6 +93,7 @@ export default {
         window.addEventListener('resize', this.clamp)
         window.addEventListener('keydown', this.handleKeyPress)
         window.addEventListener('touchstart', () => {this.touch = true})
+        document.addEventListener('contextmenu', event => event.preventDefault());
     },
 
     unmounted() {
@@ -100,6 +101,7 @@ export default {
         window.removeEventListener('resize', this.clamp)
         window.removeEventListener('keydown', this.handleKeyPress)
         window.removeEventListener('touchstart', () => {this.touch = true})
+        document.removeEventListener('contextmenu', event => event.preventDefault());
     },
 
     props: {
