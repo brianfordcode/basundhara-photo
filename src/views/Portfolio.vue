@@ -257,6 +257,9 @@
     overflow: hidden;
   }
 
+  Carousel {
+    border: 1px solid black;
+  }
 
   .category-title {
     margin-left: 20px;

@@ -31,8 +31,7 @@ export default {
         isOpen: false
     }},
     methods: {
-        closeMenu(e) {
-            console.log(e.target);
+        closeMenu() {
             this.isOpen = false
         },
         
