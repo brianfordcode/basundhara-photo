@@ -53,7 +53,7 @@ export default {
             
             if (this.social === 'linkedin') window.open('https://www.linkedin.com/in/basundhara/')
             
-            if (this.social === 'instagram') window.open('https://www.instagram.com/basundhara10/')
+            if (this.social === 'instagram') window.open('https://www.instagram.com/headshotsbyBasundhara/')
         }
     }
 }
