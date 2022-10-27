@@ -5,8 +5,7 @@
   "scripts": {
     "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint",
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider nuxt"
+    "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
