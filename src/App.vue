@@ -70,6 +70,4 @@
   "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
 },
 
-
-
 -->

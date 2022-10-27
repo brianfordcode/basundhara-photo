@@ -1,20 +1,22 @@
 <template>
 
-  <div class="entire-page">
+  <!-- <div class="entire-page"> -->
 
-    <div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
 
-      <p class="category-title">Branding and Editorial Portraits</p>
+      <!-- <p class="category-title">Branding and Editorial Portraits</p>
       <Carousel :items="portraits" />
 
       <p class="category-title">LinkedIn and Corporate Headshots</p>
-      <Carousel :items="linkedinHeadshots" />
+      <Carousel :items="linkedinHeadshots" /> -->
 
-      <p class="category-title">Headshots</p>
-      <Carousel :items="headshots" />
+      <div v-for="(pic, index) in pictures" :key="pic" class="img-container">
+        <img @click="expand(index)" :src="pic.url" alt="pic">
+      </div>
+
     </div>
 
-  </div>
+  <!-- </div> -->
 
 </template>
 
@@ -29,7 +31,12 @@
 
     data() {
       return {
-        linkedinHeadshots: [
+        pictures: [
+          {
+            name: "Abhinandan",
+            occupation: "",
+            url: "/linkedIn-headshots-small/Abhinandan_1101-Edit-min.jpg",
+          },
           {
             name: "Shweta Chauhan",
             occupation: "Human Resource Officer",
@@ -41,21 +48,6 @@
             url: "/linkedIn-headshots-small/2-vandana-reception-manager-zolie-skin-clinic.jpg",
           },
           {
-            name: "Ritesh Kumar",
-            occupation: "Legal Counsel",
-            url: "/linkedIn-headshots-small/3-ritesh-kumar-legal-counsel.jpg",
-          },
-          {
-            name: "Roma Priya",
-            occupation: "Founder Burgeon Law",
-            url: "/linkedIn-headshots-small/4-roma-priya-founder-burgeon-law.jpg",
-          },
-          {
-            name: "Priyal Keni",
-            occupation: "International Rifle Shooter",
-            url: "/linkedIn-headshots-small/5-priyal-keni-international-rifle-shooter.jpg",
-          },
-          {
             name: "Rahul Rajput",
             occupation: "Pantry Manager Zolie Skin Clinic",
             url: "/linkedIn-headshots-small/6-rahul-rajput-pantry-manager-zolie-skin-clinic.jpg",
@@ -64,11 +56,6 @@
             name: "Francis Rebello",
             occupation: "Professor",
             url: "/linkedIn-headshots-small/7-francis-rebello-professor.jpg",
-          },
-          {
-            name: "Brian Ford",
-            occupation: "THE BEST FILM DIRECTOR EVER",
-            url: "/linkedIn-headshots-small/8-brian-ford-director.jpg",
           },
           {
             name: "Shaheen Chishti",
@@ -86,51 +73,90 @@
             url: "/linkedIn-headshots-small/11-shivani-khullar-analyst.jpg",
           },
           {
-            name: "Dr. Nirupama Parwanda",
-            occupation: "Dermatologist Zolie Skin Clinic",
-            url: "/linkedIn-headshots-small/12-dr-nirupama-parwanda-dermatologist-zolie-skin-clinic.jpg",
-          },
-          {
-            name: "Raina Gupta",
-            occupation: "Model",
-            url: "/linkedIn-headshots-small/13-raina-gupta-model.jpg",
-          },
-          {
             name: "Jayshree Dugar",
             occupation: "Legal Associate",
             url: "/linkedIn-headshots-small/14-jayshree-dugar-legal-associate.jpg",
-          },
-          {
-            name: "",
-            occupation: "Cruise Ship Portrait",
-            url: "/linkedIn-headshots-small/15-Ship-portrait.jpg",
-          },
-          {
-            name: "Ria Dixit",
-            occupation: "Personal Stylist",
-            url: "/linkedIn-headshots-small/16-ria-dixit-personal-stylist.jpg",
-          },
-          {
-            name: "Sapna",
-            occupation: "Skin Therapist Zolie Skin Clinic",
-            url: "/linkedIn-headshots-small/17-sapna-skin-therapist-zolie-skin-clinic.jpg",
-          },
-          {
-            name: "Shruti",
-            occupation: "Artist",
-            url: "/linkedIn-headshots-small/18-Shrut-artist.jpg",
           },
           {
             name: "Vijay Jayswal",
             occupation: "Cloud Consultant",
             url: "/linkedIn-headshots-small/19-Vijay-jayswal-cloud-consultant.jpg",
           },
-        ],
-        portraits: [
+          {
+            name: "",
+            occupation: "",
+            url: "/portraits/Amit Bhagria_043-Social media.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Anchal S_2022_18-min.jpg",
+          },
+          {
+            name: "",
+            occupation: "",
+            url: "/portraits/Devna_9892-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Jasmine_C_05-min.jpg",
+          },
+    
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Ketaki_038_Web.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Pratiyush_04-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Omnivore_006.jpg",
+          },
           {
             name: "Raina Gupta",
             occupation: "Model",
             url: "/portraits/1-raina-gupta-model-1.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/linkedIn-headshots-small/Kabeir_9039-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/linkedIn-headshots-small/Omnivore_060-Edit_v2.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/linkedIn-headshots-small/Pragya_8968_Light_High res-Web.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/linkedIn-headshots-small/Priyal_8742_Grey-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/linkedIn-headshots-small/Sanjay_1131-Edit-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/linkedIn-headshots-small/Shailendra_1063-Edit-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/linkedIn-headshots-small/Siddharth_1081-Edit-min.jpg",
           },
           {
             name: "Brian Ford",
@@ -148,16 +174,6 @@
             url: "/portraits/4-dr-nirupama-parwanda-dermatologist-zolie-skin-clinic.jpg",
           },
           {
-            name: "Chandita Barman",
-            occupation: "Legal Advisor",
-            url: "/portraits/5-chandita-barman-legal-advisor.jpg",
-          },
-          {
-            name: "Amit Luthra",
-            occupation: "Photographer/Artist",
-            url: "/portraits/6-amit-luthra-photographer-artist-1.jpg",
-          },
-          {
             name: "Jayshree Dugar",
             occupation: "Legal Associate",
             url: "/portraits/7-jayshree-dugar-legal-associate.jpg",
@@ -168,26 +184,6 @@
             url: "/portraits/8-shaheen-chishti-founder-1.jpg",
           },
           {
-            name: "Brian Ford",
-            occupation: "Director",
-            url: "/portraits/9-brian-ford-director.jpg",
-          },
-          {
-            name: "Ria Dixit",
-            occupation: "Personal Stylist",
-            url: "/portraits/9-ria-dixit-personal-stylist-1.jpg",
-          },
-          {
-            name: "Priyal Keni",
-            occupation: "International Rifle Shooter",
-            url: "/portraits/10-priyal-keni-international-rifle-shooter-3.jpg",
-          },
-          {
-            name: "Roma Priya",
-            occupation: "Founder Burgeon Law",
-            url: "/portraits/11-roma-priya-founder-burgeon-law-2.jpg",
-          },
-          {
             name: "Raina Gupta",
             occupation: "Model",
             url: "/portraits/12-raina-gupta-model.-2.jpg",
@@ -196,11 +192,6 @@
             name: "Amit Luthra",
             occupation: "Photographer/Artist",
             url: "/portraits/13-amit-luthra-photographer-artist-2.jpg",
-          },
-          {
-            name: "Ria Dixit",
-            occupation: "Personal Stylist",
-            url: "/portraits/14-ria-dixit-personal-stylist-2.jpg",
           },
           {
             name: "Priyal Keni",
@@ -218,19 +209,9 @@
             url: "/portraits/17-deepak-menon-partner-JP-kapur-&-uberai-chartered-accountants.jpg",
           },
           {
-            name: "Priyal Keni",
-            occupation: "International Rifle Shooter",
-            url: "/portraits/18-priyal-keni-international-rifle-shooter-2.jpg",
-          },
-          {
             name: "Brian Ford",
             occupation: "Director",
             url: "/portraits/19-brian-ford-film-maker-2.jpg",
-          },
-          {
-            name: "Roma Priya",
-            occupation: "Founder Burgeon Law",
-            url: "/portraits/20-roma-priya-founder-burgeon-law-1.jpg",
           },
           {
             name: "Savita",
@@ -238,9 +219,204 @@
             url: "/portraits/21-Savita_BRI_3761-Social Media.jpg",
           },
           {
+            name: "Ria Dixit",
+            occupation: "Personal Stylist",
+            url: "/portraits/23-ria-dixit-personal-stylist-3.jpg",
+          },
+        ],
+
+
+
+
+        linkedinHeadshots: [
+          {
+            name: "Abhinandan",
+            occupation: "",
+            url: "/linkedIn-headshots-small/Abhinandan_1101-Edit-min.jpg",
+          },
+          {
+            name: "Shweta Chauhan",
+            occupation: "Human Resource Officer",
+            url: "/linkedIn-headshots-small/1-shweta-chauhan-human-resource-specialist.jpg",
+          },
+          {
+            name: "Vandana",
+            occupation: "Reception Manager Zolie Skin Clinic",
+            url: "/linkedIn-headshots-small/2-vandana-reception-manager-zolie-skin-clinic.jpg",
+          },
+          {
+            name: "Rahul Rajput",
+            occupation: "Pantry Manager Zolie Skin Clinic",
+            url: "/linkedIn-headshots-small/6-rahul-rajput-pantry-manager-zolie-skin-clinic.jpg",
+          },
+          {
+            name: "Francis Rebello",
+            occupation: "Professor",
+            url: "/linkedIn-headshots-small/7-francis-rebello-professor.jpg",
+          },
+          {
             name: "Shaheen Chishti",
             occupation: "Author",
-            url: "/portraits/22-shaheen-chishti-founder-2.jpg",
+            url: "/linkedIn-headshots-small/9-shaheen-chishti-author.jpg",
+          },
+          {
+            name: "Savita Kumari",
+            occupation: "Professor",
+            url: "/linkedIn-headshots-small/10-savita-kumari-professor.jpg",
+          },
+          {
+            name: "Shivani Khullar",
+            occupation: "Analyst",
+            url: "/linkedIn-headshots-small/11-shivani-khullar-analyst.jpg",
+          },
+          {
+            name: "Jayshree Dugar",
+            occupation: "Legal Associate",
+            url: "/linkedIn-headshots-small/14-jayshree-dugar-legal-associate.jpg",
+          },
+          {
+            name: "Vijay Jayswal",
+            occupation: "Cloud Consultant",
+            url: "/linkedIn-headshots-small/19-Vijay-jayswal-cloud-consultant.jpg",
+          },
+        ],
+        portraits: [
+        {
+            name: "",
+            occupation: "",
+            url: "/portraits/Amit Bhagria_043-Social media.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Anchal S_2022_18-min.jpg",
+          },
+          {
+            name: "",
+            occupation: "",
+            url: "/portraits/Devna_9892-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Jasmine_C_05-min.jpg",
+          },
+    
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Ketaki_038_Web.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Pratiyush_04-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Omnivore_006.jpg",
+          },
+          {
+            name: "Raina Gupta",
+            occupation: "Model",
+            url: "/portraits/1-raina-gupta-model-1.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Kabeir_9039-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Omnivore_060-Edit_v2.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Pragya_8968_Light_High res-Web.jpg",
+          },
+
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Priyal_8742_Grey-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Sanjay_1131-Edit-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Shailendra_1063-Edit-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portraits/Siddharth_1081-Edit-min.jpg",
+          },
+          {
+            name: "Brian Ford",
+            occupation: "Director",
+            url: "/portraits/2-brian-ford-director-1.jpg",
+          },
+          {
+            name: "Ria Dixit",
+            occupation: "Personal Stylist",
+            url: "/portraits/3-ria-dixit-personal-stylist.jpg",
+          },
+          {
+            name: "Dr Nirupama Parwanda",
+            occupation: "Dermatologist Zolie Skin Clinic",
+            url: "/portraits/4-dr-nirupama-parwanda-dermatologist-zolie-skin-clinic.jpg",
+          },
+          {
+            name: "Jayshree Dugar",
+            occupation: "Legal Associate",
+            url: "/portraits/7-jayshree-dugar-legal-associate.jpg",
+          },
+          {
+            name: "Shaheen Chishti",
+            occupation: "Author",
+            url: "/portraits/8-shaheen-chishti-founder-1.jpg",
+          },
+          {
+            name: "Raina Gupta",
+            occupation: "Model",
+            url: "/portraits/12-raina-gupta-model.-2.jpg",
+          },
+          {
+            name: "Amit Luthra",
+            occupation: "Photographer/Artist",
+            url: "/portraits/13-amit-luthra-photographer-artist-2.jpg",
+          },
+          {
+            name: "Priyal Keni",
+            occupation: "International Rifle Shooter",
+            url: "/portraits/15-priyal-keni-international-rifle-shooter-1.jpg",
+          },
+          {
+            name: "Raina Gupta",
+            occupation: "Model",
+            url: "/portraits/16-raina-gupta-model-3.jpg",
+          },
+          {
+            name: "Deepak Menon",
+            occupation: "Partner JP Kapur & Uberai Chartered Accountants",
+            url: "/portraits/17-deepak-menon-partner-JP-kapur-&-uberai-chartered-accountants.jpg",
+          },
+          {
+            name: "Brian Ford",
+            occupation: "Director",
+            url: "/portraits/19-brian-ford-film-maker-2.jpg",
+          },
+          {
+            name: "Savita",
+            occupation: "Professor",
+            url: "/portraits/21-Savita_BRI_3761-Social Media.jpg",
           },
           {
             name: "Ria Dixit",
@@ -248,83 +424,15 @@
             url: "/portraits/23-ria-dixit-personal-stylist-3.jpg",
           },
         ],
-        headshots: [
-          {
-            name: "Abhinandan",
-            occupation: "",
-            url: "/headshots/Abhinandan_1101-Edit-min.jpg",
-          },
-          {
-            name: "",
-            occupation: "",
-            url: "/headshots/Amit Bhagria_043-Social media.jpg",
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/headshots/Anchal S_2022_18-min.jpg",
-          },
-          {
-            name: "",
-            occupation: "",
-            url: "/headshots/Devna_9892-min.jpg",
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/headshots/Jasmine_C_05-min.jpg",
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/headshots/Kabeir_9039-min.jpg",
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/headshots/Ketaki_038_Web.jpg",
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/headshots/Omnivore_006.jpg",
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/headshots/Omnivore_060-Edit_v2.jpg",
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/headshots/Pragya_8968_Light_High res-Web.jpg",
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/headshots/Pratiyush_04-min.jpg",
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/headshots/Priyal_8742_Grey-min.jpg",
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/headshots/Sanjay_1131-Edit-min.jpg",
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/headshots/Shailendra_1063-Edit-min.jpg",
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/headshots/Siddharth_1081-Edit-min.jpg",
-          },
-        ]
+
+
+
+
+      }
+    },
+    methods: {
+      expand(index) {
+        console.log(index)
       }
     }
   }
@@ -345,6 +453,26 @@
     margin-left: 20px;
     font-family: 'dancing script', cursive;
     font-size: 25px;
+  }
+
+  .img-container {
+    /* border: 1px solid; */
+    margin:5px;
+    overflow: hidden;
+  }
+
+  img {
+    height:300px;
+    width: auto;
+    transition: transform 300ms ease-in-out;
+    display: block
+
+  }
+
+  img:hover {
+    transform: scale(1.1);
+    filter: grayscale(1);
+    cursor: pointer;
   }
 
   @media screen and (max-width: 700px) {
