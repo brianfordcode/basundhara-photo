@@ -9,6 +9,9 @@
 
       <p class="category-title">LinkedIn and Corporate Headshots</p>
       <Carousel :items="linkedinHeadshots" />
+
+      <p class="category-title">Headshots</p>
+      <Carousel :items="headshots" />
     </div>
 
   </div>
@@ -243,6 +246,83 @@
             name: "Ria Dixit",
             occupation: "Personal Stylist",
             url: "/portraits/23-ria-dixit-personal-stylist-3.jpg",
+          },
+        ],
+        headshots: [
+          {
+            name: "Abhinandan",
+            occupation: "",
+            url: "/headshots/Abhinandan_1101-Edit-min.jpg",
+          },
+          {
+            name: "",
+            occupation: "",
+            url: "/headshots/Amit Bhagria_043-Social media.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/headshots/Anchal S_2022_18-min.jpg",
+          },
+          {
+            name: "",
+            occupation: "",
+            url: "/headshots/Devna_9892-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/headshots/Jasmine_C_05-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/headshots/Kabeir_9039-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/headshots/Ketaki_038_Web.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/headshots/Omnivore_006.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/headshots/Omnivore_060-Edit_v2.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/headshots/Pragya_8968_Light_High res-Web.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/headshots/Pratiyush_04-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/headshots/Priyal_8742_Grey-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/headshots/Sanjay_1131-Edit-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/headshots/Shailendra_1063-Edit-min.jpg",
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/headshots/Siddharth_1081-Edit-min.jpg",
           },
         ]
       }
