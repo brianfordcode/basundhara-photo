@@ -318,6 +318,13 @@
   }
 
   @media screen and (max-width: 700px) {
+    img {
+      width: 300px;
+      height: auto;
+    }
+  }
+
+  /* @media screen and (max-width: 700px) {
     .category-title {
       font-size: 20px;
     }
@@ -325,6 +332,6 @@
     .entire-page {
       margin-top: 60px;
     }
-  }
+  } */
 
 </style>
