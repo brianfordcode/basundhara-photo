@@ -47,6 +47,11 @@
       return {
         pictures: [
           {
+            name: "",
+            occupation: "",
+            url: "/portraits/1-shweta-chauhan-human-resource-specialist grey.jpg",
+          },
+          {
             name: "Abhinandan",
             occupation: "",
             url: "/linkedIn-headshots-small/Abhinandan_1101-Edit-min.jpg",
@@ -66,11 +71,11 @@
             occupation: "Pantry Manager Zolie Skin Clinic",
             url: "/linkedIn-headshots-small/6-rahul-rajput-pantry-manager-zolie-skin-clinic.jpg",
           },
-          {
-            name: "Francis Rebello",
-            occupation: "Professor",
-            url: "/linkedIn-headshots-small/7-francis-rebello-professor.jpg",
-          },
+          // {
+          //   name: "Francis Rebello",
+          //   occupation: "Professor",
+          //   url: "/linkedIn-headshots-small/7-francis-rebello-professor.jpg",
+          // },
           {
             name: "Shivani Khullar",
             occupation: "Analyst",
@@ -119,7 +124,7 @@
           {
             name: " ",
             occupation: "",
-            url: "/portraits/Jasmine_C_05-min.jpg",
+            url: "/portraits/Jasmine_C_02-min.jpg",
           },
           {
             name: " ",
@@ -237,6 +242,11 @@
             url: "/portraits/21-Savita_BRI_3761-Social Media.jpg",
           },
           {
+            name: "",
+            occupation: "",
+            url: "/portraits/Anchal S_2022_55_H-min.jpg",
+          },
+          {
             name: " ",
             occupation: "",
             url: "/linkedIn-headshots-small/Omnivore_060-Edit_v2.jpg",
@@ -246,11 +256,7 @@
             occupation: "Personal Stylist",
             url: "/portraits/23-ria-dixit-personal-stylist-3.jpg",
           },
-          {
-            name: "",
-            occupation: "",
-            url: "/portraits/1-shweta-chauhan-human-resource-specialist grey.jpg",
-          },
+
           {
             name: "",
             occupation: "",
@@ -327,6 +333,8 @@
             occupation: "",
             url: "/portraits/DSC_9834.jpg",
           },
+
+
           {
             name: "",
             occupation: "",
