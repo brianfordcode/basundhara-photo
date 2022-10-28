@@ -49,6 +49,14 @@ const routes = [
       title: "Testimonials | Portraits by Basundhara"
     }
   },
+  {
+    path: '/testimonials',
+    name: 'testimonials',
+    component: () => import( '../views/Testimonials2.vue'),
+    meta: {
+      title: "Testimonials | Portraits by Basundhara"
+    }
+  },
 
 ]
 
