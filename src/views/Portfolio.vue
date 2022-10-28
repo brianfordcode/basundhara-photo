@@ -1,10 +1,6 @@
 <template>
 
-  <div
-    style="display: flex;
-    flex-wrap: wrap;
-    justify-content: center;"
-  >
+  <div class="entire-portfolio">
 
     <div
       v-for="(pic, index) in pictures"
@@ -281,6 +277,11 @@
 
 <style scoped>
 
+  .entire-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .img-container {
     margin:5px;
     overflow: hidden;
@@ -301,10 +302,10 @@
   }
 
   @media screen and (max-width: 700px) {
-    .img-container {
+    .entire-portfolio{
       margin-top: 60px;
     }
-    
+
     img {
       width: 300px;
       height: auto;
