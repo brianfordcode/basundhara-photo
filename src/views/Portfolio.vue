@@ -1,15 +1,5 @@
 <template>
 
-  <!-- <div class="entire-page">
-
-      <p class="category-title">Branding and Editorial Portraits</p>
-      <Carousel :items="portraits" />
-
-      <p class="category-title">LinkedIn and Corporate Headshots</p>
-      <Carousel :items="linkedinHeadshots" />
-      
-  </div> -->
-
   <div
     style="display: flex;
     flex-wrap: wrap;
@@ -31,17 +21,26 @@
   </div>
 
 
+  <!-- <div class="entire-page">
+
+      <p class="category-title">Branding and Editorial Portraits</p>
+      <Carousel :items="portraits" />
+
+      <p class="category-title">LinkedIn and Corporate Headshots</p>
+      <Carousel :items="linkedinHeadshots" />
+      
+  </div> -->
 
 </template>
 
 <script>
 
-  import Carousel from '../components/Carousel'
+  // import Carousel from '../components/Carousel'
 
   export default {
-    components: {
-      Carousel
-    },
+    // components: {
+    //   Carousel
+    // },
 
     data() {
       return {
@@ -282,23 +281,7 @@
 
 <style scoped>
 
-  .entire-page {
-    margin-top: 30px;
-    overflow: hidden;
-  }
-
-  Carousel {
-    border: 1px solid black;
-  }
-
-  .category-title {
-    margin-left: 20px;
-    font-family: 'dancing script', cursive;
-    font-size: 25px;
-  }
-
   .img-container {
-    /* border: 1px solid; */
     margin:5px;
     overflow: hidden;
   }
@@ -318,11 +301,30 @@
   }
 
   @media screen and (max-width: 700px) {
+    .img-container {
+      margin-top: 60px;
+    }
+    
     img {
       width: 300px;
       height: auto;
     }
   }
+
+  /* .entire-page {
+    margin-top: 30px;
+    overflow: hidden;
+  }
+
+  Carousel {
+    border: 1px solid black;
+  }
+
+  .category-title {
+    margin-left: 20px;
+    font-family: 'dancing script', cursive;
+    font-size: 25px;
+  } */
 
   /* @media screen and (max-width: 700px) {
     .category-title {
