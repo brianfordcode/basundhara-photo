@@ -86,16 +86,15 @@
             occupation: "Professor",
             url: "/linkedIn-headshots-small/10-savita-kumari-professor.jpg",
           },
-
-          {
-            name: "Jayshree Dugar",
-            occupation: "Legal Associate",
-            url: "/linkedIn-headshots-small/14-jayshree-dugar-legal-associate.jpg",
-          },
           {
             name: "Vijay Jayswal",
             occupation: "Cloud Consultant",
             url: "/linkedIn-headshots-small/19-Vijay-jayswal-cloud-consultant.jpg",
+          },
+          {
+            name: "Jayshree Dugar",
+            occupation: "Legal Associate",
+            url: "/linkedIn-headshots-small/14-jayshree-dugar-legal-associate.jpg",
           },
           {
             name: "",
