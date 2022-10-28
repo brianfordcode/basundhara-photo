@@ -63,7 +63,10 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   mode: 'history',
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    return { top: 0 }
+  },
 })
 
 // browser tab names
