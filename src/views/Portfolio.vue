@@ -8,12 +8,23 @@
       class="img-container"
     >
       <img
+        class="image"
         @click="expand(index)"
+        draggable="false"
         :src="pic.url"
         alt="pic"
       />
     </div>
 
+  </div>
+
+  <!-- MODAL -->
+  <div
+    v-if="selectedImage"
+    :class="{ modal: true, open: modalOpen }"
+    @click="closePic"
+  >
+    <img draggable="false" class="selected-image" :src="selectedImage.url">
   </div>
 
 
@@ -263,15 +274,29 @@
           },
 
         ],
+        selectedImageIndex: null,
+        modalOpen: false,
 
       }
     },
     methods: {
       expand(index) {
-        console.log(index)
-        // to expand picture for viewing
-      }
-    }
+        if(window.innerWidth > 700) {
+          this.selectedImageIndex = index
+          this.modalOpen = true          
+        }
+
+      },
+
+      closePic() {
+        this.modalOpen = false
+      },
+    },
+    computed: {
+        selectedImage() {
+            return this.pictures[this.selectedImageIndex]
+        }
+    },
   }
 </script>
 
@@ -287,15 +312,14 @@
     overflow: hidden;
   }
 
-  img {
+  .image {
     height:300px;
     width: auto;
     transition: transform 300ms ease-in-out;
     display: block
-
   }
 
-  img:hover {
+  .image:hover {
     transform: scale(1.1);
     filter: grayscale(1);
     cursor: pointer;
@@ -305,12 +329,47 @@
     .entire-portfolio{
       margin-top: 60px;
     }
-
-    img {
+    .image {
       width: 300px;
       height: auto;
     }
   }
+
+  .modal {
+        display: none;
+    }
+
+    .modal.open {
+        z-index: 999;
+        position: fixed;
+        top: 0;
+        left: 210px;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .selected-image {
+        user-select: none;
+        max-width: 100%;
+        max-height: 80vh;
+    }
+
+    @media screen and (max-width: 700px) {
+        .modal.open { 
+            left: 0;
+            margin-top: 30px;
+        }
+        .selected-image {
+            max-width: 100%;
+        }
+    }
+
+
+
+
 
   /* .entire-page {
     margin-top: 30px;
