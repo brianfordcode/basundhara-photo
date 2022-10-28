@@ -73,9 +73,14 @@
 
 <style scoped>
 
+.main-container {
+    margin: 0 auto;
+}
+
     .testimonial-wrapper {
         height: auto;
         width: auto;
+        max-width: 1000px;
         display: flex;
         margin: 12px;
         box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.15);
