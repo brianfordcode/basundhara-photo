@@ -16,7 +16,7 @@
         <br>
         <strong>Let's connect!</strong></p>
       </div>
-      <img class="basu-pic" src="../assets/basundhara.png" alt="basundhara">
+      <img class="basu-pic" src="../assets/basu-main.jpg" alt="basundhara">
     </div>
 
     <div class="client-banner">
@@ -92,7 +92,8 @@
   }
 
   .basu-pic {
-    height: 230px;
+    height: auto;
+    width: 200px;
   }
 
 
