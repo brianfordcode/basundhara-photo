@@ -2,7 +2,12 @@
 
 <div class="container">
 
-  <h1>How To Overcome Anxiety for a Photoshoot</h1>
+  <h1>How to Prepare for Your Headshot</h1>
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRlt50HsvxefP0JtK5Lftxqo1Zx9HPiA1bQijkGay8izRbQaX4lN2RI6nbb81g833Oqur0RQLjhX6Qo/embed?start=true&loop=true&delayms=3000" frameborder="0" width="800" height="490" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+  <span></span>
+  
+  <h1>How to Overcome Anxiety for a Photoshoot</h1>
   <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT4dynTcUKfw9hWPUZsjLEqxTrXC6-0SdeT9GBPKQL8vRrdW1Mg45AnbBVH9uP29CyzIathtz2SgTUY/embed?start=true&loop=true&delayms=3000" frameborder="0" width="800" height="490" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
   
   <span></span>
