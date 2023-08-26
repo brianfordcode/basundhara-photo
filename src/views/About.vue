@@ -16,7 +16,7 @@
         <br>
         <strong>Let's connect!</strong></p>
       </div>
-      <img class="basu-pic" src="../assets/main-image-basu.jpg" alt="basundhara">
+      <img class="basu-pic" src="../assets/prof-pic-aug-2023.jpg" alt="basundhara">
     </div>
 
     <div class="client-banner">
