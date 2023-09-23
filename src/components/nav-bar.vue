@@ -7,6 +7,7 @@
     
         <div class="links">
             <router-link :to="{name: 'portfolio'}">Portfolio</router-link> 
+            <router-link :to="{name: 'beforeafter'}">Before & After</router-link>
             <router-link :to="{name: 'about'}">About Me</router-link> 
             <router-link :to="{name: 'photoshoottips'}">Photoshoot Tips</router-link>
             <router-link :to="{name: 'testimonials'}">Testimonials</router-link>

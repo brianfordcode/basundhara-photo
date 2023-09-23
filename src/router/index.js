@@ -57,6 +57,14 @@ const routes = [
       title: "Testimonials | Portraits by Basundhara"
     }
   },
+  {
+    path: '/beforeafter',
+    name: 'beforeafter',
+    component: () => import( '../views/BeforeAfter.vue'),
+    meta: {
+      title: "Before & After | Portraits by Basundhara"
+    }
+  },
 
 ]
 
