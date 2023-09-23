@@ -82,7 +82,7 @@ export default {
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .images {
@@ -92,9 +92,8 @@ export default {
 
 img {
     height: auto;
-    width: 600px;
+    width: 750px;
     transition: transform 300ms ease-in-out;
-    
 }
 
 img:hover {
@@ -102,10 +101,16 @@ img:hover {
     cursor: pointer;
   }
 
+@media screen and (max-width: 1000px) {
+    img {
+        width: 500px;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .images-container {
         margin-top: 60px
-}
     }
+}
 
 </style>
