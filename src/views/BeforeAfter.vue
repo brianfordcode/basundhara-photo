@@ -85,13 +85,22 @@ export default {
     margin-top: 20px
 }
 
+.images {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
 
 img {
     height: auto;
     width: 600px;
-    margin-bottom: 5px;
-
+    transition: transform 300ms ease-in-out;
+    
 }
+
+img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
 
 @media screen and (max-width: 700px) {
     .images-container {
