@@ -8,6 +8,7 @@
         <div v-if="isOpen" @click="closeMenu" class="links-container">
             <router-link class="router-link" to="./Portfolio">Portfolio</router-link> 
             <router-link class="router-link" to="./About">About Me</router-link>
+            <router-link :to="{name: 'beforeafter'}">Before & After</router-link>
             <router-link class="router-link" to="./PhotoshootTips">Photoshoot Tips</router-link>
             <router-link class="router-link" to="./Testimonials">Testimonials</router-link>
             <router-link class="router-link" to="./Contact">Contact</router-link> 
