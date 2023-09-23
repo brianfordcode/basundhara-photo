@@ -113,4 +113,10 @@ img:hover {
     }
 }
 
+@media screen and (max-width: 500px) {
+    img {
+        width: 350px;
+    }
+}
+
 </style>
