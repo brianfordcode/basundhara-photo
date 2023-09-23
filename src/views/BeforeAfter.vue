@@ -4,6 +4,7 @@
     
     <div class="images-container">
         <h1 class="title">Before & After</h1>
+        <p>Have a look at how my client's headshots transform!</p>
         <div class="images" v-for="image in beforeAfter" :key="image">
             <img :src="image.img" alt="image" class="image">
         </div>
@@ -77,6 +78,11 @@ export default {
     font-size: 50px;
 }
 
+p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-bottom: 20px;
+}
+
 .images-container {
     display: flex;
     justify-content: space-between;
@@ -86,8 +92,9 @@ export default {
 }
 
 .images {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 img {
@@ -98,7 +105,6 @@ img {
 
 img:hover {
     transform: scale(1.1);
-    cursor: pointer;
   }
 
 @media screen and (max-width: 1000px) {
