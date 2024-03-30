@@ -1,5 +1,4 @@
 <template>
-    <!-- test -->
   <div class="nav">
         <div class="content">
             <img @click="goHome" src="../assets/basu-logo.png" class="basu-logo" alt="basu-logo">
