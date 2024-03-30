@@ -101,6 +101,78 @@
                     occupation: "Founder and CEO at VPOP",
                     picture: "/testimonial-pics/vpop-logo.jpg"
                 },
+                {
+                    quote: "I wholeheartedly recommend Basundhara to anyone seeking professional photography services, particularly for LinkedIn photoshoots. She recently conducted my shoot, displaying exceptional professionalism and attention to detail. She took the time to understand my vision, offered valuable suggestions, and created a comfortable atmosphere throughout the session. \n \n One of the qualities that impressed me most about Basundhara was her humility and genuine interest in ensuring client satisfaction. \n \n Basundhara demonstrated a remarkable level of skill and creativity in capturing the essence of my professional identity. The final photographs exceeded my expectations. I am confident that she will continue to excel in her craft and exceed the expectations of her clients.",
+                    name: "Vibhuti Hooda",
+                    occupation: "Senior Manager - HCM | HR Digital Transformation I Vertiv",
+                    picture: "/testimonial-pics/Varun_Min_03-min.jpg"
+                },
+                {
+                    quote: "It was great working with Basundhara! What I liked best is that she tries to understand you and your personality and manifests it to reflect in the headshots and photographs taken. You're in for a photograph and an end-to-end experience that she makes seamless and so comfortable. Highly recommended!",
+                    name: "Nandita Nawalakha",
+                    occupation: "Director - Indirect Tax at Price Waterhouse & Co LLP",
+                    picture: "/testimonial-pics/Nandita Lakhanwala_ 33 1-min.jpg"
+                },                
+                {
+                    quote: "I had the pleasure of working with Basundhara for my professional headshot, and I couldn't be happier with the results. Her skill behind the lens captured exactly what I was looking for—a polished and professional image for my LinkedIn profile. Basundhara is not only talented but also a pleasure to work with. I highly recommend her services!",
+                    name: "Vivek Das",
+                    occupation: "Director, Product Management @SAP | ISB",
+                    picture: "/testimonial-pics/Vivek Das_ 87 1-min.jpg"
+                },                
+                {
+                    quote: "I wholeheartedly recommend Basundhara B for your next headshot photoshoot. Her professionalism and keen eye for detail truly sets her apart in portrait photography. Working with her was an absolute breeze – as she effortlessly glided through the entire process, making it comfortable and enjoyable. Moreover, her friendly nature made the experience not only productive but also genuinely enjoyable. Basundhara B has an exceptional talent for capturing the essence of her subjects, and I couldn't be happier with the results. If you're looking for a skilled and personable photographer for your headshots, look no further – She is absolutely amongst the best in the business.",
+                    name: "Sanjay Roye",
+                    occupation: "Rear Admiral | Independent Director | Defence & Maritime | Pioneer Nuclear Submariner",
+                    picture: "/testimonial-pics/Sanjay Roye_ 16-min.jpg"
+                },                
+                {
+                    quote: "Recently, I had my headshot taken by Basundhara. I needed an updated profile picture for my social media accounts to portray the best version of myself. The experience of getting my picture taken by Basundhara was truly exceptional, and the resulting profile picture turned out to be wonderful. Basundhara has a unique approach to capturing the perfect pose and picture from her clients. She is well-prepared and organized before the shoot, putting in a lot of effort to ensure that the final result is just right. The price is definitely worth it, and it was truly a pleasure to meet and work with such a warm and friendly personality like Basundhara.",
+                    name: "Sanjay vaid",
+                    occupation: "Consultant, Auditor, Facilitator, Author & Speaker |Cybersecurity, AI & Digital Transformation Expert ",
+                    picture: "/testimonial-pics/Sanjay Vaid 80 1-min.jpg"
+                },                
+                {
+                    quote: "I'd highly recommend Basundhara to anyone who is looking to create an impactful professional profile. She is a thorough professional and extremely patient - she made me comfortable during the shoot and I especially appreciated the time she spent on different angles until I was happy with my headshot.",
+                    name: "Janhavi Malhotra",
+                    occupation: "Senior Manager HR at Tata 1mg",
+                    picture: "/testimonial-pics/Jhanvi 2-min.jpg"
+                },                
+                {
+                    quote: "I highly recommend Ms. Basundara for her outstanding photos in Headshots and Personal Branding. As a member of the Sikh community, I was initially hesitant about getting a headshot taken with my turban. However, Ms. Basundara put me at ease with her friendly and approachable manner. The result was nothing short of fabulous and was appreciated by everyone who saw it. \n \n Ms. Basundara has a unique talent for capturing the essence of her clients' personal brand and delivering headshots that truly stand out. I cannot recommend her enough for anyone seeking a standout headshot or personal branding portrait. Her work is truly exceptional and will exceed your expectations.",
+                    name: "Gurdiish Singh Sabharwal ",
+                    occupation: "Regional Director Engineering & Technical Services @The Oberoi Group",
+                    picture: "/testimonial-pics/Gurdish-444-min.jpg"
+                },                
+                {
+                    quote: "If pictures speak 1000 words, Basundhara's pictures make that 10000! Basundhara and I collaborated as I looked to get new headshots done. As someone who believes in authenticity, I am a stickler for having my truest form on or off camera. Basundhara encouraged me to be just that as her clicks worked magic. Right from the planning of the session, the discussions, and the actual clicks to seeing the final product - Basundhara exuded professionalism: Prompt, Clear, and focused customer satisfaction. \n \n As Senior leaders, one tends to often overlook the power of connecting via a real picture of ourselves. Basundhara fills that gap beautifully as she understands the depth of the art beyond its technicality. I must say, I waited for a good chunk of time to get my headshot clicked since I looked forward to getting it done by her, and yes - It was worth it!",
+                    name: "Sreekala Sunderrajan",
+                    occupation: "VP - Programmes / Operations | Creator - Shakti Leadership Academy | Women Influencer Awardee '21",
+                    picture: "/testimonial-pics/Sreekala_8838-min.jpg"
+                },                
+                {
+                    quote: "Basundhara did an amazing job with my headshots. I needed them for a publication initially but ended up using them everywhere :) across social media. They were that good. She is professional, focused, and capable. A rare combination. If you or anyone else wants to get their whole top team clicked, I'd recommend her!",
+                    name: "Aabhinandan Chatterjee",
+                    occupation: "Independent Consultant COO at Multiple companies, Ex-CEO of Revolut",
+                    picture: "/testimonial-pics/Abhinandan_1101-min.jpg"
+                },                
+                {
+                    quote: "I found Basundhara's profile on Linkedin through a random Google search and I am so glad that I did! \n \n Right in our first call, she understood my requirements were and discussed the various ways we could achieve them. She came across as extremely passionate about her role, and her ideas were really innovative and she presented different options for me to choose from. \n \n Her approach was professional and systematic the entire time, right from planning the photoshoot to the final review. On the day of the photoshoot, she was already prepped before I reached the venue, and took the efforts to make me comfortable with the process. It was an incredible experience for me. The final shots delivered were of the highest quality. \n \n It was a pleasure working with Basundhara, and look forward to more such collaborations!",
+                    name: "Rohan Bansal",
+                    occupation: "Oxford MBA '24 | Climate and Sustainability | Strategy & Finance | Private Equity | Helping Impact-Driven Founders Build Solid Fundraising Strategies",
+                    picture: "/testimonial-pics/Rohan_025-min.jpg"
+                },                
+                {
+                    quote: "We did a photo shoot with Basundhara and it was really memorable. What made it really memorable was her keen intent to understand the personality and her photographs capture the real personality and that is what makes her stand apart! \n \n I strongly recommend Basundhara as her camera can capture more than what's visible!",
+                    name: "Jasmine Suri",
+                    occupation: "Founder Jasmine's Playadiem, PCC Life and Leadership Coach",
+                    picture: "/testimonial-pics/Jasmine_02-min.jpg"
+                },                
+                {
+                    quote: "I came across Basundhara's profile quite serendipitously on LinkedIn and we were in business within the week! She is clearly passionate about her work and despite her years of experience I found her to be genuinely open to constructive feedback and trying new things. She exudes a great deal of patience and warmth while behind the camera which helps nervous subjects feel more at ease, a key component of her beautiful shots. \n \n While working with me she had extremely limited space and various other constraints. However, there was never any fuss or complaints about the same. She prepped meticulously, adjusted wherever needed, and in the end, the results satisfied my whole team which is no mean feat! Even aside from her considerable photography skills, she is friendly, easy to talk to, and very transparent about her pricing. It was a pleasure working with her and I look forward to more collaborations in the future.",
+                    name: "Saborni Poddar",
+                    occupation: "Head of Communication, Omnivore",
+                    picture: "/testimonial-pics/Saborni_004-min.jpg"
+                },
 
             ]
         }
@@ -111,7 +183,9 @@
 <style scoped>
 
 .main-container {
+    white-space: pre-line;
     margin: 0 auto;
+
 }
 
     .testimonial-wrapper {
