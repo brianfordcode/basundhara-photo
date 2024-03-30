@@ -37,9 +37,9 @@ export default {
                 {
                     img: "beforeafter/Anurag.jpg"
                 },
-                {
-                    img: "beforeafter/BA_Aasifa.jpg"
-                },
+                // {
+                //     img: "beforeafter/BA_Aasifa.jpg"
+                // },
                 {
                     img: "beforeafter/Compare_Sanjay Vaid 0593.jpg"
                 },
