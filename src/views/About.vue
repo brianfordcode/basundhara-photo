@@ -36,24 +36,24 @@
     data: function() {
       return {
         clients: [
-          'src/assets/logos/ace-update-logo.png',
-          'src/assets/logos/ace-update-logo.png',
-          'src/assets/logos/burgeon-law-logo.png',
-          'src/assets/logos/dailyhunt-logo.png',
-          'src/assets/logos/design-stories-logo.png',
-          'src/assets/logos/girltable-logo.png',
-          'src/assets/logos/herstory-logo.png',
-          'src/assets/logos/indian-express-indulge-logo.png',
-          'src/assets/logos/jewish-news-logo.png',
-          'src/assets/logos/lab-in-motion-logo.png',
-          'src/assets/logos/plus61j-media-logo.png',
-          'src/assets/logos/Rediff-logo.png',
-          'src/assets/logos/ria-dixit-logo.png',
-          'src/assets/logos/shaheen-logo.png',
-          'src/assets/logos/siliconindia-logo.gif',
-          'src/assets/logos/vpop-logo.jpg',
-          'src/assets/logos/zolie-skin-clinic-logo.png',
-          'src/assets/logos/KSLF-London-24-logo.png'
+          require('src/assets/logos/ace-update-logo.png'),
+          require('src/assets/logos/ace-update-logo.png'),
+          require('src/assets/logos/burgeon-law-logo.png'),
+          require('src/assets/logos/dailyhunt-logo.png'),
+          require('src/assets/logos/design-stories-logo.png'),
+          require('src/assets/logos/girltable-logo.png'),
+          require('src/assets/logos/herstory-logo.png'),
+          require('src/assets/logos/indian-express-indulge-logo.png'),
+          require('src/assets/logos/jewish-news-logo.png'),
+          require('src/assets/logos/lab-in-motion-logo.png'),
+          require('src/assets/logos/plus61j-media-logo.png'),
+          require('src/assets/logos/Rediff-logo.png'),
+          require('src/assets/logos/ria-dixit-logo.png'),
+          require('src/assets/logos/shaheen-logo.png'),
+          require('src/assets/logos/siliconindia-logo.gif'),
+          require('src/assets/logos/vpop-logo.jpg'),
+          require('src/assets/logos/zolie-skin-clinic-logo.png'),
+          require('src/assets/logos/KSLF-London-24-logo.png')
         ]
       }
     }
