@@ -11,9 +11,9 @@
 
 <script>
 
-  import navbar from './components/nav-bar'
-  import openingscreen from './views/opening-screen'
-  import navbarmobile from './components/nav-bar-mobile'
+  import navbar from './components/nav-bar.vue'
+  import openingscreen from './views/opening-screen.vue'
+  import navbarmobile from './components/nav-bar-mobile.vue'
 
   export default {
     components: {
@@ -44,30 +44,3 @@
     }
   }
 </style>
-
-<!--
-  
-  --------- put this in package.json----------
-
-  ---- I don't know how to do npm run serve to get localhost: -----
-"scripts": {
-  "serve": "vue-cli-service --openssl-legacy-provider serve",
-  "build": "vue-cli-service --openssl-legacy-provider build",
-  "lint": "vue-cli-service --openssl-legacy-provider lint"
-},
-
----- This works on netlify but not for localhost viewing: ------
-"scripts": {
-  "serve": "vue-cli-service",
-  "build": "vue-cli-service",
-  "lint": "vue-cli-service"
-},
-
------ this works for localhost but not for netlify build: -----
-"scripts": {
-  "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
-  "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
-  "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
-},
-
--->

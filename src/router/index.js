@@ -70,6 +70,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
+  base: import.meta.env.BASE_URL,
   mode: 'history',
   routes,
   scrollBehavior (to, from, savedPosition) {
