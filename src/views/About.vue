@@ -36,23 +36,23 @@
     data: function() {
       return {
         clients: [
-          'src/assets/logos/ace-update-logo.png',
-          'src/assets/logos/burgeon-law-logo.png',
-          'src/assets/logos/dailyhunt-logo.png',
-          'src/assets/logos/design-stories-logo.png',
-          'src/assets/logos/girltable-logo.png',
-          'src/assets/logos/herstory-logo.png',
-          'src/assets/logos/indian-express-indulge-logo.png',
-          'src/assets/logos/jewish-news-logo.png',
-          'src/assets/logos/lab-in-motion-logo.png',
-          'src/assets/logos/plus61j-media-logo.png',
-          'src/assets/logos/Rediff-logo.png',
-          'src/assets/logos/ria-dixit-logo.png',
-          'src/assets/logos/shaheen-logo.png',
-          'src/assets/logos/siliconindia-logo.gif',
-          'src/assets/logos/vpop-logo.jpg',
-          'src/assets/logos/zolie-skin-clinic-logo.png',
-          'src/assets/logos/KSLF-London-24-logo.png'
+          '/logos/ace-update-logo.png',
+          'logos/burgeon-law-logo.png',
+          'logos/dailyhunt-logo.png',
+          'logos/design-stories-logo.png',
+          'logos/girltable-logo.png',
+          'logos/herstory-logo.png',
+          'logos/indian-express-indulge-logo.png',
+          'logos/jewish-news-logo.png',
+          'logos/lab-in-motion-logo.png',
+          'logos/plus61j-media-logo.png',
+          'logos/Rediff-logo.png',
+          'logos/ria-dixit-logo.png',
+          'logos/shaheen-logo.png',
+          'logos/siliconindia-logo.gif',
+          'logos/vpop-logo.jpg',
+          'logos/zolie-skin-clinic-logo.png',
+          'logos/KSLF-London-24-logo.png'
         ]
       }
     }
