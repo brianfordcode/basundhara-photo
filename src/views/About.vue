@@ -36,23 +36,24 @@
     data: function() {
       return {
         clients: [
-          require('../assets/logos/ace-update-logo.png'),
-          require('../assets/logos/burgeon-law-logo.png'),
-          require('../assets/logos/dailyhunt-logo.png'),
-          require('../assets/logos/design-stories-logo.png'),
-          require('../assets/logos/girltable-logo.png'),
-          require('../assets/logos/herstory-logo.png'),
-          require('../assets/logos/indian-express-indulge-logo.png'),
-          require('../assets/logos/jewish-news-logo.png'),
-          require('../assets/logos/lab-in-motion-logo.png'),
-          require('../assets/logos/plus61j-media-logo.png'),
-          require('../assets/logos/Rediff-logo.png'),
-          require('../assets/logos/ria-dixit-logo.png'),
-          require('../assets/logos/shaheen-logo.png'),
-          require('../assets/logos/siliconindia-logo.gif'),
-          require('../assets/logos/vpop-logo.jpg'),
-          require('../assets/logos/zolie-skin-clinic-logo.png'),
-          require('../assets/logos/KSLF-London-24-logo.png')
+          'src/assets/logos/ace-update-logo.png',
+          'src/assets/logos/ace-update-logo.png',
+          'src/assets/logos/burgeon-law-logo.png',
+          'src/assets/logos/dailyhunt-logo.png',
+          'src/assets/logos/design-stories-logo.png',
+          'src/assets/logos/girltable-logo.png',
+          'src/assets/logos/herstory-logo.png',
+          'src/assets/logos/indian-express-indulge-logo.png',
+          'src/assets/logos/jewish-news-logo.png',
+          'src/assets/logos/lab-in-motion-logo.png',
+          'src/assets/logos/plus61j-media-logo.png',
+          'src/assets/logos/Rediff-logo.png',
+          'src/assets/logos/ria-dixit-logo.png',
+          'src/assets/logos/shaheen-logo.png',
+          'src/assets/logos/siliconindia-logo.gif',
+          'src/assets/logos/vpop-logo.jpg',
+          'src/assets/logos/zolie-skin-clinic-logo.png',
+          'src/assets/logos/KSLF-London-24-logo.png'
         ]
       }
     }
