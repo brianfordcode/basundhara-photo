@@ -22,7 +22,7 @@
 
     <div class="entire-portfolio">
 
-
+<!-- HEADSHOTS -->
     <div
       v-for="(pic, index) in headshots"
       :key="pic"
@@ -39,6 +39,7 @@
       />
     </div>
 
+    <!-- BRANDING -->
     <div
       v-for="(pic, index) in branding"
       :key="pic"
@@ -562,8 +563,9 @@
           if (this.headshotsSelected) {
             return this.headshots[this.selectedImageIndex]
           } else if (this.brandingSelected) {
-            return this.brandingSelected[this.selectedImageIndex]
+            return this.branding[this.selectedImageIndex]
           }
+
             
         }
     },
