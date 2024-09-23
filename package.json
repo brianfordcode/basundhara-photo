@@ -16,7 +16,7 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^8.7.1",
-    "vite": "^5.2.7",
+    "vite": "^5.2.9",
     "vue-concise-slider": "^3.4.4"
   },
   "browserslist": [

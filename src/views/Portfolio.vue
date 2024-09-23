@@ -254,6 +254,24 @@
             type: "branding"
           },
           {
+            name: "Dr Nirupama Parwanda",
+            occupation: "Dermatologist Zolie Skin Clinic",
+            url: "/portfolio/headshots/4-dr-nirupama-parwanda-dermatologist-zolie-skin-clinic.jpg",
+            type: "branding"
+          },
+          {
+            name: "",
+            occupation: "",
+            url: "/portfolio/headshots/BRI_5196.jpg",
+            type: "branding"
+          },
+          {
+            name: "Ria Dixit",
+            occupation: "Personal Stylist",
+            url: "/portfolio/headshots/23-ria-dixit-personal-stylist-3.jpg",
+            type: "branding"
+          },
+          {
             name: "",
             occupation: "",
             url: "/portfolio/branding/Rohan_025.jpg",
@@ -277,7 +295,24 @@
             url: "/portfolio/branding/Web-Vishal356.jpg",
             type: "branding"
           },
-          
+          {
+            name: " ",
+            occupation: "",
+            url: "/portfolio/headshots/Anchal S_2022_18-min.jpg",
+            type: "branding"
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portfolio/headshots/Jasmine_C_02-min.jpg",
+            type: "branding"
+          },
+          {
+            name: " ",
+            occupation: "",
+            url: "/portfolio/headshots/Ketaki_038_Web.jpg",
+            type: "branding"
+          },
         ],
         headshots: [
           {
@@ -443,6 +478,36 @@
             type: "headshot"
           },
           {
+            name: "Brian Ford",
+            occupation: "Director",
+            url: "/portfolio/headshots/2-brian-ford-director-1.jpg",
+            type: "headshot"
+          },
+          // {
+          //   name: "Raina Gupta",
+          //   occupation: "Model",
+          //   url: "/portfolio/headshots/12-raina-gupta-model.-2.jpg",
+          //   type: "headshot"
+          // },
+          // {
+          //   name: "Amit Luthra",
+          //   occupation: "Photographer/Artist",
+          //   url: "/portfolio/headshots/13-amit-luthra-photographer-artist-2.jpg",
+          //   type: "headshot"
+          // },
+          // {
+          //   name: "Raina Gupta",
+          //   occupation: "Model",
+          //   url: "/portfolio/headshots/16-raina-gupta-model-3.jpg",
+          //   type: "headshot"
+          // },
+          {
+            name: "Brian Ford",
+            occupation: "Director",
+            url: "/portfolio/headshots/19-brian-ford-film-maker-2.jpg",
+            type: "headshot"
+          },
+          {
             name: "Jayshree Dugar",
             occupation: "Legal Associate",
             url: "/portfolio/headshots/14-jayshree-dugar-legal-associate.jpg",
@@ -451,73 +516,7 @@
           {
             name: " ",
             occupation: "",
-            url: "/portfolio/headshots/Anchal S_2022_18-min.jpg",
-            type: "headshot"
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/portfolio/headshots/Jasmine_C_02-min.jpg",
-            type: "headshot"
-          },
-          {
-            name: " ",
-            occupation: "",
-            url: "/portfolio/headshots/Ketaki_038_Web.jpg",
-            type: "headshot"
-          },
-          {
-            name: "Brian Ford",
-            occupation: "Director",
-            url: "/portfolio/headshots/2-brian-ford-director-1.jpg",
-            type: "headshot"
-          },
-          {
-            name: "Dr Nirupama Parwanda",
-            occupation: "Dermatologist Zolie Skin Clinic",
-            url: "/portfolio/headshots/4-dr-nirupama-parwanda-dermatologist-zolie-skin-clinic.jpg",
-            type: "headshot"
-          },
-          {
-            name: "Raina Gupta",
-            occupation: "Model",
-            url: "/portfolio/headshots/12-raina-gupta-model.-2.jpg",
-            type: "headshot"
-          },
-          {
-            name: "Amit Luthra",
-            occupation: "Photographer/Artist",
-            url: "/portfolio/headshots/13-amit-luthra-photographer-artist-2.jpg",
-            type: "headshot"
-          },
-          {
-            name: "",
-            occupation: "",
-            url: "/portfolio/headshots/BRI_5196.jpg",
-            type: "headshot"
-          },
-          {
-            name: "Raina Gupta",
-            occupation: "Model",
-            url: "/portfolio/headshots/16-raina-gupta-model-3.jpg",
-            type: "headshot"
-          },
-          {
-            name: "Brian Ford",
-            occupation: "Director",
-            url: "/portfolio/headshots/19-brian-ford-film-maker-2.jpg",
-            type: "headshot"
-          },
-          {
-            name: " ",
-            occupation: "",
             url: "/portfolio/headshots/Omnivore_060-Edit_v2.jpg",
-            type: "headshot"
-          },
-          {
-            name: "Ria Dixit",
-            occupation: "Personal Stylist",
-            url: "/portfolio/headshots/23-ria-dixit-personal-stylist-3.jpg",
             type: "headshot"
           },
           {
