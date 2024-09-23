@@ -80,6 +80,13 @@
 
   </div>
 
+  <img
+    src="https://cdn.onlinewebfonts.com/svg/img_158933.png"
+    alt="to-top-icon"
+    class="to-top-icon"
+    @click="goToTop()"
+>
+
   
 </template>
 
@@ -550,12 +557,13 @@
           this.selectedImageIndex = index
           this.modalOpen = true          
         }
-
       },
-
       closePic() {
         this.modalOpen = false
       },
+      goToTop() {
+        window.scrollTo(0,0);
+      }
     },
     computed: {
         selectedImage() {
@@ -665,6 +673,20 @@
         user-select: none;
         max-width: 100%;
         max-height: 80vh;
+    }
+
+    .to-top-icon {
+      height: 40px;
+      opacity: .25;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      margin: 20px;
+      cursor: pointer;
+    }
+
+    .to-top-icon:hover {
+      opacity: 1;
     }
 
     @media screen and (max-width: 700px) {
